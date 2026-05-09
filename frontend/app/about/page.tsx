@@ -162,7 +162,7 @@ export default function AboutPage() {
                 <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
                   <p>
                     Tattvashila is being held primarily by{" "}
-                    <span className="text-ink">Vikram Aditya Mitra</span>,
+                    <span className="text-ink">Vikramaditya Mitra</span>,
                     working with a small group of contributors across different
                     fields &mdash; quietly, without a marketing rhythm, and
                     without an interest in scale for its own sake.
