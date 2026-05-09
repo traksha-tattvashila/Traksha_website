@@ -11,19 +11,20 @@ export default function Wordmark({
 }) {
   const cls =
     size === "small"
-      ? "text-base"
+      ? "text-[1.0625rem]"
       : size === "large"
         ? "text-2xl md:text-3xl"
-        : "text-lg";
+        : "text-xl";
 
   return (
     <Link
       href="/"
       data-testid={testId}
-      className={`font-display font-light tracking-tight text-ink hover:text-river transition-colors duration-700 ease-gentle ${cls}`}
+      aria-label="Tattvashila — home"
+      className={`font-display font-normal text-ink hover:text-river transition-colors duration-500 ease-gentle ${cls}`}
+      style={{ letterSpacing: "-0.005em" }}
     >
-      <span className="italic">tattva</span>
-      <span>shila</span>
+      Tattvashila
     </Link>
   );
 }

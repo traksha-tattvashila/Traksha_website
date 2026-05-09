@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${instrument.variable} ${tiro.variable}`}>
-      <body className="font-sans antialiased grain">
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>

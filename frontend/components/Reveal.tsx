@@ -26,11 +26,11 @@ export default function Reveal({
 
   return (
     <Tag
-      initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{
-        duration: reduce ? 0 : 1.1,
+        duration: reduce ? 0 : 0.85,
         delay: reduce ? 0 : delay,
         ease: [0.22, 0.61, 0.36, 1],
       }}

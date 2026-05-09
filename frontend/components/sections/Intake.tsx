@@ -28,7 +28,11 @@ export default function Intake() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data?.detail?.[0]?.msg || data?.detail || "Something didn't go through.");
+        const msg =
+          (Array.isArray(data?.detail) && data.detail[0]?.msg) ||
+          (typeof data?.detail === "string" && data.detail) ||
+          "Something didn't go through.";
+        throw new Error(msg);
       }
       setState("done");
     } catch (err: any) {
@@ -41,10 +45,10 @@ export default function Intake() {
     <section
       id="intake"
       data-testid="section-intake"
-      className="relative py-32 md:py-48 border-t border-ink/10"
+      className="relative py-20 md:py-28 border-t border-ink/10 bg-bone-light"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-12 md:gap-x-12">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -55,14 +59,15 @@ export default function Intake() {
 
           <div className="col-span-12 md:col-span-9 max-w-prose-wide">
             <Reveal delay={0.05}>
-              <h2 className="font-display text-display font-light text-ink leading-tight">
-                Two questions, <span className="italic text-river">if you'd like.</span>
+              <h2 className="font-display text-display font-normal text-ink leading-[1.15]">
+                Two questions, if you&rsquo;d like to stay in touch.
               </h2>
             </Reveal>
-            <Reveal delay={0.15}>
-              <p className="mt-8 text-body text-ink-muted max-w-reading">
-                We don't keep a list. We keep correspondence. Write rarely, when there
-                is something worth reading &mdash; and only to people who quietly asked.
+            <Reveal delay={0.12}>
+              <p className="mt-5 text-body text-ink-soft max-w-reading">
+                We don&rsquo;t keep a mailing list. We keep correspondence.
+                We&rsquo;ll write rarely, only when there is genuinely something
+                worth reading &mdash; and only to people who quietly asked.
               </p>
             </Reveal>
 
@@ -71,18 +76,19 @@ export default function Intake() {
                 <motion.form
                   key="form"
                   onSubmit={handleSubmit}
+                  noValidate
                   initial={{ opacity: 1 }}
-                  exit={{ opacity: 0, y: -8, transition: { duration: 0.6 } }}
-                  className="mt-20 md:mt-24 space-y-16"
+                  exit={{ opacity: 0, y: -8, transition: { duration: 0.5 } }}
+                  className="mt-12 md:mt-14 space-y-10"
                   data-testid="intake-form"
                 >
                   <Reveal delay={0.05}>
                     <div>
                       <label
                         htmlFor="reflection"
-                        className="block font-display text-xl md:text-2xl font-light text-ink"
+                        className="block font-display text-xl md:text-[1.4rem] font-normal text-ink leading-snug"
                       >
-                        <span className="text-river-soft mr-3 num-osf">i.</span>
+                        <span className="text-river-soft mr-3 num-tab text-base">01</span>
                         What brought you here today &mdash; in your own words?
                       </label>
                       <textarea
@@ -93,8 +99,8 @@ export default function Intake() {
                         value={reflection}
                         onChange={(e) => setReflection(e.target.value)}
                         data-testid="intake-reflection"
-                        className="mt-6 w-full bg-transparent text-body text-ink placeholder:text-ink-faint resize-none border-0 border-b border-ink/20 focus:border-river pb-3 transition-colors duration-700 ease-gentle"
-                        placeholder="A line, a phrase &mdash; whatever feels honest."
+                        className="mt-4 w-full bg-transparent text-body text-ink placeholder:text-ink-faint resize-none border-0 border-b border-ink/25 focus:border-river pb-2 transition-colors duration-500 ease-gentle"
+                        placeholder="A line or two — whatever feels honest."
                       />
                     </div>
                   </Reveal>
@@ -103,9 +109,9 @@ export default function Intake() {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block font-display text-xl md:text-2xl font-light text-ink"
+                        className="block font-display text-xl md:text-[1.4rem] font-normal text-ink leading-snug"
                       >
-                        <span className="text-river-soft mr-3 num-osf">ii.</span>
+                        <span className="text-river-soft mr-3 num-tab text-base">02</span>
                         Where would you like the updates to find you?
                       </label>
                       <input
@@ -115,30 +121,30 @@ export default function Intake() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         data-testid="intake-email"
-                        className="mt-6 w-full bg-transparent text-body text-ink placeholder:text-ink-faint border-0 border-b border-ink/20 focus:border-river pb-3 transition-colors duration-700 ease-gentle"
+                        className="mt-4 w-full bg-transparent text-body text-ink placeholder:text-ink-faint border-0 border-b border-ink/25 focus:border-river pb-2 transition-colors duration-500 ease-gentle"
                         placeholder="your@email"
                       />
                     </div>
                   </Reveal>
 
                   <Reveal delay={0.15}>
-                    <div className="flex items-center justify-between gap-6 pt-4">
+                    <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-5 md:gap-6 pt-2">
                       <p
                         data-testid="intake-error"
                         className={`text-small ${error ? "text-river-deep" : "text-ink-faint"}`}
                       >
-                        {error || "We write rarely. When we do, it will be worth reading."}
+                        {error || "We will only ever write — never sell, never share."}
                       </p>
                       <button
                         type="submit"
                         disabled={state === "submitting"}
                         data-testid="intake-submit"
-                        className="group inline-flex items-center gap-3 text-micro tracking-widest uppercase text-ink hover:text-river transition-colors duration-700 ease-gentle disabled:opacity-40"
+                        className="self-start group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle disabled:opacity-50 disabled:cursor-wait"
                       >
-                        <span>{state === "submitting" ? "Sending" : "Send"}</span>
+                        <span>{state === "submitting" ? "Sending" : "Send quietly"}</span>
                         <span
                           aria-hidden
-                          className="block w-10 h-px bg-current transition-[width] duration-700 ease-gentle group-hover:w-16"
+                          className="block w-6 h-px bg-current transition-[width] duration-500 ease-gentle group-hover:w-10"
                         />
                       </button>
                     </div>
@@ -149,15 +155,16 @@ export default function Intake() {
                   key="done"
                   data-testid="intake-success"
                   initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0, transition: { duration: 1.0, ease: [0.22, 0.61, 0.36, 1] } }}
-                  className="mt-20 md:mt-24 max-w-reading"
+                  animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 0.61, 0.36, 1] } }}
+                  className="mt-12 md:mt-14 max-w-reading"
                 >
-                  <p className="font-display text-2xl md:text-3xl font-light text-ink leading-snug">
+                  <p className="font-display text-2xl md:text-3xl font-normal text-ink leading-snug">
                     Received, with care.
                   </p>
-                  <p className="mt-6 text-body text-ink-muted">
-                    Thank you for the trust of even a single line. We will write
-                    only when something is genuinely ready &mdash; not before.
+                  <p className="mt-4 text-body text-ink-soft">
+                    Thank you for the trust of even a single line. We&rsquo;ll
+                    write only when something is genuinely ready &mdash; not
+                    before.
                   </p>
                 </motion.div>
               )}

@@ -7,25 +7,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Mood B — "Rivered Paper"
+        // Mood B — "Rivered Paper" (rebalanced for clarity)
         bone: {
-          DEFAULT: "#EAE6DD",
-          50: "#F5F2EC",
-          100: "#EFEBE2",
-          200: "#EAE6DD",
-          300: "#DDD7CB",
-          400: "#C9C2B3",
+          DEFAULT: "#ECE7DC",
+          light: "#F2EDE3",
+          deep: "#E2DCCD",
         },
         ink: {
-          DEFAULT: "#1F2230",
-          soft: "#2A2E3D",
-          muted: "#4A4F60",
-          faint: "#7A7F8E",
+          DEFAULT: "#15171F",
+          soft: "#1F2230",
+          muted: "#3C414F",
+          faint: "#6B7080",
         },
         river: {
-          DEFAULT: "#3A4A6B",
-          deep: "#2C3A57",
-          soft: "#5A6A87",
+          DEFAULT: "#324669",
+          deep: "#243352",
+          soft: "#4D5E80",
           wash: "#8FA0BC",
         },
       },
@@ -35,13 +32,13 @@ module.exports = {
         deva: ["var(--font-tiro)", "serif"],
       },
       fontSize: {
-        // restrained scale — only 6 sizes total
+        // restrained scale — six sizes only
         "micro": ["0.75rem", { lineHeight: "1.5", letterSpacing: "0.08em" }],
-        "small": ["0.9375rem", { lineHeight: "1.6" }],
-        "body": ["1.0625rem", { lineHeight: "1.75" }],
-        "lead": ["1.25rem", { lineHeight: "1.7" }],
-        "display": ["clamp(2.25rem, 5vw, 3.75rem)", { lineHeight: "1.15", letterSpacing: "-0.015em" }],
-        "hero": ["clamp(2.75rem, 7vw, 5.25rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
+        "small": ["0.9375rem", { lineHeight: "1.55" }],
+        "body": ["1.0625rem", { lineHeight: "1.65" }],
+        "lead": ["1.1875rem", { lineHeight: "1.55" }],
+        "display": ["clamp(1.875rem, 3.6vw, 2.625rem)", { lineHeight: "1.18", letterSpacing: "-0.012em" }],
+        "hero": ["clamp(2.25rem, 5.2vw, 4rem)", { lineHeight: "1.1", letterSpacing: "-0.018em" }],
       },
       letterSpacing: {
         wider: "0.08em",

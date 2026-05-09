@@ -6,18 +6,17 @@ const NAV = [
   { label: "Philosophy", href: "#philosophy" },
   { label: "Ecosystem", href: "#ecosystem" },
   { label: "Journey", href: "#journey" },
-  { label: "Stay in touch", href: "#intake" },
 ];
 
 export default function Nav() {
   return (
     <header
       data-testid="site-nav"
-      className="fixed top-0 inset-x-0 z-30 backdrop-blur-[6px] bg-bone/70 border-b border-ink/5"
+      className="fixed top-0 inset-x-0 z-30 backdrop-blur-md bg-bone/85 border-b border-ink/10"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 h-16 md:h-20 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16 h-16 md:h-[72px] flex items-center justify-between">
         <Wordmark testId="nav-wordmark" />
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-9">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -28,11 +27,18 @@ export default function Nav() {
               {item.label}
             </a>
           ))}
+          <a
+            href="#intake"
+            data-testid="nav-intake-cta"
+            className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle"
+          >
+            Stay in touch
+          </a>
         </nav>
         <a
           href="#intake"
-          data-testid="nav-intake-cta"
-          className="md:hidden text-micro tracking-widest uppercase text-ink-muted"
+          data-testid="nav-intake-cta-mobile"
+          className="md:hidden inline-flex items-center px-3.5 py-1.5 bg-ink text-bone-light text-micro tracking-widest uppercase rounded-[2px]"
         >
           Stay in touch
         </a>

@@ -1,16 +1,20 @@
 "use client";
 
 import Reveal from "../Reveal";
+import QuietImage from "../QuietImage";
+
+const PREMISE_IMG =
+  "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?auto=format&fit=crop&w=1400&q=80";
 
 export default function Premise() {
   return (
     <section
       id="premise"
       data-testid="section-premise"
-      className="relative py-32 md:py-48"
+      className="relative py-20 md:py-28 border-t border-ink/10"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-12 md:gap-x-12">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -19,33 +23,52 @@ export default function Premise() {
             </Reveal>
           </div>
 
-          <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-            <Reveal delay={0.1}>
-              <p className="font-display text-display font-light text-ink leading-tight">
-                This is not another system that asks you to{" "}
-                <span className="italic text-river">become someone else</span>.
-              </p>
-            </Reveal>
+          <div className="col-span-12 md:col-span-9">
+            <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 items-start">
+              <div className="col-span-12 lg:col-span-7">
+                <Reveal delay={0.05}>
+                  <h2 className="font-display text-display font-normal text-ink leading-[1.15]">
+                    This is not another system that asks you to become someone else.
+                  </h2>
+                </Reveal>
 
-            <Reveal delay={0.2}>
-              <div className="mt-12 md:mt-16 space-y-7 text-body text-ink-soft">
-                <p>
-                  Tattvashila is a slow body of work concerned with one ordinary
-                  question &mdash; how does a person live with awareness, and still
-                  carry the weight of an ordinary life?
-                </p>
-                <p>
-                  It does not promise transformation. It does not ask you to leave
-                  what you have built. It does not stand against the modern world,
-                  nor does it dress old ideas in new urgency.
-                </p>
-                <p className="text-ink">
-                  It begins where most things end &mdash; with the assumption that
-                  you are already capable, already responsible, already enough to
-                  do the quiet work that matters.
-                </p>
+                <Reveal delay={0.15}>
+                  <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft max-w-reading">
+                    <p>
+                      Tattvashila begins from a simple observation. Most modern
+                      systems for growth ask you to overhaul your life, declare
+                      a new identity, or step outside the world you&rsquo;ve built.
+                      Few of them last.
+                    </p>
+                    <p>
+                      What endures is quieter. The ability to meet a difficult
+                      morning. To hold responsibility without resentment. To
+                      keep showing up for work, for the people you love, for
+                      yourself &mdash; with steadiness rather than performance.
+                    </p>
+                    <p className="text-ink">
+                      Tattvashila is a body of work concerned with that
+                      ordinary, durable steadiness &mdash; how it&rsquo;s built,
+                      how it&rsquo;s kept, and why it matters more now than it
+                      did a generation ago.
+                    </p>
+                  </div>
+                </Reveal>
               </div>
-            </Reveal>
+
+              <Reveal delay={0.25} className="col-span-12 lg:col-span-5 lg:pt-4">
+                <QuietImage
+                  src={PREMISE_IMG}
+                  alt="A person reading a book between library shelves — quiet, ordinary attention"
+                  testId="premise-image"
+                  aspectClass="aspect-[4/5]"
+                  fallbackTone="warm"
+                />
+                <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
+                  The work of paying attention.
+                </p>
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
