@@ -29,6 +29,19 @@ Build the foundation of the official Tattvashila website (`tattvashila.org`) —
 - ✅ Bone backgrounds preserved (warm ivory, not pure white)
 - Result: "quiet premium depth" — CTAs, wordmark, headings, body all carry calm mineral warmth instead of stark black
 
+### v3.2 — Founder attribution (LOW-CREDIT)
+- ✅ "Vikramaditya Mitra" (single word) added to About / Origin section III as factual mid-sentence attribution — no portrait, no biography, no founder hero treatment
+
+### v3.3 — Philosophy page built (LOW-CREDIT, single pass)
+- ✅ `/philosophy` page created — text-led, no new imagery (most credible for "explain not perform")
+- ✅ Inherits v3.1 palette and existing Nav/Reveal/Closing components automatically
+- ✅ Six numbered sections (I–VI): The condition · Awareness · Responsibility · Discipline · Conscious participation · Why this, now
+- ✅ Each section: short label, plain title, 3 short paragraphs — readable, breathable, observational
+- ✅ Opening: "These are the working ideas behind Tattvashila. We have kept them as plain as we could. They are not original to us — they are observations..."
+- ✅ Closing summary: "Awareness, responsibility, discipline, conscious participation — carried into the same ordinary life you are already living. Nothing more, nothing less."
+- ✅ CTAs: "Read the origin" → /about, "Stay in touch" → /#intake
+- ✅ Tone: observational, calm, direct — explicitly avoids mystical/poetic register
+
 ## What's Implemented
 - **Pages:** `/` homepage (7 sections), `/about` Origin (5 sections + footer)
 - **Backend:** FastAPI `/api/health`, `POST /api/intake`, `/api/intake/count`

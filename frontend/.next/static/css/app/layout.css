@@ -758,6 +758,9 @@ video {
 .visible {
   visibility: visible;
 }
+.invisible {
+  visibility: hidden;
+}
 .fixed {
   position: fixed;
 }
@@ -892,6 +895,9 @@ video {
 .max-w-reading {
   max-width: 38rem;
 }
+.grow {
+  flex-grow: 1;
+}
 .resize-none {
   resize: none;
 }
@@ -983,6 +989,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -1089,6 +1100,10 @@ video {
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -1201,6 +1216,9 @@ video {
 }
 .leading-snug {
   line-height: 1.375;
+}
+.leading-\[1\.25\] {
+  line-height: 1.25;
 }
 .tracking-normal {
   letter-spacing: 0em;
@@ -1515,6 +1533,10 @@ img.broken {
     margin-top: 2.25rem;
   }
 
+  .md\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1589,6 +1611,11 @@ img.broken {
   .md\:py-9 {
     padding-top: 2.25rem;
     padding-bottom: 2.25rem;
+  }
+
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .md\:pb-16 {
