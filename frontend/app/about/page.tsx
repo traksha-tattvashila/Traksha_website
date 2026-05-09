@@ -161,19 +161,23 @@ export default function AboutPage() {
               <Reveal delay={0.12}>
                 <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
                   <p>
-                    Tattvashila is being built in India by a small group of practitioners and
-                    writers across different fields &mdash; quietly, without a marketing rhythm, and
+                    Tattvashila is being held primarily by{" "}
+                    <span className="text-ink">Vikram Aditya Mitra</span>,
+                    working with a small group of contributors across different
+                    fields &mdash; quietly, without a marketing rhythm, and
                     without an interest in scale for its own sake.
                   </p>
                   <p>
-                    There is no founder figure to follow, no lineage to inherit, no movement being
-                    recruited for. We have deliberately kept the team in the background and the
-                    language plain. The work itself is what we want a reader to meet, on its own
-                    terms.
+                    There is no founder figure to follow, no lineage to inherit,
+                    no movement being recruited for. We have deliberately kept
+                    the project free of personality, the language plain, and the
+                    work itself the only thing a reader is asked to meet.
                   </p>
                   <p className="text-ink">
-                    Names and faces will be shared as the work makes that necessary &mdash; not before,
-                    and not for marketing.
+                    The name appears here as a matter of accountability, not
+                    authority. Other contributors and any further detail will be
+                    introduced only when the work itself makes that useful
+                    &mdash; not before, and not for marketing.
                   </p>
                 </div>
               </Reveal>
