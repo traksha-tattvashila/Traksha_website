@@ -42,6 +42,27 @@ Build the foundation of the official Tattvashila website (`tattvashila.org`) —
 - ✅ CTAs: "Read the origin" → /about, "Stay in touch" → /#intake
 - ✅ Tone: observational, calm, direct — explicitly avoids mystical/poetic register
 
+### v3.4 — CTA inversion system formalized (LOW-CREDIT, token + hover)
+**Source-of-truth: official CTA psychology for Tattvashila.**
+
+- **Background (page):** warm bone `#ECE7DC` / `bone-light` `#F3EEE5`
+- **Text (page):** ink `#001F20`
+- **CTA buttons** invert this:
+  - Background → `bg-ink` `#001F20`
+  - Text → `text-bone-light` `#F3EEE5` (warm ivory — never pure white)
+- **Hover:** subtle lift only — `hover:bg-ink-soft` `#0D2A2C` (slightly lighter shade of the same ink). No hue shift, no scale, no glow, no brightening.
+- **Transition:** `duration-500 ease-gentle` (cubic-bezier 0.22, 0.61, 0.36, 1)
+
+**Why:** the button reads as a natural extension of the page (thoughtful invitation), not as a separate marketing object (conversion optimization). Inversion keeps emotional continuity; the warm ivory text on deep mineral teal preserves "calm premium depth" instead of stark black-on-white contrast.
+
+**Applied across all 5 CTA instances:**
+- `Nav` — Stay in touch (desktop + mobile)
+- `Intake` — Send quietly
+- `/about` — Write to us, quietly
+- `/philosophy` — Read the origin
+
+**All future pages and components must inherit these tokens — no new CTA color decisions per page.**
+
 ## What's Implemented
 - **Pages:** `/` homepage (7 sections), `/about` Origin (5 sections + footer)
 - **Backend:** FastAPI `/api/health`, `POST /api/intake`, `/api/intake/count`

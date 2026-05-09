@@ -10,7 +10,7 @@ module.exports = {
         // Mood B — "Rivered Paper" v3 (deep mineral text on warm bone)
         bone: {
           DEFAULT: "#ECE7DC",
-          light: "#F2EDE3",
+          light: "#F3EEE5",
           deep: "#E2DCCD",
         },
         ink: {

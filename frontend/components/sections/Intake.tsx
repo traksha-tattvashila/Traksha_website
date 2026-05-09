@@ -139,7 +139,7 @@ export default function Intake() {
                         type="submit"
                         disabled={state === "submitting"}
                         data-testid="intake-submit"
-                        className="self-start group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle disabled:opacity-50 disabled:cursor-wait"
+                        className="self-start group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-ink-soft transition-colors duration-500 ease-gentle disabled:opacity-50 disabled:cursor-wait"
                       >
                         <span>{state === "submitting" ? "Sending" : "Send quietly"}</span>
                         <span

@@ -30,7 +30,7 @@ export default function Nav() {
           <a
             href="/#intake"
             data-testid="nav-intake-cta"
-            className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle"
+            className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-ink-soft transition-colors duration-500 ease-gentle"
           >
             Stay in touch
           </a>

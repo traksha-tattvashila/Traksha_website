@@ -227,7 +227,7 @@ export default function AboutPage() {
                   <a
                     href="/#intake"
                     data-testid="about-cta-intake"
-                    className="group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle"
+                    className="group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-ink-soft transition-colors duration-500 ease-gentle"
                   >
                     <span>Write to us, quietly</span>
                     <span aria-hidden className="block w-6 h-px bg-current transition-[width] duration-500 ease-gentle group-hover:w-10" />
