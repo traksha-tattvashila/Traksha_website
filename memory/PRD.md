@@ -18,11 +18,16 @@ Build the foundation of the official Tattvashila website (`tattvashila.org`) —
 - ✅ Section label "The Ecosystem" → "The work" (homepage), "Several dimensions, each opening in its own time"
 - ✅ Soft hint of structural completeness: *"Other dimensions are being thought through. The whole will reveal itself slowly."*
 - ✅ **About / Origin page built** (`/about`) — quietly accountable, observational, no founder branding
-  - Sections: Origin opening · What was observed · Why this, why now · Who is building this · A note on accountability
-  - Reuses Reveal, Wordmark, Nav, Closing components — no new infrastructure
-  - Two CTAs: "Write to us, quietly" → /#intake, "Read the philosophy" → /#philosophy
 - ✅ Nav updated: Philosophy · The work · Origin · Stay in touch (CTA)
 - ✅ Footer updated: "The work" group + "About" group (Origin, Reflective intake, Quiet notes)
+
+### v3.1 — Visual psychology source-of-truth (LOW-CREDIT, color pass only)
+- ✅ Primary text color shifted from harsh slate (`#15171F`) to deep mineral teal-charcoal (**`#001F20`**) — warmer, calmer, more grounded
+- ✅ Ink scale harmonized: `#001F20` → `#0D2A2C` → `#3A4F51` → `#6E7E80`
+- ✅ Accent (river) re-tuned to harmonized mineral teal: `#2A5158` (was slate-indigo `#324669`)
+- ✅ Selection color and CSS variables updated
+- ✅ Bone backgrounds preserved (warm ivory, not pure white)
+- Result: "quiet premium depth" — CTAs, wordmark, headings, body all carry calm mineral warmth instead of stark black
 
 ## What's Implemented
 - **Pages:** `/` homepage (7 sections), `/about` Origin (5 sections + footer)

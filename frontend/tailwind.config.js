@@ -7,23 +7,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Mood B — "Rivered Paper" (rebalanced for clarity)
+        // Mood B — "Rivered Paper" v3 (deep mineral text on warm bone)
         bone: {
           DEFAULT: "#ECE7DC",
           light: "#F2EDE3",
           deep: "#E2DCCD",
         },
         ink: {
-          DEFAULT: "#15171F",
-          soft: "#1F2230",
-          muted: "#3C414F",
-          faint: "#6B7080",
+          // primary text — deep teal-charcoal, not harsh black
+          DEFAULT: "#001F20",
+          soft: "#0D2A2C",
+          muted: "#3A4F51",
+          faint: "#6E7E80",
         },
         river: {
-          DEFAULT: "#324669",
-          deep: "#243352",
-          soft: "#4D5E80",
-          wash: "#8FA0BC",
+          // accent — quiet mineral tone harmonized with ink
+          DEFAULT: "#2A5158",
+          deep: "#1D3E44",
+          soft: "#4A6C72",
+          wash: "#8AA3A8",
         },
       },
       fontFamily: {
