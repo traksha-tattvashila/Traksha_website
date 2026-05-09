@@ -27,7 +27,7 @@ const tiro = Tiro_Devanagari_Hindi({
 export const metadata: Metadata = {
   title: "Tattvashila — Awareness, integrated into life.",
   description:
-    "Tattvashila is a quiet ecosystem for grounded, conscious living. Awareness, responsibility and discipline — integrated into ordinary life.",
+    "Tattvashila is a quiet body of work for grounded, conscious living. Awareness, responsibility and discipline — integrated into ordinary life.",
   openGraph: {
     title: "Tattvashila",
     description: "Awareness, integrated into life.",

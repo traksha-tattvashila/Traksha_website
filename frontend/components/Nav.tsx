@@ -3,9 +3,9 @@
 import Wordmark from "./Wordmark";
 
 const NAV = [
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Journey", href: "#journey" },
+  { label: "Philosophy", href: "/#philosophy" },
+  { label: "The work", href: "/#ecosystem" },
+  { label: "Origin", href: "/about" },
 ];
 
 export default function Nav() {
@@ -28,7 +28,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#intake"
+            href="/#intake"
             data-testid="nav-intake-cta"
             className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-river transition-colors duration-500 ease-gentle"
           >
@@ -36,7 +36,7 @@ export default function Nav() {
           </a>
         </nav>
         <a
-          href="#intake"
+          href="/#intake"
           data-testid="nav-intake-cta-mobile"
           className="md:hidden inline-flex items-center px-3.5 py-1.5 bg-ink text-bone-light text-micro tracking-widest uppercase rounded-[2px]"
         >

@@ -5,30 +5,37 @@ import Reveal from "../Reveal";
 const CHAMBERS = [
   {
     name: "Tattvapeetha",
-    deva: "तत्त्वपीठ",
+    deva: "तत्त्वपीठा",
     essence:
       "A progressive ground for human development &mdash; the inner work that precedes everything else.",
     status: "Becoming available",
   },
   {
     name: "Traksha",
-    deva: "त्राक्ष",
+    deva: "त्रक्षा",
     essence:
-      "The core platform &mdash; quiet tools for daily awareness, integrated into the rhythms of ordinary life.",
+      "A quiet daily practice &mdash; small instruments for awareness, integrated into the rhythms of ordinary life.",
     status: "In preparation",
   },
   {
     name: "Vanatattva",
-    deva: "वनतत्त्व",
+    deva: "वनतत्त्वा",
     essence:
       "A considered space for men&rsquo;s wellness &mdash; physical, emotional, relational. Without bravado.",
     status: "On the horizon",
   },
   {
     name: "Shreetattva",
-    deva: "श्रीतत्त्व",
+    deva: "श्रीतत्त्वा",
     essence:
       "A considered space for women&rsquo;s wellness &mdash; embodied, honest, unadorned by trend.",
+    status: "On the horizon",
+  },
+  {
+    name: "Raksha",
+    deva: "रक्षा",
+    essence:
+      "Care for what is fragile &mdash; safety, dignity and quiet protection across the years of a life.",
     status: "On the horizon",
   },
 ];
@@ -45,7 +52,7 @@ export default function Ecosystem() {
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
-                III &nbsp;·&nbsp; The ecosystem
+                III &nbsp;·&nbsp; The work
               </p>
             </Reveal>
           </div>
@@ -53,14 +60,15 @@ export default function Ecosystem() {
           <div className="col-span-12 md:col-span-9">
             <Reveal delay={0.05}>
               <h2 className="font-display text-display font-normal text-ink leading-[1.15] max-w-prose-wide">
-                One foundation. Four spaces, each opening in its own time.
+                One foundation. Several dimensions, each opening in its own time.
               </h2>
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-5 text-body text-ink-soft max-w-reading">
-                Tattvashila is the parent &mdash; a philosophy and a place.
-                What follows are four distinct spaces within it. None of them
-                will be rushed.
+                Tattvashila is a long body of work, exploring distinct
+                dimensions of an ordinary life. A few of those dimensions are
+                named below. Others will arrive as they are ready &mdash; not
+                before.
               </p>
             </Reveal>
 
@@ -97,6 +105,12 @@ export default function Ecosystem() {
                 </Reveal>
               ))}
             </ul>
+
+            <Reveal delay={0.2}>
+              <p className="mt-10 text-small text-ink-faint max-w-reading">
+                Other dimensions are being thought through. The whole will reveal itself slowly.
+              </p>
+            </Reveal>
           </div>
         </div>
       </div>

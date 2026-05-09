@@ -755,6 +755,9 @@ video {
 .pointer-events-none {
   pointer-events: none;
 }
+.visible {
+  visibility: visible;
+}
 .fixed {
   position: fixed;
 }
@@ -957,6 +960,9 @@ video {
 }
 .gap-y-4 {
   row-gap: 1rem;
+}
+.gap-y-8 {
+  row-gap: 2rem;
 }
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1181,8 +1187,14 @@ video {
 .italic {
   font-style: italic;
 }
+.leading-\[1\.12\] {
+  line-height: 1.12;
+}
 .leading-\[1\.15\] {
   line-height: 1.15;
+}
+.leading-\[1\.18\] {
+  line-height: 1.18;
 }
 .leading-\[1\.1\] {
   line-height: 1.1;
@@ -1495,6 +1507,10 @@ img.broken {
     margin-top: 5rem;
   }
 
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:mt-9 {
     margin-top: 2.25rem;
   }
@@ -1589,6 +1605,10 @@ img.broken {
 
   .md\:pt-32 {
     padding-top: 8rem;
+  }
+
+  .md\:pt-36 {
+    padding-top: 9rem;
   }
 
   .md\:text-right {

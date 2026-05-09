@@ -7,15 +7,16 @@ const NAV_GROUPS = [
   {
     label: "The work",
     links: [
-      { label: "Philosophy", href: "#philosophy" },
-      { label: "Ecosystem", href: "#ecosystem" },
-      { label: "Journey", href: "#journey" },
+      { label: "Philosophy", href: "/#philosophy" },
+      { label: "The dimensions", href: "/#ecosystem" },
+      { label: "The journey", href: "/#journey" },
     ],
   },
   {
-    label: "Stay close",
+    label: "About",
     links: [
-      { label: "Reflective intake", href: "#intake" },
+      { label: "Origin", href: "/about" },
+      { label: "Reflective intake", href: "/#intake" },
       { label: "Quiet notes (soon)", href: "#" },
     ],
   },
@@ -42,7 +43,7 @@ export default function Closing() {
             <Reveal delay={0.1}>
               <p className="mt-5 text-small text-ink-muted max-w-reading">
                 <span className="font-deva text-[0.95rem] tracking-normal text-ink mr-2">तत्त्वशिला</span>
-                — the foundation stone. A long-form, slowly-built ecosystem for grounded, conscious living.
+                — the foundation stone. A long-form, slowly-built body of work for grounded, conscious living.
               </p>
             </Reveal>
           </div>
@@ -74,7 +75,7 @@ export default function Closing() {
             data-testid="footer-meta"
             className="text-micro tracking-widest uppercase text-ink-faint num-tab"
           >
-            © {year} &nbsp;·&nbsp; Tattvashila Ecosystem
+            © {year} &nbsp;·&nbsp; Tattvashila
           </p>
           <p className="text-micro tracking-widest uppercase text-ink-faint">
             <span className="font-deva text-[0.85rem] tracking-normal normal-case text-ink-muted">

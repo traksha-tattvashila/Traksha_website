@@ -26,7 +26,7 @@ export default function Threshold() {
               className="text-micro tracking-widest uppercase text-ink-muted mb-6 md:mb-8"
             >
               <span className="font-deva text-[0.95rem] tracking-normal normal-case mr-3 text-ink">तत्त्वशिला</span>
-              <span className="align-middle">— Tattvashila Ecosystem</span>
+              <span className="align-middle">— a quiet body of work</span>
             </motion.p>
 
             <motion.h1
