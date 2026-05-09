@@ -55,13 +55,19 @@ Build the foundation of the official Tattvashila website (`tattvashila.org`) —
 
 **Why:** the button reads as a natural extension of the page (thoughtful invitation), not as a separate marketing object (conversion optimization). Inversion keeps emotional continuity; the warm ivory text on deep mineral teal preserves "calm premium depth" instead of stark black-on-white contrast.
 
-**Applied across all 5 CTA instances:**
-- `Nav` — Stay in touch (desktop + mobile)
-- `Intake` — Send quietly
-- `/about` — Write to us, quietly
-- `/philosophy` — Read the origin
+**Applied across all 5 CTA instances:** Nav (desktop + mobile), Intake submit, /about CTA, /philosophy CTA. **All future pages and components must inherit these tokens.**
 
-**All future pages and components must inherit these tokens — no new CTA color decisions per page.**
+### v3.5 — Quiet Notes archive built (LOW-CREDIT, single pass)
+- ✅ `/notes` archive index — "Rare reflections, written when there is something honest worth saying."
+- ✅ `/notes/[slug]` dynamic note page (Next.js `generateStaticParams`)
+- ✅ Single source of truth: `/app/frontend/lib/notes.ts` (note metadata + body paragraphs)
+- ✅ **One note, intentionally** — *"On being tired in a way sleep doesn't fix."* (~5 min read, signed: Vikramaditya Mitra)
+- ✅ Topic: the modern condition of stimulation-without-pause; observational tone, no spiritual terminology
+- ✅ Inherits v3.1 palette + v3.4 CTA system automatically
+- ✅ Archive intentionally short with closing line: "Future notes will appear here as they are written. If you would like them sent to you when they are ready, leave us a quiet line."
+- ✅ Note signing format: simple "— Vikramaditya Mitra" — no titles, no bio, no portrait
+
+**Future notes:** add a new entry to `NOTES` array in `/app/frontend/lib/notes.ts`. Archive and routing pick it up automatically. No page-by-page work needed.
 
 ## What's Implemented
 - **Pages:** `/` homepage (7 sections), `/about` Origin (5 sections + footer)
