@@ -25,15 +25,52 @@ const tiro = Tiro_Devanagari_Hindi({
 });
 
 export const metadata: Metadata = {
-  title: "Tattvashila — Awareness, integrated into life.",
+  metadataBase: new URL("https://tattvashila.org"),
+  title: {
+    default: "Tattvashila — Awareness, integrated into life.",
+    template: "%s — Tattvashila",
+  },
   description:
     "Tattvashila is a quiet body of work for grounded, conscious living. Awareness, responsibility and discipline — integrated into ordinary life.",
-  openGraph: {
-    title: "Tattvashila",
-    description: "Awareness, integrated into life.",
-    type: "website",
+  applicationName: "Tattvashila",
+  authors: [{ name: "Tattvashila" }],
+  keywords: [
+    "Tattvashila",
+    "awareness",
+    "conscious living",
+    "philosophy",
+    "Bharatiya",
+    "responsibility",
+    "discipline",
+  ],
+  alternates: {
+    canonical: "/",
   },
-  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    siteName: "Tattvashila",
+    title: "Tattvashila — Awareness, integrated into life.",
+    description:
+      "A quieter way to live with awareness — without leaving the world you've built.",
+    url: "/",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tattvashila — Awareness, integrated into life.",
+    description:
+      "A quieter way to live with awareness — without leaving the world you've built.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

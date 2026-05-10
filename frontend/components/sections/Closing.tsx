@@ -31,7 +31,7 @@ interface SocialItem {
 const SOCIAL: SocialItem[] = [
   {
     label: "Instagram",
-    href: "https://instagram.com/",
+    href: "https://instagram.com/tattvashila",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -41,34 +41,12 @@ const SOCIAL: SocialItem[] = [
     ),
   },
   {
-    label: "X",
-    href: "https://x.com/",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M4 4l16 16" />
-        <path d="M20 4L4 20" />
-      </svg>
-    ),
-  },
-  {
     label: "YouTube",
-    href: "https://youtube.com/",
+    href: "https://youtube.com/@tattvashila",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2.5" y="6" width="19" height="12" rx="3" />
         <path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="3" width="18" height="18" rx="2.5" />
-        <path d="M7.5 10v7" />
-        <circle cx="7.5" cy="7" r="0.7" fill="currentColor" stroke="none" />
-        <path d="M11.5 17v-4.2c0-1.5 1-2.3 2.2-2.3s2.3 0.8 2.3 2.5V17" />
       </svg>
     ),
   },
