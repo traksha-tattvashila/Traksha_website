@@ -34,13 +34,13 @@ module.exports = {
         deva: ["var(--font-tiro)", "serif"],
       },
       fontSize: {
-        // restrained scale — six sizes only
+        // restrained scale — six sizes, recalibrated for quieter authority
         "micro": ["0.75rem", { lineHeight: "1.5", letterSpacing: "0.08em" }],
         "small": ["0.9375rem", { lineHeight: "1.55" }],
         "body": ["1.0625rem", { lineHeight: "1.65" }],
-        "lead": ["1.1875rem", { lineHeight: "1.55" }],
-        "display": ["clamp(1.875rem, 3.6vw, 2.625rem)", { lineHeight: "1.18", letterSpacing: "-0.012em" }],
-        "hero": ["clamp(2.25rem, 5.2vw, 4rem)", { lineHeight: "1.1", letterSpacing: "-0.018em" }],
+        "lead": ["1.15rem", { lineHeight: "1.55" }],
+        "display": ["clamp(1.625rem, 3.1vw, 2.25rem)", { lineHeight: "1.2", letterSpacing: "-0.012em" }],
+        "hero": ["clamp(1.875rem, 4.4vw, 3.25rem)", { lineHeight: "1.12", letterSpacing: "-0.018em" }],
       },
       letterSpacing: {
         wider: "0.08em",

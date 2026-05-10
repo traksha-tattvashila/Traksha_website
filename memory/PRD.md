@@ -67,7 +67,16 @@ Build the foundation of the official Tattvashila website (`tattvashila.org`) —
 - ✅ Archive intentionally short with closing line: "Future notes will appear here as they are written. If you would like them sent to you when they are ready, leave us a quiet line."
 - ✅ Note signing format: simple "— Vikramaditya Mitra" — no titles, no bio, no portrait
 
-**Future notes:** add a new entry to `NOTES` array in `/app/frontend/lib/notes.ts`. Archive and routing pick it up automatically. No page-by-page work needed.
+**Future notes:** add a new entry to `NOTES` array in `/app/frontend/lib/notes.ts`. Archive and routing pick it up automatically.
+
+### v3.6 — Homepage refinement & calibration (LOW-CREDIT, craft pass)
+- ✅ **Type scale reduced ~14%:** `display` `clamp(1.625rem→2.25rem)` (was `1.875→2.625rem`), `hero` `clamp(1.875rem→3.25rem)` (was `2.25rem→4rem`); `lead` 1.15rem (was 1.1875rem); line-height tightened
+- ✅ **Section padding tightened:** all homepage sections `py-14 md:py-20` (was `py-20 md:py-28`) — better rhythm, less scrolling fatigue
+- ✅ **Hero compressed:** `pt-24 md:pt-28 pb-12 md:pb-20` (was `pt-28 md:pt-32 pb-16 md:pb-24`); inline hero clamp reduced to match new scale
+- ✅ **Hero image:** `aspect-[4/5] md:aspect-[4/5]` (was `md:aspect-[3/4]`) — less vertical dominance on desktop
+- ✅ **Footer recalibrated:** wordmark size `default` (was `large`); quote `text-lg md:text-xl` (was `text-xl md:text-2xl`); paddings tightened (`pt-14 md:pt-20 pb-9 md:pb-11`); link spacing `space-y-2.5` (was `space-y-3`); link text `text-small` (was `text-body`)
+- ✅ **Quiet Notes link activated:** footer "Quiet notes (soon)" → "Quiet Notes" → `/notes`
+- ✅ Result: "calm authority, not scale dominance" — typography no longer performs importance, footer no longer feels like a second landing page
 
 ## What's Implemented
 - **Pages:** `/` homepage (7 sections), `/about` Origin (5 sections + footer)

@@ -45,7 +45,7 @@ export default function Ecosystem() {
     <section
       id="ecosystem"
       data-testid="section-ecosystem"
-      className="relative py-20 md:py-28 border-t border-ink/10"
+      className="relative py-14 md:py-20 border-t border-ink/10"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">

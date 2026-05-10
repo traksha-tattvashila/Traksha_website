@@ -12,7 +12,7 @@ export default function Threshold() {
   return (
     <section
       data-testid="section-threshold"
-      className="relative pt-28 md:pt-32 pb-16 md:pb-24"
+      className="relative pt-24 md:pt-28 pb-12 md:pb-20"
     >
       <div className="max-w-[1400px] w-full mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-12 gap-y-12 md:gap-x-12 items-center">
@@ -34,8 +34,8 @@ export default function Threshold() {
               initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
-              className="font-display font-normal text-ink leading-[1.1] tracking-tight"
-              style={{ fontSize: "clamp(2.25rem, 5.2vw, 4rem)" }}
+              className="font-display font-normal text-ink leading-[1.12] tracking-tight"
+              style={{ fontSize: "clamp(1.875rem, 4.4vw, 3.25rem)" }}
             >
               A quieter way to live with awareness &mdash; without leaving the world you&rsquo;ve built.
             </motion.h1>
@@ -88,7 +88,7 @@ export default function Threshold() {
               src={HERO_IMG}
               alt="Soft morning light falling on a quiet, lived-in room"
               testId="threshold-image"
-              aspectClass="aspect-[4/5] md:aspect-[3/4]"
+              aspectClass="aspect-[4/5] md:aspect-[4/5]"
               fallbackTone="warm"
               className="rounded-[2px]"
             />

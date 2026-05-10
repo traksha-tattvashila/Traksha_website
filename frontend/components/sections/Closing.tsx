@@ -17,7 +17,7 @@ const NAV_GROUPS = [
     links: [
       { label: "Origin", href: "/about" },
       { label: "Reflective intake", href: "/#intake" },
-      { label: "Quiet notes (soon)", href: "#" },
+      { label: "Quiet Notes", href: "/notes" },
     ],
   },
 ];
@@ -27,21 +27,21 @@ export default function Closing() {
   return (
     <footer
       data-testid="section-closing"
-      className="relative pt-20 md:pt-28 pb-12 md:pb-16 border-t border-ink/15 bg-bone-deep/40"
+      className="relative pt-14 md:pt-20 pb-9 md:pb-11 border-t border-ink/15 bg-bone-deep/40"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-12 md:gap-x-12">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12">
           <div className="col-span-12 md:col-span-6">
             <Reveal>
-              <Wordmark size="large" testId="footer-wordmark" />
+              <Wordmark size="default" testId="footer-wordmark" />
             </Reveal>
             <Reveal delay={0.05}>
-              <p className="mt-6 font-display text-xl md:text-2xl text-ink-soft leading-snug max-w-prose-wide">
+              <p className="mt-4 font-display text-lg md:text-xl text-ink-soft leading-snug max-w-prose-wide">
                 A foundation is laid quietly, long before anything is built upon it.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-5 text-small text-ink-muted max-w-reading">
+              <p className="mt-4 text-small text-ink-muted max-w-reading">
                 <span className="font-deva text-[0.95rem] tracking-normal text-ink mr-2">तत्त्वशिला</span>
                 — the foundation stone. A long-form, slowly-built body of work for grounded, conscious living.
               </p>
@@ -50,16 +50,16 @@ export default function Closing() {
 
           {NAV_GROUPS.map((g, gi) => (
             <Reveal key={g.label} delay={0.1 + gi * 0.04} className="col-span-6 md:col-span-3">
-              <p className="text-micro tracking-widest uppercase text-ink-faint mb-5">
+              <p className="text-micro tracking-widest uppercase text-ink-faint mb-4">
                 {g.label}
               </p>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {g.links.map((l) => (
                   <li key={l.label}>
                     <a
                       href={l.href}
                       data-testid={`footer-link-${l.label.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "")}`}
-                      className="text-body text-ink-soft hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                      className="text-small text-ink-soft hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
                     >
                       {l.label}
                     </a>
@@ -70,7 +70,7 @@ export default function Closing() {
           ))}
         </div>
 
-        <div className="mt-16 md:mt-20 pt-6 border-t border-ink/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="mt-10 md:mt-14 pt-5 border-t border-ink/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <p
             data-testid="footer-meta"
             className="text-micro tracking-widest uppercase text-ink-faint num-tab"
