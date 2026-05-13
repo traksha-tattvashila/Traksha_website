@@ -1,3 +1,3 @@
 # Tattvashila Website
 
-Official website for the Tattvashila Ecosystem.
+Official website for the Tattvashila.
