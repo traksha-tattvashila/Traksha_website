@@ -84,6 +84,16 @@ export default function Journey() {
                     </Reveal>
                   ))}
                 </ol>
+
+                <Reveal delay={0.3}>
+                  <p className="mt-10 text-small text-ink-muted max-w-reading">
+                    Read about the work as it is being done in the{" "}
+                    <a href="/notes" data-testid="homepage-notes-link" className="text-ink hover:text-river quiet-link transition-colors">
+                      Quiet Notes
+                    </a>
+                    .
+                  </p>
+                </Reveal>
               </div>
 
               <Reveal delay={0.2} className="col-span-12 lg:col-span-5 lg:pt-2">

@@ -3,8 +3,9 @@
 import Wordmark from "./Wordmark";
 
 const NAV = [
-  { label: "Philosophy", href: "/#philosophy" },
+  { label: "Philosophy", href: "/philosophy" },
   { label: "The work", href: "/#ecosystem" },
+  { label: "Notes", href: "/notes" },
   { label: "Origin", href: "/about" },
 ];
 

@@ -83,6 +83,16 @@ export default function Philosophy() {
                 </Reveal>
               ))}
             </ol>
+
+            <Reveal delay={0.25}>
+              <p className="mt-10 text-small text-ink-muted max-w-reading">
+                These ideas are explored more fully in the full{" "}
+                <a href="/philosophy" data-testid="homepage-philosophy-link" className="text-ink hover:text-river quiet-link transition-colors">
+                  Philosophy
+                </a>
+                .
+              </p>
+            </Reveal>
           </div>
         </div>
       </div>

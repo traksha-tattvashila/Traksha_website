@@ -7,7 +7,7 @@ const NAV_GROUPS = [
   {
     label: "The work",
     links: [
-      { label: "Philosophy", href: "/#philosophy" },
+      { label: "Philosophy", href: "/philosophy" },
       { label: "The dimensions", href: "/#ecosystem" },
       { label: "The journey", href: "/#journey" },
     ],

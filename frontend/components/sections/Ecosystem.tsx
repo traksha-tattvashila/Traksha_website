@@ -14,8 +14,8 @@ const CHAMBERS = [
     name: "Traksha",
     deva: "त्रक्षा",
     essence:
-      "A quiet daily practice &mdash; small instruments for awareness, integrated into the rhythms of ordinary life.",
-    status: "In preparation",
+      "The current digital practice &mdash; a quiet, slowly-built environment for reflective learning, continuity, and structured personal development.",
+    status: "In active development",
   },
   {
     name: "Vanatattva",
@@ -108,7 +108,7 @@ export default function Ecosystem() {
 
             <Reveal delay={0.2}>
               <p className="mt-10 text-small text-ink-faint max-w-reading">
-                Other dimensions are being thought through. The whole will reveal itself slowly.
+                Currently &mdash; <a href="/notes" className="text-ink-muted hover:text-ink quiet-link transition-colors">Quiet Notes</a> and the early Traksha system are being built. The other dimensions will unfold carefully, in their own time.
               </p>
             </Reveal>
           </div>
