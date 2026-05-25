@@ -1,0 +1,16 @@
+# env
+.env
+*.env
+
+# next
+.next/
+
+# node
+node_modules/
+
+# python
+__pycache__/
+*.pyc
+
+# cache
+.cache/
