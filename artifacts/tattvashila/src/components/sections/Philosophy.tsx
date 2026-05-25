@@ -1,4 +1,6 @@
+import { Link } from "wouter";
 import Reveal from "../Reveal";
+import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
 
 const PRINCIPLES = [
   {
@@ -25,13 +27,9 @@ const PRINCIPLES = [
 
 export default function Philosophy() {
   return (
-    <section
-      id="philosophy"
-      data-testid="section-philosophy"
-      className="relative py-14 md:py-20 border-t border-ink/10"
-    >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+    <SectionShell id="philosophy" testId="section-philosophy">
+      <SiteContainer>
+        <SectionGrid>
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -81,15 +79,15 @@ export default function Philosophy() {
             <Reveal delay={0.25}>
               <p className="mt-10 text-small text-ink-muted max-w-reading">
                 These ideas are explored more fully in the full{" "}
-                <a href="/philosophy" data-testid="homepage-philosophy-link" className="text-ink hover:text-river quiet-link transition-colors">
+                <Link href="/philosophy" data-testid="homepage-philosophy-link" className="text-ink hover:text-river quiet-link transition-colors">
                   Philosophy
-                </a>
+                </Link>
                 .
               </p>
             </Reveal>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionGrid>
+      </SiteContainer>
+    </SectionShell>
   );
 }

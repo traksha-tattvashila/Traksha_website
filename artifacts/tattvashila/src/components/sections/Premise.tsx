@@ -1,18 +1,15 @@
 import Reveal from "../Reveal";
 import QuietImage from "../QuietImage";
+import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
 
 const PREMISE_IMG =
   "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?auto=format&fit=crop&w=1400&q=80";
 
 export default function Premise() {
   return (
-    <section
-      id="premise"
-      data-testid="section-premise"
-      className="relative py-14 md:py-20 border-t border-ink/10"
-    >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+    <SectionShell id="premise" testId="section-premise">
+      <SiteContainer>
+        <SectionGrid>
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -68,8 +65,8 @@ export default function Premise() {
               </Reveal>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionGrid>
+      </SiteContainer>
+    </SectionShell>
   );
 }

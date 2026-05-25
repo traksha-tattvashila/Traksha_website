@@ -1,21 +1,23 @@
+import { Link } from "wouter";
 import Reveal from "../Reveal";
 import Wordmark from "../Wordmark";
+import { SiteContainer } from "../../layouts";
 
 const NAV_GROUPS = [
   {
     label: "The work",
     links: [
-      { label: "Philosophy", href: "/philosophy" },
-      { label: "The dimensions", href: "/#ecosystem" },
-      { label: "The journey", href: "/#journey" },
+      { label: "Philosophy", href: "/philosophy", isRoute: true },
+      { label: "The dimensions", href: "/#ecosystem", isRoute: false },
+      { label: "The journey", href: "/#journey", isRoute: false },
     ],
   },
   {
     label: "About",
     links: [
-      { label: "Origin", href: "/about" },
-      { label: "Reflective intake", href: "/#intake" },
-      { label: "Quiet Notes", href: "/notes" },
+      { label: "Origin", href: "/about", isRoute: true },
+      { label: "Reflective intake", href: "/#intake", isRoute: false },
+      { label: "Quiet Notes", href: "/notes", isRoute: true },
     ],
   },
 ];
@@ -57,7 +59,7 @@ export default function Closing() {
       data-testid="section-closing"
       className="relative pt-12 md:pt-16 pb-7 md:pb-9 border-t border-ink/15 bg-bone-deep/40"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
+      <SiteContainer>
         <div className="grid grid-cols-12 gap-y-8 md:gap-x-12">
           <div className="col-span-12 md:col-span-6">
             <Reveal>
@@ -84,13 +86,23 @@ export default function Closing() {
               <ul className="space-y-2">
                 {g.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      data-testid={`footer-link-${l.label.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "")}`}
-                      className="text-small text-ink-soft hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
-                    >
-                      {l.label}
-                    </a>
+                    {l.isRoute ? (
+                      <Link
+                        href={l.href}
+                        data-testid={`footer-link-${l.label.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "")}`}
+                        className="text-small text-ink-soft hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                      >
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={l.href}
+                        data-testid={`footer-link-${l.label.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "")}`}
+                        className="text-small text-ink-soft hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -130,7 +142,7 @@ export default function Closing() {
             Grounded in Dharma. Carried with integrity.
           </p>
         </div>
-      </div>
+      </SiteContainer>
     </footer>
   );
 }

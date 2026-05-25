@@ -1,7 +1,6 @@
 import { Link, useParams } from "wouter";
-import Nav from "../components/Nav";
 import Reveal from "../components/Reveal";
-import Closing from "../components/sections/Closing";
+import { PageLayout, SiteContainer, SectionGrid } from "../layouts";
 import { getNote, formatNoteDate } from "../lib/notes";
 
 export default function NotePage() {
@@ -10,28 +9,27 @@ export default function NotePage() {
 
   if (!note) {
     return (
-      <main className="relative min-h-screen bg-bone text-ink">
-        <Nav />
-        <div className="pt-40 pb-20 max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <p className="text-lead text-ink-soft">Note not found.</p>
-          <Link href="/notes" className="mt-6 inline-block text-small text-ink-muted hover:text-ink quiet-link">
-            Back to Quiet Notes
-          </Link>
+      <PageLayout testId="note-not-found">
+        <div className="pt-40 pb-20">
+          <SiteContainer>
+            <p className="text-lead text-ink-soft">Note not found.</p>
+            <Link href="/notes" className="mt-6 inline-block text-small text-ink-muted hover:text-ink quiet-link">
+              Back to Quiet Notes
+            </Link>
+          </SiteContainer>
         </div>
-      </main>
+      </PageLayout>
     );
   }
 
   return (
-    <main data-testid="note-page" className="relative min-h-screen bg-bone text-ink">
-      <Nav />
-
+    <PageLayout testId="note-page">
       <article
         data-testid={`note-${note.slug}`}
         className="relative pt-28 md:pt-36 pb-16 md:pb-20"
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-12">
+        <SiteContainer>
+          <SectionGrid gapY="gap-y-8">
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <Link
@@ -63,8 +61,7 @@ export default function NotePage() {
               <Reveal delay={0.1}>
                 <h1
                   data-testid="note-title"
-                  className="mt-5 md:mt-6 font-display font-normal text-ink leading-[1.12] tracking-tight"
-                  style={{ fontSize: "clamp(1.85rem, 4vw, 2.85rem)" }}
+                  className="mt-5 md:mt-6 font-display text-display-xl font-normal text-ink leading-[1.12] tracking-tight"
                 >
                   {note.title}
                 </h1>
@@ -109,11 +106,9 @@ export default function NotePage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
+          </SectionGrid>
+        </SiteContainer>
       </article>
-
-      <Closing />
-    </main>
+    </PageLayout>
   );
 }

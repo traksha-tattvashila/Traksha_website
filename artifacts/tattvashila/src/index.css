@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bone: #ECE7DC;
+  --bone:       #ECE7DC;
   --bone-light: #F3EEE5;
-  --ink: #001F20;
-  --ink-soft: #0D2A2C;
-  --ink-muted: #3A4F51;
-  --ink-faint: #6E7E80;
-  --river: #2A5158;
+  --ink:        #001F20;
+  --ink-soft:   #0D2A2C;
+  --ink-muted:  #3A4F51;
+  --ink-faint:  #6E7E80;
+  --river:      #2A5158;
   --river-soft: #4A6C72;
-  --rule: rgba(0, 31, 32, 0.14);
 }
 
 * {
@@ -39,8 +38,16 @@ input, textarea {
   caret-color: var(--river);
 }
 
-input:focus, textarea:focus, button:focus-visible, a:focus-visible {
+input:focus,
+textarea:focus {
   outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .quiet-link {

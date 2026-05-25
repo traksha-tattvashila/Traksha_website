@@ -1,6 +1,5 @@
-import Nav from "../components/Nav";
 import Reveal from "../components/Reveal";
-import Closing from "../components/sections/Closing";
+import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
 
 interface IdeaSection {
   numeral: string;
@@ -74,15 +73,14 @@ const SECTIONS: IdeaSection[] = [
 
 export default function PhilosophyPage() {
   return (
-    <main data-testid="philosophy-page" className="relative min-h-screen bg-bone text-ink">
-      <Nav />
+    <PageLayout testId="philosophy-page">
 
       <section
         data-testid="philosophy-hero"
         className="relative pt-28 md:pt-36 pb-12 md:pb-16"
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-12">
+        <SiteContainer>
+          <SectionGrid gapY="gap-y-8">
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -94,8 +92,7 @@ export default function PhilosophyPage() {
               <Reveal delay={0.05}>
                 <h1
                   data-testid="philosophy-headline"
-                  className="font-display font-normal text-ink leading-[1.12] tracking-tight"
-                  style={{ fontSize: "clamp(2rem, 4.4vw, 3.25rem)" }}
+                  className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
                 >
                   Awareness, integrated into ordinary life.
                 </h1>
@@ -110,18 +107,18 @@ export default function PhilosophyPage() {
                 </p>
               </Reveal>
             </div>
-          </div>
-        </div>
+          </SectionGrid>
+        </SiteContainer>
       </section>
 
       {SECTIONS.map((s) => (
-        <section
+        <SectionShell
           key={s.numeral}
-          data-testid={`philosophy-section-${s.numeral.toLowerCase()}`}
-          className="relative py-16 md:py-24 border-t border-ink/10"
+          testId={`philosophy-section-${s.numeral.toLowerCase()}`}
+          size="md"
         >
-          <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-            <div className="grid grid-cols-12 gap-y-8 md:gap-x-12 items-start">
+          <SiteContainer>
+            <SectionGrid gapY="gap-y-8">
               <div className="col-span-12 md:col-span-3">
                 <Reveal>
                   <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -131,8 +128,7 @@ export default function PhilosophyPage() {
               </div>
               <div className="col-span-12 md:col-span-9 max-w-prose-wide">
                 <Reveal delay={0.05}>
-                  <h2 className="font-display font-normal text-ink leading-[1.18]"
-                      style={{ fontSize: "clamp(1.5rem, 2.6vw, 2rem)" }}>
+                  <h2 className="font-display text-subhead font-normal text-ink leading-[1.18]">
                     {s.title}
                   </h2>
                 </Reveal>
@@ -149,17 +145,14 @@ export default function PhilosophyPage() {
                   </div>
                 </Reveal>
               </div>
-            </div>
-          </div>
-        </section>
+            </SectionGrid>
+          </SiteContainer>
+        </SectionShell>
       ))}
 
-      <section
-        data-testid="philosophy-closing"
-        className="relative py-20 md:py-28 border-t border-ink/10 bg-bone-light"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="philosophy-closing" size="lg" bg="bg-bone-light">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -169,8 +162,7 @@ export default function PhilosophyPage() {
             </div>
             <div className="col-span-12 md:col-span-9 max-w-prose-wide">
               <Reveal delay={0.05}>
-                <p className="font-display text-ink leading-[1.25]"
-                   style={{ fontSize: "clamp(1.4rem, 2.4vw, 1.85rem)" }}>
+                <p className="font-display text-title text-ink leading-[1.25]">
                   Awareness, responsibility, discipline, conscious participation
                   &mdash; carried into the same ordinary life you are already
                   living. Nothing more, nothing less.
@@ -197,11 +189,10 @@ export default function PhilosophyPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <Closing />
-    </main>
+    </PageLayout>
   );
 }

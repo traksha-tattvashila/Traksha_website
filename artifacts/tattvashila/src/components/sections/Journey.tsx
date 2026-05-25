@@ -1,4 +1,5 @@
 import Reveal from "../Reveal";
+import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
 
 const STEPS = [
   {
@@ -25,13 +26,9 @@ const STEPS = [
 
 export default function Journey() {
   return (
-    <section
-      id="journey"
-      data-testid="section-journey"
-      className="relative py-14 md:py-20 border-t border-ink/10 bg-bone-light"
-    >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+    <SectionShell id="journey" testId="section-journey" bg="bg-bone-light">
+      <SiteContainer>
+        <SectionGrid>
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -78,8 +75,8 @@ export default function Journey() {
               ))}
             </ol>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionGrid>
+      </SiteContainer>
+    </SectionShell>
   );
 }

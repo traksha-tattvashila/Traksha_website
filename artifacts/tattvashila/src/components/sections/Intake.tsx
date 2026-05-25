@@ -1,6 +1,8 @@
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "../Reveal";
+import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
+import { EASE_GENTLE_ARRAY } from "../../tokens/motion";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
 
@@ -33,20 +35,17 @@ export default function Intake() {
         throw new Error(msg);
       }
       setState("done");
-    } catch (err: any) {
-      setError(err.message || "Something didn't go through.");
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Something didn't go through.";
+      setError(message);
       setState("error");
     }
   }
 
   return (
-    <section
-      id="intake"
-      data-testid="section-intake"
-      className="relative py-14 md:py-20 border-t border-ink/10 bg-bone-light"
-    >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+    <SectionShell id="intake" testId="section-intake" bg="bg-bone-light">
+      <SiteContainer>
+        <SectionGrid>
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -153,7 +152,7 @@ export default function Intake() {
                   key="done"
                   data-testid="intake-success"
                   initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 0.61, 0.36, 1] } }}
+                  animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: EASE_GENTLE_ARRAY } }}
                   className="mt-12 md:mt-14 max-w-reading"
                 >
                   <p className="font-display text-2xl md:text-3xl font-normal text-ink leading-snug">
@@ -168,8 +167,8 @@ export default function Intake() {
               )}
             </AnimatePresence>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionGrid>
+      </SiteContainer>
+    </SectionShell>
   );
 }

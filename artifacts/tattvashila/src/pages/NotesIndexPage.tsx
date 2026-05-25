@@ -1,20 +1,18 @@
 import { Link } from "wouter";
-import Nav from "../components/Nav";
 import Reveal from "../components/Reveal";
-import Closing from "../components/sections/Closing";
+import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
 import { NOTES_SORTED, formatNoteDate } from "../lib/notes";
 
 export default function NotesIndexPage() {
   return (
-    <main data-testid="notes-page" className="relative min-h-screen bg-bone text-ink">
-      <Nav />
+    <PageLayout testId="notes-page">
 
       <section
         data-testid="notes-hero"
         className="relative pt-28 md:pt-36 pb-12 md:pb-16"
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-12">
+        <SiteContainer>
+          <SectionGrid gapY="gap-y-8">
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -26,8 +24,7 @@ export default function NotesIndexPage() {
               <Reveal delay={0.05}>
                 <h1
                   data-testid="notes-headline"
-                  className="font-display font-normal text-ink leading-[1.12] tracking-tight"
-                  style={{ fontSize: "clamp(2rem, 4.4vw, 3.25rem)" }}
+                  className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
                 >
                   Rare reflections, written when there is something honest worth saying.
                 </h1>
@@ -40,16 +37,13 @@ export default function NotesIndexPage() {
                 </p>
               </Reveal>
             </div>
-          </div>
-        </div>
+          </SectionGrid>
+        </SiteContainer>
       </section>
 
-      <section
-        data-testid="notes-index"
-        className="relative py-12 md:py-16 border-t border-ink/10"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="notes-index" size="sm">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -78,8 +72,7 @@ export default function NotesIndexPage() {
                           · {n.reading} read
                         </span>
                       </div>
-                      <h2 className="mt-3 font-display font-normal text-ink leading-[1.18] group-hover:text-river transition-colors duration-500 ease-gentle"
-                          style={{ fontSize: "clamp(1.4rem, 2.4vw, 1.85rem)" }}>
+                      <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river transition-colors duration-500 ease-gentle">
                         {n.title}
                       </h2>
                       <p className="mt-3 text-body text-ink-soft">
@@ -105,11 +98,10 @@ export default function NotesIndexPage() {
                 </p>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <Closing />
-    </main>
+    </PageLayout>
   );
 }

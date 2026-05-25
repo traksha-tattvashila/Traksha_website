@@ -1,18 +1,16 @@
-import Nav from "../components/Nav";
 import Reveal from "../components/Reveal";
-import Closing from "../components/sections/Closing";
+import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
 
 export default function AboutPage() {
   return (
-    <main data-testid="about-page" className="relative min-h-screen bg-bone text-ink">
-      <Nav />
+    <PageLayout testId="about-page">
 
       <section
         data-testid="about-hero"
         className="relative pt-28 md:pt-36 pb-12 md:pb-16"
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-8 md:gap-x-12">
+        <SiteContainer>
+          <SectionGrid gapY="gap-y-8">
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -24,8 +22,7 @@ export default function AboutPage() {
               <Reveal delay={0.05}>
                 <h1
                   data-testid="about-headline"
-                  className="font-display font-normal text-ink leading-[1.12] tracking-tight"
-                  style={{ fontSize: "clamp(2rem, 4.4vw, 3.25rem)" }}
+                  className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
                 >
                   This did not begin as an idea. It began as a series of quiet observations.
                 </h1>
@@ -38,16 +35,13 @@ export default function AboutPage() {
                 </p>
               </Reveal>
             </div>
-          </div>
-        </div>
+          </SectionGrid>
+        </SiteContainer>
       </section>
 
-      <section
-        data-testid="about-observation"
-        className="relative py-20 md:py-28 border-t border-ink/10"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="about-observation" size="lg">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -81,16 +75,13 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <section
-        data-testid="about-why"
-        className="relative py-20 md:py-28 border-t border-ink/10"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="about-why" size="lg">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -124,16 +115,13 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <section
-        data-testid="about-makers"
-        className="relative py-20 md:py-28 border-t border-ink/10"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="about-makers" size="lg">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -171,16 +159,13 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <section
-        data-testid="about-accountability"
-        className="relative py-20 md:py-28 border-t border-ink/10 bg-bone-light"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-x-12 items-start">
+      <SectionShell testId="about-accountability" size="lg" bg="bg-bone-light">
+        <SiteContainer>
+          <SectionGrid>
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
@@ -230,11 +215,10 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             </div>
-          </div>
-        </div>
-      </section>
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
 
-      <Closing />
-    </main>
+    </PageLayout>
   );
 }
