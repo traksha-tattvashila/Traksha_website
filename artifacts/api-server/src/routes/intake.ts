@@ -1,35 +1,36 @@
 import { Router } from "express";
+import { db, intakeSubmissionsTable, insertIntakeSchema } from "@workspace/db";
+import { count } from "drizzle-orm";
 
 const router = Router();
 
-const submissions: Array<{ id: string; reflection: string; email: string; receivedAt: string }> = [];
+router.post("/intake", async (req, res) => {
+  const parsed = insertIntakeSchema.safeParse({
+    reflection: req.body?.reflection,
+    email: req.body?.email,
+  });
 
-router.post("/intake", (req, res) => {
-  const { reflection, email } = req.body as { reflection?: string; email?: string };
-
-  if (!reflection || typeof reflection !== "string" || reflection.trim().length === 0) {
-    res.status(422).json({ detail: "reflection is required" });
-    return;
-  }
-  if (!email || typeof email !== "string" || !email.includes("@")) {
-    res.status(422).json({ detail: "a valid email is required" });
-    return;
-  }
-  if (reflection.trim().length > 600) {
-    res.status(422).json({ detail: "reflection must be 600 characters or fewer" });
+  if (!parsed.success) {
+    const firstIssue = parsed.error.issues[0];
+    const field = firstIssue?.path?.[0] ?? "field";
+    const msg = firstIssue?.message ?? "Invalid input";
+    res.status(422).json({ detail: `${field}: ${msg}` });
     return;
   }
 
-  const record = {
-    id: crypto.randomUUID(),
-    reflection: reflection.trim(),
-    email: email.trim().toLowerCase(),
-    receivedAt: new Date().toISOString(),
-  };
+  const { reflection, email } = parsed.data;
 
-  submissions.push(record);
+  const [record] = await db
+    .insert(intakeSubmissionsTable)
+    .values({ reflection: reflection.trim(), email: email.trim().toLowerCase() })
+    .returning({ id: intakeSubmissionsTable.id, receivedAt: intakeSubmissionsTable.receivedAt });
 
   res.status(201).json({ id: record.id, received_at: record.receivedAt });
+});
+
+router.get("/intake/count", async (_req, res) => {
+  const [row] = await db.select({ count: count() }).from(intakeSubmissionsTable);
+  res.json({ count: Number(row?.count ?? 0) });
 });
 
 export default router;
