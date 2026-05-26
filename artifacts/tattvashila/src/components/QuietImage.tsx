@@ -10,9 +10,9 @@ interface QuietImageProps {
 }
 
 const TONES: Record<string, string> = {
-  warm: "linear-gradient(135deg, #DCD2BC 0%, #C8B898 60%, #A89878 100%)",
-  river: "linear-gradient(135deg, #4D5E80 0%, #324669 70%, #243352 100%)",
-  stone: "linear-gradient(135deg, #C8C2B3 0%, #A89F8A 100%)",
+  warm:  "linear-gradient(150deg, #DCD2BC 0%, #C8B898 55%, #A89878 100%)",
+  river: "linear-gradient(150deg, #4D5E80 0%, #324669 70%, #243352 100%)",
+  stone: "linear-gradient(150deg, #C8C2B3 0%, #A89F8A 100%)",
 };
 
 export default function QuietImage({
@@ -56,12 +56,13 @@ export default function QuietImage({
           decoding="async"
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
-          className={`absolute inset-0 w-full h-full object-cover img-warm transition-opacity duration-700 ease-out ${
+          className={`absolute inset-0 w-full h-full object-cover img-warm transition-opacity duration-[1200ms] ease-gentle ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         />
       )}
-      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/5" />
+      {/* Inset frame — subtle, editorial */}
+      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-ink/8" />
     </div>
   );
 }

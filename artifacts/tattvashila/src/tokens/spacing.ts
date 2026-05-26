@@ -4,9 +4,9 @@ export const container = {
 
 export const sectionPadding = {
   sm:   "py-12 md:py-16",
-  base: "py-14 md:py-20",
-  md:   "py-16 md:py-24",
-  lg:   "py-20 md:py-28",
+  base: "py-16 md:py-24",
+  md:   "py-20 md:py-28",
+  lg:   "py-24 md:py-32",
 } as const;
 
 export type SectionSize = keyof typeof sectionPadding;
