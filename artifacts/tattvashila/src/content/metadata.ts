@@ -74,6 +74,26 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
     canonicalUrl: buildCanonicalUrl("/notes"),
   },
+  archive: {
+    title: buildTitle("Archive"),
+    description:
+      "A complete institutional record of all Tattvashila publications, organised by year and domain of inquiry.",
+    ogTitle: buildTitle("Archive"),
+    ogDescription:
+      "A complete institutional record of all publications — held slowly, by design.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/archive"),
+  },
+  granthalaya: {
+    title: buildTitle("Granthālaya"),
+    description:
+      "The canonical institutional manuscript space of Tattvashila. Tattvaprashna, Tattvagrantha, and the works in composition.",
+    ogTitle: buildTitle("Granthālaya — ग्रन्थालय"),
+    ogDescription:
+      "The canonical institutional manuscript library. Texts composed carefully, held patiently, released when ready.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/granthalaya"),
+  },
 };
 
 export function buildNotePublicationMeta(note: Note): PublicationMeta {

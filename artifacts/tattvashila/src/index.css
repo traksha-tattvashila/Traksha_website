@@ -360,6 +360,56 @@ img.broken { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   ARCHIVE READING ROOM ATMOSPHERE
+   Institutional library — civilizational scale, manuscript calmness.
+═══════════════════════════════════════════════════════════════ */
+
+/* Year marker — large, recessive, typographic architecture */
+.archive-year-marker {
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 31, 32, 0.08);
+}
+.archive-year-marker h2 {
+  /* The large year figure retreats visually, framing without dominating */
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+/* Archive entry — scholarly listing row */
+.archive-entry {
+  position: relative;
+}
+.archive-entry + .archive-entry {
+  border-top: 1px solid rgba(0, 31, 32, 0.08);
+}
+
+/* Granthālaya work block — manuscript in preparation */
+.granthalaya-work {
+  position: relative;
+}
+
+/* Status indicator — quiet institutional notation */
+.granthalaya-work [data-status="in-composition"] {
+  color: var(--river-soft);
+}
+.granthalaya-work [data-status="forthcoming"] {
+  color: var(--ink-muted);
+}
+.granthalaya-work [data-status="not-yet-begun"] {
+  color: var(--ink-faint);
+}
+
+/* Publication domain listing — library catalog rhythm */
+.domain-listing-item {
+  padding-block: 1.75rem;
+  border-bottom: 1px solid rgba(0, 31, 32, 0.08);
+}
+.domain-listing-item:first-child {
+  border-top: 1px solid rgba(0, 31, 32, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════════
    ACCESSIBILITY & REDUCED MOTION
 ═══════════════════════════════════════════════════════════════ */
 
