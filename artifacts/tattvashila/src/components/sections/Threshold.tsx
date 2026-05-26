@@ -12,7 +12,7 @@ export default function Threshold() {
   return (
     <section
       data-testid="section-threshold"
-      className="relative pt-24 md:pt-28 pb-12 md:pb-20"
+      className="relative pt-28 md:pt-32 pb-14 md:pb-24"
     >
       <SiteContainer>
         <SectionGrid align="center" gapY="gap-y-12">

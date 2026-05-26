@@ -68,7 +68,7 @@ export default function PhilosophyPage() {
                   </h2>
                 </Reveal>
                 <Reveal delay={0.1}>
-                  <div className="mt-7 md:mt-9 space-y-6 text-body text-ink-soft">
+                  <div className="mt-7 md:mt-9 space-y-6 text-body text-ink-soft max-w-reading">
                     {s.paragraphs.map((p, idx) => (
                       <p
                         key={idx}

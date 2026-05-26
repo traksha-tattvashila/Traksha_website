@@ -32,7 +32,7 @@ export default function Ecosystem() {
             </Reveal>
 
             <ul
-              className="mt-12 md:mt-16 divide-y divide-ink/10 border-y border-ink/15"
+              className="mt-12 md:mt-16 divide-y divide-ink/10 border-y border-ink/10"
               data-testid="ecosystem-chambers"
             >
               {CHAMBERS.map((c, i) => (
@@ -43,7 +43,7 @@ export default function Ecosystem() {
                   >
                     <div className="col-span-12 md:col-span-4 mb-3 md:mb-0">
                       <div className="flex items-baseline gap-3 flex-wrap">
-                        <h3 className="font-display text-2xl md:text-3xl font-normal text-ink group-hover:text-river transition-colors duration-500 ease-gentle">
+                        <h3 className="font-display text-2xl md:text-3xl font-normal text-ink group-hover:text-river-soft transition-colors duration-500 ease-gentle">
                           {c.name}
                         </h3>
                         <span className="font-deva text-base text-ink-faint">

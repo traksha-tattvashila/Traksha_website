@@ -84,11 +84,11 @@ a:focus-visible {
 }
 .quiet-link:hover::after {
   transform: scaleX(1);
-  opacity: 0.75;
+  opacity: 0.6;
 }
 .quiet-link.is-active::after {
   transform: scaleX(1);
-  opacity: 0.75;
+  opacity: 0.6;
 }
 
 /* Typographic utilities */

@@ -57,7 +57,7 @@ export default function NotesIndexPage() {
             </div>
 
             <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-              <ul className="divide-y divide-ink/10 border-y border-ink/15">
+              <ul className="divide-y divide-ink/10 border-y border-ink/10">
                 {NOTES_SORTED.map((n, i) => (
                   <Reveal key={n.slug} delay={0.05 + i * 0.04} as="li">
                     <Link
@@ -76,7 +76,7 @@ export default function NotesIndexPage() {
                           · {n.reading} read
                         </span>
                       </div>
-                      <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river transition-colors duration-500 ease-gentle">
+                      <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-500 ease-gentle">
                         {n.title}
                       </h2>
                       <p className="mt-3 text-body text-ink-soft">

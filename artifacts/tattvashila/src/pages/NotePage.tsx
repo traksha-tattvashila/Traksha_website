@@ -83,7 +83,7 @@ export default function NotePage() {
               <Reveal delay={0.15}>
                 <div
                   data-testid="note-body"
-                  className="mt-10 md:mt-12 space-y-5 text-body text-ink-soft"
+                  className="mt-10 md:mt-12 space-y-7 text-body text-ink-soft max-w-reading"
                 >
                   {note.body.map((p, idx) => (
                     <p key={idx}>{p}</p>

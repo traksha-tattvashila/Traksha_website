@@ -30,7 +30,7 @@ export default function Philosophy() {
             </Reveal>
 
             <ol
-              className="mt-12 md:mt-16 divide-y divide-ink/10 border-y border-ink/15"
+              className="mt-12 md:mt-16 divide-y divide-ink/10 border-y border-ink/10"
               data-testid="philosophy-principles"
             >
               {HOME_PRINCIPLES.map((p, i) => (
