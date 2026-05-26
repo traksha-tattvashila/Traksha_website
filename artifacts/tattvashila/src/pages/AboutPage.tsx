@@ -1,7 +1,12 @@
+import { Link } from "wouter";
 import Reveal from "../components/Reveal";
+import QuietImage from "../components/QuietImage";
 import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { PAGE_META } from "../content/metadata";
+import { ORIGIN_SECTIONS, ORIGIN_RECORD, ORIGIN_CLOSING } from "../content/origin";
+import { EditorialDivider } from "../components/editorial";
+import { images } from "../system/images/registry";
 
 export default function AboutPage() {
   usePageMeta(PAGE_META.about);
@@ -9,216 +14,374 @@ export default function AboutPage() {
   return (
     <PageLayout testId="about-page">
 
-      <section
+      {/* ── Founding manuscript header ── */}
+      <header
         data-testid="about-hero"
-        className="relative pt-28 md:pt-36 pb-12 md:pb-16"
+        className="relative pt-28 md:pt-36 pb-0"
       >
         <SiteContainer>
-          <SectionGrid gapY="gap-y-8">
+          <SectionGrid gapY="gap-y-8" align="start">
+
+            {/* Left col — section index + image */}
             <div className="col-span-12 md:col-span-3">
               <Reveal>
-                <p className="text-micro tracking-widest uppercase text-ink-muted">
+                <p className="text-micro tracking-widest uppercase text-ink-muted mb-6 md:mb-8">
                   Origin
                 </p>
+
+                {/* In-page manuscript index */}
+                <nav
+                  aria-label="Origin manuscript sections"
+                  className="hidden md:flex flex-col gap-3"
+                >
+                  {ORIGIN_SECTIONS.map((s) => (
+                    <a
+                      key={s.numeral}
+                      href={`#origin-${s.numeral.toLowerCase()}`}
+                      className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                    >
+                      <span className="inline-block w-5 text-ink-faint num-tab">
+                        {s.numeral}
+                      </span>
+                      {s.label}
+                    </a>
+                  ))}
+                  <a
+                    href="#origin-record"
+                    className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link mt-1"
+                  >
+                    <span className="inline-block w-5 text-ink-faint">&mdash;</span>
+                    A record
+                  </a>
+                </nav>
+              </Reveal>
+
+              {/* Solitary mountain-walk — institutional emergence */}
+              <Reveal delay={0.2}>
+                <div className="mt-10 md:mt-14 hidden md:block">
+                  <QuietImage
+                    src={images.journeyWalk.src}
+                    alt={images.journeyWalk.alt}
+                    aspectClass="aspect-[3/2]"
+                    fallbackTone="warm"
+                    className="rounded-[2px]"
+                  />
+                  <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
+                    {images.journeyWalk.credit}
+                  </p>
+                </div>
               </Reveal>
             </div>
-            <div className="col-span-12 md:col-span-9 max-w-prose-wide">
+
+            {/* Right col — founding statement */}
+            <div className="col-span-12 md:col-span-9 pb-12 md:pb-16">
               <Reveal delay={0.05}>
                 <h1
                   data-testid="about-headline"
-                  className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
+                  className="font-display text-hero font-normal text-ink leading-[1.08] tracking-tight max-w-prose-wide"
                 >
                   This did not begin as an idea. It began as a series of quiet observations.
                 </h1>
               </Reveal>
+
               <Reveal delay={0.12}>
-                <p className="mt-6 md:mt-8 text-lead text-ink-soft max-w-reading">
-                  Tattvashila is not a movement, a startup, or a personal vision. It is a
-                  long body of work, put together carefully, in response to something many of us
-                  recognise privately but rarely name in public.
+                <p className="mt-7 md:mt-9 text-lead text-ink-soft max-w-reading leading-[1.75]">
+                  Tattvashila is not a movement, a startup, or a personal vision.
+                  It is a long body of work, put together carefully, in response
+                  to something many people recognise privately but rarely name.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.16}>
+                <p className="mt-5 text-body text-ink-soft max-w-reading leading-[1.80]">
+                  What follows is an account of why this institution exists,
+                  what philosophical absence it responds to, and what it is
+                  building toward. It is written as a record, not a manifesto.
                 </p>
               </Reveal>
             </div>
+
           </SectionGrid>
         </SiteContainer>
-      </section>
+      </header>
 
-      <SectionShell testId="about-observation" size="lg">
+      {/* ── Manuscript sections ── */}
+      {ORIGIN_SECTIONS.map((s, sIdx) => {
+        const isBeforeManuscripts = sIdx === ORIGIN_SECTIONS.length - 2;
+
+        return (
+          <div key={s.numeral}>
+            {/* Contemplative visual pause before Section VI */}
+            {isBeforeManuscripts && (
+              <SectionShell
+                testId="about-transition"
+                size="base"
+                border
+              >
+                <SiteContainer>
+                  <SectionGrid>
+                    <div className="col-span-12 md:col-span-3" />
+                    <div className="col-span-12 md:col-span-9">
+                      <Reveal>
+                        <div className="max-w-reading">
+                          <QuietImage
+                            src={images.vaseInterior.src}
+                            alt={images.vaseInterior.alt}
+                            aspectClass="aspect-[4/3]"
+                            fallbackTone="warm"
+                            className="rounded-[2px]"
+                          />
+                          <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
+                            {images.vaseInterior.credit}
+                          </p>
+                        </div>
+                      </Reveal>
+                    </div>
+                  </SectionGrid>
+                </SiteContainer>
+              </SectionShell>
+            )}
+
+            <SectionShell
+              id={`origin-${s.numeral.toLowerCase()}`}
+              testId={`about-${s.label.toLowerCase().replace(/\s+/g, "-")}`}
+              size="md"
+              border
+            >
+              <SiteContainer>
+                <SectionGrid gapY="gap-y-8">
+
+                  <div className="col-span-12 md:col-span-3">
+                    <Reveal>
+                      <p className="text-micro tracking-widest uppercase text-ink-muted">
+                        {s.numeral}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{s.label}
+                      </p>
+                    </Reveal>
+                  </div>
+
+                  <div className="col-span-12 md:col-span-9">
+                    <Reveal delay={0.05}>
+                      <h2
+                        className="font-display text-display font-normal text-ink leading-[1.18] tracking-tight max-w-prose-wide"
+                      >
+                        {s.title}
+                      </h2>
+                    </Reveal>
+
+                    <Reveal delay={0.12}>
+                      <div className="mt-8 md:mt-10 max-w-reading">
+                        {s.paragraphs.map((p, idx) => (
+                          <p
+                            key={idx}
+                            className={`text-body leading-[1.85] ${
+                              idx < s.paragraphs.length - 1
+                                ? "mb-[1.7em] text-ink-soft"
+                                : "text-ink"
+                            }`}
+                          >
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                    </Reveal>
+                  </div>
+
+                </SectionGrid>
+              </SiteContainer>
+            </SectionShell>
+          </div>
+        );
+      })}
+
+      {/* ── Editorial chronology — a record of emergence ── */}
+      <SectionShell
+        id="origin-record"
+        testId="about-record"
+        size="md"
+        border
+      >
         <SiteContainer>
           <SectionGrid>
+
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
-                  I &nbsp;·&nbsp; What was observed
+                  A record
+                </p>
+                <p className="mt-2 text-small text-ink-faint">
+                  of emergence
                 </p>
               </Reveal>
             </div>
-            <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-              <Reveal delay={0.05}>
-                <h2 className="font-display text-display font-normal text-ink leading-[1.18]">
-                  A pattern that keeps appearing.
-                </h2>
+
+            <div className="col-span-12 md:col-span-9">
+              <Reveal delay={0.04}>
+                <p className="text-body text-ink-soft max-w-reading mb-10 md:mb-12">
+                  An institutional record is not a timeline of achievements.
+                  It is a record of what was done and when — held plainly,
+                  without the distortion of retrospective meaning.
+                </p>
               </Reveal>
-              <Reveal delay={0.12}>
-                <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
-                  <p>
-                    Across professions, ages and circumstances, a similar quietness keeps showing
-                    up &mdash; in capable, responsible adults who are managing work, family,
-                    health and relationships well enough on the outside.
-                  </p>
-                  <p>
-                    They are not unhappy. They are not unsuccessful. They are simply running on
-                    a kind of momentum that no one taught them how to interrupt &mdash; and slowly
-                    losing the ability to feel their own life from the inside.
-                  </p>
-                  <p className="text-ink">
-                    That is the condition Tattvashila was put together to address. Not through
-                    motivation or escape, but through something older and steadier &mdash;
-                    awareness, responsibility and the daily disciplines that hold a life together.
-                  </p>
-                </div>
-              </Reveal>
+
+              <ol
+                aria-label="Institutional record of emergence"
+                className="divide-y divide-ink/8 border-y border-ink/8"
+              >
+                {ORIGIN_RECORD.map((record, i) => (
+                  <Reveal key={record.year} delay={0.03 + i * 0.04} as="li">
+                    <div className="py-6 md:py-7 flex items-baseline gap-8 md:gap-12">
+                      <time
+                        dateTime={record.year}
+                        className="text-small text-ink-faint num-tab shrink-0 w-10"
+                      >
+                        {record.year}
+                      </time>
+                      <p className="text-body text-ink-soft leading-relaxed">
+                        {record.entry}
+                      </p>
+                    </div>
+                  </Reveal>
+                ))}
+              </ol>
             </div>
+
           </SectionGrid>
         </SiteContainer>
       </SectionShell>
 
-      <SectionShell testId="about-why" size="lg">
+      {/* ── Institutional closing — the foundational statement ── */}
+      <SectionShell testId="about-closing" size="lg" border>
         <SiteContainer>
           <SectionGrid>
+
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
-                  II &nbsp;·&nbsp; Why this, why now
+                  The position
                 </p>
               </Reveal>
             </div>
+
             <div className="col-span-12 md:col-span-9 max-w-prose-wide">
               <Reveal delay={0.05}>
-                <h2 className="font-display text-display font-normal text-ink leading-[1.18]">
-                  Modern life is not broken. The inner architecture most of us were given for it is.
-                </h2>
-              </Reveal>
-              <Reveal delay={0.12}>
-                <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
-                  <p>
-                    The demands placed on a single life today &mdash; economic, emotional,
-                    informational, relational &mdash; have quietly outpaced the tools most of us
-                    inherited from family, schooling or culture.
-                  </p>
-                  <p>
-                    Tattvashila is one careful response to that gap. We are not asking anyone to
-                    leave the life they&rsquo;ve built. We are asking, gently, whether the life that
-                    has been built can be lived from a steadier place inside the person living it.
-                  </p>
-                  <p>
-                    Bharatiya thought has spent a long time on this question. So have many other
-                    traditions. We borrow from these where they help, plainly &mdash; without
-                    ceremony, costume or claim.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </SectionGrid>
-        </SiteContainer>
-      </SectionShell>
-
-      <SectionShell testId="about-makers" size="lg">
-        <SiteContainer>
-          <SectionGrid>
-            <div className="col-span-12 md:col-span-3">
-              <Reveal>
-                <p className="text-micro tracking-widest uppercase text-ink-muted">
-                  III &nbsp;·&nbsp; Who is building this
+                <p className="font-display text-display-xl font-normal text-ink leading-[1.18] tracking-tight">
+                  {ORIGIN_CLOSING}
                 </p>
               </Reveal>
-            </div>
-            <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-              <Reveal delay={0.05}>
-                <h2 className="font-display text-display font-normal text-ink leading-[1.18]">
-                  A small group of people, working slowly.
-                </h2>
-              </Reveal>
-              <Reveal delay={0.12}>
-                <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
-                  <p>
-                    Tattvashila is being held primarily by{" "}
-                    <span className="text-ink">Vikramaditya Mitra</span>,
-                    working with a small group of contributors across different
-                    fields &mdash; quietly, without a marketing rhythm, and
-                    without an interest in scale for its own sake.
-                  </p>
-                  <p>
-                    There is no founder figure to follow, no lineage to inherit,
-                    no movement being recruited for. We have deliberately kept
-                    the project free of personality, the language plain, and the
-                    work itself the only thing a reader is asked to meet.
-                  </p>
-                  <p className="text-ink">
-                    The name appears here as a matter of accountability, not
-                    authority. Other contributors and any further detail will be
-                    introduced only when the work itself makes that useful
-                    &mdash; not before, and not for marketing.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </SectionGrid>
-        </SiteContainer>
-      </SectionShell>
 
-      <SectionShell testId="about-accountability" size="lg" bg="bg-bone-light">
-        <SiteContainer>
-          <SectionGrid>
-            <div className="col-span-12 md:col-span-3">
-              <Reveal>
-                <p className="text-micro tracking-widest uppercase text-ink-muted">
-                  IV &nbsp;·&nbsp; A note on accountability
-                </p>
-              </Reveal>
-            </div>
-            <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-              <Reveal delay={0.05}>
-                <h2 className="font-display text-display font-normal text-ink leading-[1.18]">
-                  We would rather be questioned than admired.
-                </h2>
-              </Reveal>
               <Reveal delay={0.12}>
-                <div className="mt-8 md:mt-10 space-y-5 text-body text-ink-soft">
-                  <p>
-                    A body of work like this can drift, over time, into the very things it was
-                    built to avoid &mdash; performance, certainty, soft authority. We have written
-                    the philosophy specifically to make that drift visible to ourselves and to
-                    anyone watching.
-                  </p>
-                  <p>
-                    If something here begins to feel like marketing, mysticism or moral pressure,
-                    it is a failure on our side &mdash; not a deepening. We&rsquo;d like to hear
-                    about it.
-                  </p>
-                </div>
+                <EditorialDivider kind="ornament" className="mt-12 md:mt-14" />
               </Reveal>
 
-              <Reveal delay={0.18}>
-                <div className="mt-12 md:mt-14 flex flex-wrap items-center gap-x-8 gap-y-4">
+              {/* Quiet institutional CTAs — no product buttons */}
+              <Reveal delay={0.16}>
+                <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
+                  <Link
+                    href="/philosophy"
+                    data-testid="about-cta-philosophy"
+                    className="inline-flex items-center gap-3 text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle group"
+                  >
+                    <span aria-hidden className="block w-5 h-px bg-current opacity-40 group-hover:opacity-70 transition-opacity duration-700" />
+                    <span>Read the philosophy</span>
+                  </Link>
+                  <Link
+                    href="/granthalaya"
+                    data-testid="about-cta-granthalaya"
+                    className="text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle quiet-link"
+                  >
+                    Granthālaya
+                  </Link>
+                  <Link
+                    href="/archive"
+                    data-testid="about-cta-archive"
+                    className="text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle quiet-link"
+                  >
+                    Archive
+                  </Link>
                   <a
                     href="/#intake"
                     data-testid="about-cta-intake"
-                    className="group inline-flex items-center gap-3 px-6 py-3 bg-ink text-bone-light text-small font-medium rounded-[2px] hover:bg-ink-soft transition-colors duration-500 ease-gentle"
+                    className="text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle quiet-link"
                   >
-                    <span>Write to us, quietly</span>
-                    <span aria-hidden className="block w-6 h-px bg-current transition-[width] duration-500 ease-gentle group-hover:w-10" />
-                  </a>
-                  <a
-                    href="/#philosophy"
-                    data-testid="about-cta-philosophy"
-                    className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
-                  >
-                    Read the philosophy
+                    Write to us, quietly
                   </a>
                 </div>
               </Reveal>
             </div>
+
+          </SectionGrid>
+        </SiteContainer>
+      </SectionShell>
+
+      {/* ── Civilizational continuity — cross-institutional links ── */}
+      <SectionShell testId="about-continuity" size="md" border>
+        <SiteContainer>
+          <SectionGrid>
+
+            <div className="col-span-12 md:col-span-3">
+              <Reveal>
+                <p className="text-micro tracking-widest uppercase text-ink-muted">
+                  Continue reading
+                </p>
+              </Reveal>
+            </div>
+
+            <div className="col-span-12 md:col-span-9">
+              <div className="divide-y divide-ink/8 border-y border-ink/8">
+
+                {/* Philosophy */}
+                <Reveal>
+                  <Link
+                    href="/philosophy"
+                    className="block py-8 group"
+                    data-testid="about-link-philosophy"
+                  >
+                    <p className="text-micro tracking-widest uppercase text-ink-faint mb-3">
+                      Philosophy
+                    </p>
+                    <h3 className="font-display text-title font-normal text-ink-muted group-hover:text-ink transition-colors duration-700 ease-gentle leading-[1.2] tracking-tight">
+                      Awareness, integrated into ordinary life.
+                    </h3>
+                    <p className="mt-3 text-body text-ink-soft max-w-reading leading-relaxed">
+                      The working ideas behind Tattvashila — the three doctrinal
+                      positions and the philosophical framework that informs all
+                      institutional work.
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-700 ease-gentle">
+                      Read the philosophy
+                      <span aria-hidden className="block w-6 h-px bg-current transition-[width] duration-700 ease-gentle group-hover:w-10" />
+                    </span>
+                  </Link>
+                </Reveal>
+
+                {/* Granthālaya */}
+                <Reveal delay={0.04}>
+                  <Link
+                    href="/granthalaya"
+                    className="block py-8 group"
+                    data-testid="about-link-granthalaya"
+                  >
+                    <p className="text-micro tracking-widest uppercase text-ink-faint mb-3">
+                      Granthālaya &nbsp;·&nbsp; ग्रन्थालय
+                    </p>
+                    <h3 className="font-display text-title font-normal text-ink-muted group-hover:text-ink transition-colors duration-700 ease-gentle leading-[1.2] tracking-tight">
+                      The canonical institutional manuscript space.
+                    </h3>
+                    <p className="mt-3 text-body text-ink-soft max-w-reading leading-relaxed">
+                      Where the institutional working ideas will eventually be
+                      held at manuscript scale — in Tattvaprashna and the
+                      Tattvagrantha series.
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-700 ease-gentle">
+                      Granthālaya
+                      <span aria-hidden className="block w-6 h-px bg-current transition-[width] duration-700 ease-gentle group-hover:w-10" />
+                    </span>
+                  </Link>
+                </Reveal>
+
+              </div>
+            </div>
+
           </SectionGrid>
         </SiteContainer>
       </SectionShell>
