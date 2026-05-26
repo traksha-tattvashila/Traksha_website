@@ -7,4 +7,6 @@ export {
   getNotesByCategory,
   getNotesByTag,
   getRelatedNotes,
+  getNextNote,
+  getPreviousNote,
 } from "../../lib/notes";

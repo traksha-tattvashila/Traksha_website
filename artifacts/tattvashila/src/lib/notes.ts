@@ -92,6 +92,18 @@ export function getNotesByTag(tagSlug: string): Note[] {
   return NOTES_SORTED.filter((n) => n.tags.includes(tagSlug));
 }
 
+export function getNextNote(note: Note): Note | undefined {
+  const idx = NOTES_SORTED.findIndex((n) => n.slug === note.slug);
+  return idx > 0 ? NOTES_SORTED[idx - 1] : undefined;
+}
+
+export function getPreviousNote(note: Note): Note | undefined {
+  const idx = NOTES_SORTED.findIndex((n) => n.slug === note.slug);
+  return idx >= 0 && idx < NOTES_SORTED.length - 1
+    ? NOTES_SORTED[idx + 1]
+    : undefined;
+}
+
 export function getRelatedNotes(note: Note, limit = 3): Note[] {
   if (!note.relatedPublications?.length) {
     return NOTES_SORTED.filter(

@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   Civilizational palette — warm ivory, deep institutional ink.
+═══════════════════════════════════════════════════════════════ */
+
 :root {
-  --bone:       #ECE7DC;
-  --bone-light: #F3EEE5;
-  --ink:        #001F20;
-  --ink-soft:   #0D2A2C;
-  --ink-muted:  #3A4F51;
-  --ink-faint:  #6E7E80;
-  --river:      #2A5158;
-  --river-soft: #4A6C72;
+  --bone:         #ECE7DC;
+  --bone-light:   #F3EEE5;
+  --bone-deep:    #E3DCCF;
+  --ink:          #001F20;
+  --ink-soft:     #0D2A2C;
+  --ink-muted:    #3A4F51;
+  --ink-faint:    #6E7E80;
+  --river:        #2A5158;
+  --river-soft:   #4A6C72;
+  --river-faint:  #7A9DA3;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE RENDERING
+   Antialiasing, text rendering, font features.
+═══════════════════════════════════════════════════════════════ */
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 html, body {
   background-color: var(--bone);
   color: var(--ink);
-  font-feature-settings: "ss01", "kern", "liga", "calt";
+  font-feature-settings: "ss01", "kern", "liga", "calt", "onum";
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
 }
@@ -31,21 +44,34 @@ html {
   scroll-padding-top: 6rem;
 }
 
-/* Typographic refinements — balance headings, prevent orphans in prose */
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHIC HIERARCHY
+   Institutional, restrained, manuscript-inspired.
+═══════════════════════════════════════════════════════════════ */
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   hanging-punctuation: first allow-end;
+  font-variant-ligatures: discretionary-ligatures;
 }
 
 p {
   text-wrap: pretty;
 }
 
+/* Optical margin alignment — hanging punctuation for display text */
+.font-display {
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+  font-feature-settings: "liga", "dlig", "kern", "ss01";
+}
+
+/* Selection treatment — quiet, institutional */
 ::selection {
-  background-color: rgba(42, 81, 88, 0.2);
+  background-color: rgba(42, 81, 88, 0.16);
   color: var(--ink);
 }
 
+/* Form elements */
 input, textarea {
   caret-color: var(--river);
   font-feature-settings: inherit;
@@ -63,7 +89,11 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-/* ─── Quiet animated underline — institutional link treatment ─── */
+/* ═══════════════════════════════════════════════════════════════
+   INSTITUTIONAL LINK TREATMENT
+   Quiet animated underline — editorial restraint.
+═══════════════════════════════════════════════════════════════ */
+
 .quiet-link {
   position: relative;
   display: inline-block;
@@ -72,60 +102,74 @@ a:focus-visible {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -2px;
   width: 100%;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity  600ms cubic-bezier(0.22, 0.61, 0.36, 1);
-  opacity: 0.4;
+  transition: transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity  700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 0.35;
 }
 .quiet-link:hover::after {
   transform: scaleX(1);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 .quiet-link.is-active::after {
   transform: scaleX(1);
-  opacity: 0.6;
-}
-
-/* ─── Typographic utilities ─── */
-.num-osf {
-  font-feature-settings: "onum", "kern";
-}
-.num-tab {
-  font-feature-settings: "tnum", "lnum";
-}
-
-/* ─── Editorial image treatment — restrained warm correction ─── */
-.img-warm {
-  filter: saturate(0.82) contrast(1.02) brightness(1.01);
-}
-
-/* Suppresses broken image icon */
-img.broken {
-  display: none;
+  opacity: 0.55;
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHIC UTILITIES
+   OpenType feature shorthands.
+═══════════════════════════════════════════════════════════════ */
+
+.num-osf  { font-feature-settings: "onum", "kern"; }
+.num-tab  { font-feature-settings: "tnum", "lnum"; }
+.num-frac { font-feature-settings: "frac", "kern"; }
+.small-caps { font-variant-caps: all-small-caps; letter-spacing: 0.04em; }
+
+/* ═══════════════════════════════════════════════════════════════
+   EDITORIAL IMAGE TREATMENT
+   Restrained warm correction — institutional tonal harmony.
+═══════════════════════════════════════════════════════════════ */
+
+.img-warm {
+  filter: saturate(0.78) contrast(1.02) brightness(1.01);
+}
+
+.img-warm-strong {
+  filter: saturate(0.70) contrast(1.03) brightness(0.99) sepia(0.04);
+}
+
+/* Suppresses broken image icon */
+img.broken { display: none; }
+
+/* ═══════════════════════════════════════════════════════════════
    LONG-FORM READING SYSTEM
-   Contemplative, editorial, institutional.
-   Applied to .note-body — preserves heading and layout styles elsewhere.
+   Contemplative, manuscript-grade, institutional.
+   Applied to .note-body only — does not bleed into layout.
 ═══════════════════════════════════════════════════════════════ */
 
 .note-body {
   font-size: 1.0625rem;
-  line-height: 1.84;
+  line-height: 1.86;
   color: var(--ink-soft);
   max-width: 40rem;
+
+  /* Optical improvements for long-form text */
+  hyphens: auto;
+  hyphenate-limit-chars: 8 3 3;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Paragraph rhythm — generous vertical breathing */
+/* Paragraph rhythm — generous, contemplative */
 .note-body p {
   margin-top: 0;
-  margin-bottom: 1.65em;
+  margin-bottom: 1.7em;
   text-wrap: pretty;
   hanging-punctuation: first allow-end;
 }
@@ -134,54 +178,53 @@ img.broken {
   margin-bottom: 0;
 }
 
-/* Closing paragraph — slightly elevated presence */
+/* Closing paragraph — elevated presence, institutional voice */
 .note-body p:last-of-type {
   color: var(--ink);
 }
 
-/* First paragraph — slightly looser leading, editorial opening */
+/* Opening paragraph — looser leading, inviting entry */
 .note-body > p:first-child {
-  line-height: 1.90;
+  line-height: 1.92;
 }
 
-/* In-text emphasis — calm, not aggressive */
-.note-body em {
-  font-style: italic;
-  color: var(--ink);
-}
+/* Emphasis — calm, not aggressive */
+.note-body em     { font-style: italic; color: var(--ink); }
+.note-body strong { font-weight: 500;   color: var(--ink); }
 
-.note-body strong {
-  font-weight: 500;
-  color: var(--ink);
-}
-
-/* Abbreviations — scholarly, accessible */
+/* Abbreviations — scholarly notation */
 .note-body abbr[title] {
   text-decoration: underline dotted;
   text-underline-offset: 3px;
   cursor: help;
 }
 
-/* Blockquote — citation-ready, editorial */
+/* Blockquote — scholarly, editorial, citation-ready */
 .note-body blockquote {
-  margin: 2.25em 0;
-  padding: 0 0 0 1.5em;
-  border-left: 1px solid rgba(0, 31, 32, 0.18);
+  margin: 2.5em 0;
+  padding: 0 0 0 1.75em;
+  border-left: 1px solid rgba(0, 31, 32, 0.15);
   color: var(--ink-muted);
   font-style: italic;
 }
 
+.note-body blockquote p {
+  margin-bottom: 0.5em;
+  font-size: 1.05em;
+  line-height: 1.75;
+}
+
 .note-body blockquote cite {
   display: block;
-  margin-top: 0.8em;
+  margin-top: 0.85em;
   font-style: normal;
-  font-size: 0.875em;
+  font-size: 0.82em;
   color: var(--ink-faint);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-/* Footnote reference markers */
+/* Footnote markers */
 .note-body sup.footnote-ref {
   font-size: 0.72em;
   line-height: 1;
@@ -191,40 +234,9 @@ img.broken {
   margin-left: 0.12em;
   text-decoration: none;
 }
+.note-body sup.footnote-ref:hover { color: var(--river-soft); }
 
-.note-body sup.footnote-ref:hover {
-  color: var(--river-soft);
-}
-
-/* Footnotes list — endnote rendering */
-.note-footnotes {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 31, 32, 0.1);
-  font-size: 0.875rem;
-  color: var(--ink-muted);
-  line-height: 1.68;
-}
-
-.note-footnotes ol {
-  padding-left: 0;
-  list-style: none;
-}
-
-.note-footnotes li {
-  margin-bottom: 0.8em;
-  display: flex;
-  gap: 0.75em;
-}
-
-/* Section divider within long-form text */
-.note-body hr {
-  margin: 2.75em 0;
-  border: none;
-  border-top: 1px solid rgba(0, 31, 32, 0.1);
-}
-
-/* Internal publication headings — multi-section notes */
+/* Internal section headings */
 .note-body h2 {
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
@@ -232,20 +244,46 @@ img.broken {
   line-height: 1.22;
   letter-spacing: -0.012em;
   color: var(--ink);
-  margin-top: 2.75em;
+  margin-top: 3em;
   margin-bottom: 0.9em;
   text-wrap: balance;
 }
 
 .note-body h3 {
   font-family: "Instrument Sans", system-ui, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin-top: 2.25em;
+  margin-top: 2.5em;
   margin-bottom: 0.75em;
+}
+
+/* Section rule */
+.note-body hr {
+  margin: 3em 0;
+  border: none;
+  border-top: 1px solid rgba(0, 31, 32, 0.09);
+}
+
+/* Footnotes endnote region */
+.note-footnotes {
+  margin-top: 4rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.1);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.68;
+}
+.note-footnotes ol {
+  padding-left: 0;
+  list-style: none;
+}
+.note-footnotes li {
+  margin-bottom: 0.85em;
+  display: flex;
+  gap: 0.85em;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -253,37 +291,90 @@ img.broken {
    Canonical reading primitives — publication-grade.
 ═══════════════════════════════════════════════════════════════ */
 
-/* Editorial section spacing */
+/* Editorial section rhythm */
 .editorial-section {
-  padding-top: 2.5rem;
-}
-
-.editorial-section + .editorial-section {
   padding-top: 3rem;
-  border-top: 1px solid rgba(0, 31, 32, 0.08);
-  margin-top: 3rem;
 }
-
+.editorial-section + .editorial-section {
+  padding-top: 3.5rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.07);
+  margin-top: 3.5rem;
+}
 .editorial-section-body {
   max-width: 40rem;
 }
 
-/* Archive listing — calm institutional browsing */
-.archive-listing {
-  display: flex;
-  flex-direction: column;
+/* ═══════════════════════════════════════════════════════════════
+   INSTITUTIONAL SURFACE ATMOSPHERE
+   Archive listing, section dividers, quiet transitions.
+═══════════════════════════════════════════════════════════════ */
+
+/* Archive listing — civilizational library rhythm */
+.archive-listing        { display: flex; flex-direction: column; }
+.archive-listing-item   { padding-block: 2.75rem; border-bottom: 1px solid rgba(0, 31, 32, 0.09); }
+.archive-listing-item:first-child { border-top: 1px solid rgba(0, 31, 32, 0.09); }
+
+/* Section divider — institutional rule */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 31, 32, 0.09);
+  margin-block: 0;
 }
 
-.archive-listing-item {
-  padding-block: 2.5rem;
-  border-bottom: 1px solid rgba(0, 31, 32, 0.1);
+/* Publication ornament — editorial marker */
+.pub-ornament {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--ink-faint);
+}
+.pub-ornament::before,
+.pub-ornament::after {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
 }
 
-.archive-listing-item:first-child {
-  border-top: 1px solid rgba(0, 31, 32, 0.1);
+/* ═══════════════════════════════════════════════════════════════
+   INSTITUTIONAL NAVIGATION SURFACE
+   Quiet, measured, architectural.
+═══════════════════════════════════════════════════════════════ */
+
+/* Ensure nav backdrop renders correctly over ivory surfaces */
+[data-testid="site-nav"] {
+  border-bottom-color: rgba(0, 31, 32, 0.08);
 }
 
-/* ─── Reduced motion — preserve layout, remove all animation ─── */
+/* ═══════════════════════════════════════════════════════════════
+   PUBLICATION SEQUENCE
+   Quiet editorial continuity between publications.
+═══════════════════════════════════════════════════════════════ */
+
+/* Sequence navigation — restrained hover treatment */
+[aria-label="Publication sequence"] a {
+  transition: color 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCESSIBILITY & REDUCED MOTION
+═══════════════════════════════════════════════════════════════ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

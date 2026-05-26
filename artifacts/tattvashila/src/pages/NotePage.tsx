@@ -4,12 +4,13 @@ import QuietImage from "../components/QuietImage";
 import { PageLayout, SiteContainer, SectionGrid } from "../layouts";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { PAGE_META, buildNotePublicationMeta } from "../content/metadata";
-import { getNote } from "../content/notes";
+import { getNote, getNextNote, getPreviousNote } from "../content/notes";
 import { getCategoryBySlug, getTagsBySlug } from "../content/taxonomy";
 import { images } from "../system/images/registry";
 import {
   EditorialMeta,
   EditorialDivider,
+  PublicationSequence,
 } from "../components/editorial";
 
 export default function NotePage() {
@@ -21,6 +22,8 @@ export default function NotePage() {
 
   const category = note ? getCategoryBySlug(note.category) : undefined;
   const tags = note ? getTagsBySlug(note.tags) : [];
+  const nextNote = note ? getNextNote(note) : undefined;
+  const previousNote = note ? getPreviousNote(note) : undefined;
 
   if (!note) {
     return (
@@ -52,14 +55,14 @@ export default function NotePage() {
         <SiteContainer>
           <SectionGrid gapY="gap-y-8">
 
-            {/* Left column — navigation + sidebar meta */}
+            {/* Left column — navigation + category + editorial image */}
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <nav aria-label="Publication breadcrumb">
                   <Link
                     href="/notes"
                     data-testid="note-back"
-                    className="inline-flex items-center gap-2 text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle"
+                    className="inline-flex items-center gap-2 text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle"
                   >
                     <span aria-hidden>&larr;</span>
                     <span>Quiet Notes</span>
@@ -69,7 +72,7 @@ export default function NotePage() {
 
               {category && (
                 <Reveal delay={0.06}>
-                  <p className="mt-6 text-micro tracking-widests uppercase text-ink-faint">
+                  <p className="mt-6 text-micro tracking-widest uppercase text-ink-faint">
                     {category.label}
                   </p>
                 </Reveal>
@@ -92,7 +95,7 @@ export default function NotePage() {
               </Reveal>
             </div>
 
-            {/* Right column — publication content */}
+            {/* Right column — the publication */}
             <div className="col-span-12 md:col-span-9 max-w-prose-wide">
 
               <header>
@@ -126,7 +129,7 @@ export default function NotePage() {
                 </Reveal>
 
                 {note.summary && (
-                  <Reveal delay={0.13}>
+                  <Reveal delay={0.14}>
                     <p
                       itemProp="description"
                       className="mt-5 md:mt-7 text-lead text-ink-soft max-w-reading leading-relaxed"
@@ -136,12 +139,12 @@ export default function NotePage() {
                   </Reveal>
                 )}
 
-                <Reveal delay={0.14}>
-                  <EditorialDivider kind="rule" className="mt-8 md:mt-10 mb-0" />
+                <Reveal delay={0.16}>
+                  <EditorialDivider kind="rule" className="mt-9 md:mt-11 mb-0" />
                 </Reveal>
               </header>
 
-              <Reveal delay={0.18}>
+              <Reveal delay={0.20}>
                 <div
                   data-testid="note-body"
                   itemProp="articleBody"
@@ -154,7 +157,7 @@ export default function NotePage() {
               </Reveal>
 
               <footer>
-                <Reveal delay={0.22}>
+                <Reveal delay={0.24}>
                   <p
                     data-testid="note-signed"
                     className="mt-12 md:mt-14 text-body text-ink"
@@ -166,12 +169,12 @@ export default function NotePage() {
                 </Reveal>
 
                 {tags.length > 0 && (
-                  <Reveal delay={0.26}>
+                  <Reveal delay={0.27}>
                     <div className="mt-8 flex flex-wrap gap-2" aria-label="Publication tags">
                       {tags.map((tag) => (
                         <span
                           key={tag.slug}
-                          className="text-micro tracking-widest uppercase text-ink-faint border border-ink/12 px-3 py-1 rounded-[2px]"
+                          className="text-micro tracking-widest uppercase text-ink-faint border border-ink/10 px-3 py-1 rounded-[2px]"
                         >
                           {tag.label}
                         </span>
@@ -180,19 +183,27 @@ export default function NotePage() {
                   </Reveal>
                 )}
 
-                <Reveal delay={0.3}>
-                  <div className="mt-16 md:mt-20 pt-6 border-t border-ink/12 flex flex-wrap items-center gap-x-8 gap-y-4">
+                {/* Publication sequence — calm editorial continuity */}
+                <Reveal delay={0.1}>
+                  <PublicationSequence
+                    previous={previousNote}
+                    next={nextNote}
+                  />
+                </Reveal>
+
+                <Reveal delay={0.32}>
+                  <div className="mt-12 md:mt-16 pt-6 border-t border-ink/10 flex flex-wrap items-center gap-x-8 gap-y-4">
                     <Link
                       href="/notes"
                       data-testid="note-cta-back"
-                      className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                      className="text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle quiet-link"
                     >
                       Back to Quiet Notes
                     </Link>
                     <a
                       href="/#intake"
                       data-testid="note-cta-intake"
-                      className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
+                      className="text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle quiet-link"
                     >
                       Stay in touch
                     </a>

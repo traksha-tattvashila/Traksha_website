@@ -5,3 +5,4 @@ export { default as EditorialCitation, EditorialCitationList } from "./Editorial
 export { default as EditorialAnnotation, FootnoteRef } from "./EditorialAnnotation";
 export { default as EditorialDivider } from "./EditorialDivider";
 export { default as EditorialMeta } from "./EditorialMeta";
+export { default as PublicationSequence } from "./PublicationSequence";

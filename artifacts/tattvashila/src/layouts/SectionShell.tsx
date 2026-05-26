@@ -1,10 +1,10 @@
 import type { SectionSize } from "../tokens/spacing";
 
 const paddingMap: Record<SectionSize, string> = {
-  sm:   "py-12 md:py-16",
-  base: "py-16 md:py-24",
-  md:   "py-20 md:py-28",
-  lg:   "py-24 md:py-32",
+  sm:   "py-14 md:py-20",
+  base: "py-20 md:py-28",
+  md:   "py-24 md:py-32",
+  lg:   "py-28 md:py-36",
 };
 
 interface Props {

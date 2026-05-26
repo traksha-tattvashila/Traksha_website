@@ -22,9 +22,9 @@ export default function Reveal({
 
   return (
     <Tag
-      initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+      initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{
         duration: reduce ? 0 : duration.reveal,
         delay:    reduce ? 0 : delay,
