@@ -117,7 +117,7 @@ img.broken {
 
 .note-body {
   font-size: 1.0625rem;
-  line-height: 1.82;
+  line-height: 1.84;
   color: var(--ink-soft);
   max-width: 40rem;
 }
@@ -125,7 +125,7 @@ img.broken {
 /* Paragraph rhythm — generous vertical breathing */
 .note-body p {
   margin-top: 0;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.65em;
   text-wrap: pretty;
   hanging-punctuation: first allow-end;
 }
@@ -139,9 +139,9 @@ img.broken {
   color: var(--ink);
 }
 
-/* First paragraph in a section — slightly looser leading */
+/* First paragraph — slightly looser leading, editorial opening */
 .note-body > p:first-child {
-  line-height: 1.86;
+  line-height: 1.90;
 }
 
 /* In-text emphasis — calm, not aggressive */
@@ -162,32 +162,33 @@ img.broken {
   cursor: help;
 }
 
-/* Future blockquote structure — citation-ready */
+/* Blockquote — citation-ready, editorial */
 .note-body blockquote {
-  margin: 2em 0;
+  margin: 2.25em 0;
   padding: 0 0 0 1.5em;
-  border-left: 1px solid var(--ink-faint);
+  border-left: 1px solid rgba(0, 31, 32, 0.18);
   color: var(--ink-muted);
   font-style: italic;
 }
 
 .note-body blockquote cite {
   display: block;
-  margin-top: 0.75em;
+  margin-top: 0.8em;
   font-style: normal;
   font-size: 0.875em;
   color: var(--ink-faint);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-/* Footnote reference markers — future footnote system */
+/* Footnote reference markers */
 .note-body sup.footnote-ref {
   font-size: 0.72em;
   line-height: 1;
   vertical-align: super;
   color: var(--river);
   font-feature-settings: "sups";
-  margin-left: 0.1em;
+  margin-left: 0.12em;
   text-decoration: none;
 }
 
@@ -195,53 +196,91 @@ img.broken {
   color: var(--river-soft);
 }
 
-/* Footnotes list — future endnote rendering */
+/* Footnotes list — endnote rendering */
 .note-footnotes {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 31, 32, 0.12);
+  border-top: 1px solid rgba(0, 31, 32, 0.1);
   font-size: 0.875rem;
   color: var(--ink-muted);
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
 .note-footnotes ol {
-  padding-left: 1.25em;
+  padding-left: 0;
+  list-style: none;
 }
 
 .note-footnotes li {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.8em;
+  display: flex;
+  gap: 0.75em;
 }
 
 /* Section divider within long-form text */
 .note-body hr {
-  margin: 2.5em 0;
+  margin: 2.75em 0;
   border: none;
   border-top: 1px solid rgba(0, 31, 32, 0.1);
 }
 
-/* Internal publication headings (h2/h3) — for future multi-section notes */
+/* Internal publication headings — multi-section notes */
 .note-body h2 {
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.22;
   letter-spacing: -0.012em;
   color: var(--ink);
-  margin-top: 2.5em;
+  margin-top: 2.75em;
   margin-bottom: 0.9em;
   text-wrap: balance;
 }
 
 .note-body h3 {
   font-family: "Instrument Sans", system-ui, sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin-top: 2em;
+  margin-top: 2.25em;
   margin-bottom: 0.75em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   EDITORIAL COMPONENT SYSTEM
+   Canonical reading primitives — publication-grade.
+═══════════════════════════════════════════════════════════════ */
+
+/* Editorial section spacing */
+.editorial-section {
+  padding-top: 2.5rem;
+}
+
+.editorial-section + .editorial-section {
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.08);
+  margin-top: 3rem;
+}
+
+.editorial-section-body {
+  max-width: 40rem;
+}
+
+/* Archive listing — calm institutional browsing */
+.archive-listing {
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-listing-item {
+  padding-block: 2.5rem;
+  border-bottom: 1px solid rgba(0, 31, 32, 0.1);
+}
+
+.archive-listing-item:first-child {
+  border-top: 1px solid rgba(0, 31, 32, 0.1);
 }
 
 /* ─── Reduced motion — preserve layout, remove all animation ─── */

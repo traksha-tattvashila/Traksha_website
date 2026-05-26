@@ -1,6 +1,8 @@
 import Reveal from "../Reveal";
+import QuietImage from "../QuietImage";
 import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
 import { JOURNEY_STEPS } from "../../content/journey";
+import { images } from "../../system/images/registry";
 
 export default function Journey() {
   return (
@@ -12,6 +14,22 @@ export default function Journey() {
               <p className="text-micro tracking-widest uppercase text-ink-muted">
                 IV &nbsp;·&nbsp; The journey
               </p>
+            </Reveal>
+
+            {/* Mountain-walk editorial image — contemplative transition */}
+            <Reveal delay={0.25}>
+              <div className="mt-10 md:mt-14 hidden md:block">
+                <QuietImage
+                  src={images.journeyWalk.src}
+                  alt={images.journeyWalk.alt}
+                  aspectClass="aspect-[3/2]"
+                  fallbackTone="warm"
+                  className="rounded-[2px]"
+                />
+                <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
+                  {images.journeyWalk.credit}
+                </p>
+              </div>
             </Reveal>
           </div>
 

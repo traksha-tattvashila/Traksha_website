@@ -1,10 +1,12 @@
 import { Link } from "wouter";
 import Reveal from "../components/Reveal";
+import QuietImage from "../components/QuietImage";
 import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { PAGE_META } from "../content/metadata";
 import { NOTES_SORTED, formatNoteDate } from "../content/notes";
 import { getCategoryBySlug } from "../content/taxonomy";
+import { images } from "../system/images/registry";
 
 export default function NotesIndexPage() {
   usePageMeta(PAGE_META.notes);
@@ -12,20 +14,39 @@ export default function NotesIndexPage() {
   return (
     <PageLayout testId="notes-page">
 
+      {/* ── Publication header ── */}
       <header
         data-testid="notes-hero"
-        className="relative pt-28 md:pt-36 pb-12 md:pb-16"
+        className="relative pt-28 md:pt-36 pb-0"
       >
         <SiteContainer>
-          <SectionGrid gapY="gap-y-8">
+          <SectionGrid gapY="gap-y-8" align="start">
+
             <div className="col-span-12 md:col-span-3">
               <Reveal>
                 <p className="text-micro tracking-widest uppercase text-ink-muted">
                   Quiet Notes
                 </p>
               </Reveal>
+
+              {/* Editorial image — book and tea still-life */}
+              <Reveal delay={0.2}>
+                <div className="mt-8 md:mt-12 hidden md:block">
+                  <QuietImage
+                    src={images.heroPremise.src}
+                    alt={images.heroPremise.alt}
+                    aspectClass="aspect-[4/5]"
+                    fallbackTone="warm"
+                    className="rounded-[2px]"
+                  />
+                  <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
+                    {images.heroPremise.credit}
+                  </p>
+                </div>
+              </Reveal>
             </div>
-            <div className="col-span-12 md:col-span-9 max-w-prose-wide">
+
+            <div className="col-span-12 md:col-span-9 max-w-prose-wide pb-12 md:pb-16">
               <Reveal delay={0.05}>
                 <h1
                   data-testid="notes-headline"
@@ -42,10 +63,12 @@ export default function NotesIndexPage() {
                 </p>
               </Reveal>
             </div>
+
           </SectionGrid>
         </SiteContainer>
       </header>
 
+      {/* ── Publication archive ── */}
       <SectionShell testId="notes-index" size="sm">
         <SiteContainer>
           <SectionGrid>
@@ -70,16 +93,16 @@ export default function NotesIndexPage() {
                         <Link
                           href={`/notes/${n.slug}`}
                           data-testid={`note-link-${n.slug}`}
-                          className="block py-8 md:py-10 group"
+                          className="block py-9 md:py-11 group"
                         >
-                          <div className="flex items-baseline gap-4 flex-wrap">
+                          <div className="flex items-baseline gap-x-4 gap-y-1 flex-wrap">
                             <time
                               dateTime={n.date}
                               className="text-micro tracking-widest uppercase text-ink-faint num-tab"
                             >
                               {formatNoteDate(n.date)}
                             </time>
-                            <span className="text-micro tracking-widest uppercase text-ink-faint">
+                            <span className="text-micro tracking-widests uppercase text-ink-faint">
                               &middot; {n.reading} read
                             </span>
                             {category && (
@@ -88,13 +111,16 @@ export default function NotesIndexPage() {
                               </span>
                             )}
                           </div>
-                          <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-500 ease-gentle">
+
+                          <h2 className="mt-4 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-500 ease-gentle">
                             {n.title}
                           </h2>
-                          <p className="mt-3 text-body text-ink-soft">
+
+                          <p className="mt-4 text-body text-ink-soft max-w-reading leading-relaxed">
                             {n.excerpt}
                           </p>
-                          <span className="mt-5 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-500 ease-gentle">
+
+                          <span className="mt-6 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-500 ease-gentle">
                             Read the note
                             <span
                               aria-hidden
@@ -109,7 +135,7 @@ export default function NotesIndexPage() {
               </ol>
 
               <Reveal delay={0.2}>
-                <p className="mt-10 text-small text-ink-faint max-w-reading">
+                <p className="mt-12 text-small text-ink-faint max-w-reading">
                   Future notes will appear here as they are written. If you
                   would like them sent to you when they are ready,{" "}
                   <a
