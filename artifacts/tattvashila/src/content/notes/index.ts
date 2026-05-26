@@ -4,4 +4,7 @@ export {
   NOTES_SORTED,
   getNote,
   formatNoteDate,
+  getNotesByCategory,
+  getNotesByTag,
+  getRelatedNotes,
 } from "../../lib/notes";

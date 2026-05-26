@@ -63,7 +63,7 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-/* Quiet animated underline — institutional link treatment */
+/* ─── Quiet animated underline — institutional link treatment ─── */
 .quiet-link {
   position: relative;
   display: inline-block;
@@ -91,7 +91,7 @@ a:focus-visible {
   opacity: 0.6;
 }
 
-/* Typographic utilities */
+/* ─── Typographic utilities ─── */
 .num-osf {
   font-feature-settings: "onum", "kern";
 }
@@ -99,7 +99,7 @@ a:focus-visible {
   font-feature-settings: "tnum", "lnum";
 }
 
-/* Editorial image treatment — restrained warm correction */
+/* ─── Editorial image treatment — restrained warm correction ─── */
 .img-warm {
   filter: saturate(0.82) contrast(1.02) brightness(1.01);
 }
@@ -109,7 +109,142 @@ img.broken {
   display: none;
 }
 
-/* Reduced motion — preserve layout, remove all animation */
+/* ═══════════════════════════════════════════════════════════════
+   LONG-FORM READING SYSTEM
+   Contemplative, editorial, institutional.
+   Applied to .note-body — preserves heading and layout styles elsewhere.
+═══════════════════════════════════════════════════════════════ */
+
+.note-body {
+  font-size: 1.0625rem;
+  line-height: 1.82;
+  color: var(--ink-soft);
+  max-width: 40rem;
+}
+
+/* Paragraph rhythm — generous vertical breathing */
+.note-body p {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+  text-wrap: pretty;
+  hanging-punctuation: first allow-end;
+}
+
+.note-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Closing paragraph — slightly elevated presence */
+.note-body p:last-of-type {
+  color: var(--ink);
+}
+
+/* First paragraph in a section — slightly looser leading */
+.note-body > p:first-child {
+  line-height: 1.86;
+}
+
+/* In-text emphasis — calm, not aggressive */
+.note-body em {
+  font-style: italic;
+  color: var(--ink);
+}
+
+.note-body strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Abbreviations — scholarly, accessible */
+.note-body abbr[title] {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+/* Future blockquote structure — citation-ready */
+.note-body blockquote {
+  margin: 2em 0;
+  padding: 0 0 0 1.5em;
+  border-left: 1px solid var(--ink-faint);
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.note-body blockquote cite {
+  display: block;
+  margin-top: 0.75em;
+  font-style: normal;
+  font-size: 0.875em;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+}
+
+/* Footnote reference markers — future footnote system */
+.note-body sup.footnote-ref {
+  font-size: 0.72em;
+  line-height: 1;
+  vertical-align: super;
+  color: var(--river);
+  font-feature-settings: "sups";
+  margin-left: 0.1em;
+  text-decoration: none;
+}
+
+.note-body sup.footnote-ref:hover {
+  color: var(--river-soft);
+}
+
+/* Footnotes list — future endnote rendering */
+.note-footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.12);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.65;
+}
+
+.note-footnotes ol {
+  padding-left: 1.25em;
+}
+
+.note-footnotes li {
+  margin-bottom: 0.75em;
+}
+
+/* Section divider within long-form text */
+.note-body hr {
+  margin: 2.5em 0;
+  border: none;
+  border-top: 1px solid rgba(0, 31, 32, 0.1);
+}
+
+/* Internal publication headings (h2/h3) — for future multi-section notes */
+.note-body h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  margin-top: 2.5em;
+  margin-bottom: 0.9em;
+  text-wrap: balance;
+}
+
+.note-body h3 {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+/* ─── Reduced motion — preserve layout, remove all animation ─── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

@@ -4,6 +4,7 @@ import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts
 import { usePageMeta } from "../hooks/usePageMeta";
 import { PAGE_META } from "../content/metadata";
 import { NOTES_SORTED, formatNoteDate } from "../content/notes";
+import { getCategoryBySlug } from "../content/taxonomy";
 
 export default function NotesIndexPage() {
   usePageMeta(PAGE_META.notes);
@@ -11,7 +12,7 @@ export default function NotesIndexPage() {
   return (
     <PageLayout testId="notes-page">
 
-      <section
+      <header
         data-testid="notes-hero"
         className="relative pt-28 md:pt-36 pb-12 md:pb-16"
       >
@@ -43,7 +44,7 @@ export default function NotesIndexPage() {
             </div>
           </SectionGrid>
         </SiteContainer>
-      </section>
+      </header>
 
       <SectionShell testId="notes-index" size="sm">
         <SiteContainer>
@@ -57,45 +58,64 @@ export default function NotesIndexPage() {
             </div>
 
             <div className="col-span-12 md:col-span-9 max-w-prose-wide">
-              <ul className="divide-y divide-ink/10 border-y border-ink/10">
-                {NOTES_SORTED.map((n, i) => (
-                  <Reveal key={n.slug} delay={0.05 + i * 0.04} as="li">
-                    <Link
-                      href={`/notes/${n.slug}`}
-                      data-testid={`note-link-${n.slug}`}
-                      className="block py-8 md:py-10 group"
-                    >
-                      <div className="flex items-baseline gap-4 flex-wrap">
-                        <time
-                          dateTime={n.date}
-                          className="text-micro tracking-widest uppercase text-ink-faint num-tab"
+              <ol
+                aria-label="Publication archive"
+                className="divide-y divide-ink/10 border-y border-ink/10"
+              >
+                {NOTES_SORTED.map((n, i) => {
+                  const category = getCategoryBySlug(n.category);
+                  return (
+                    <Reveal key={n.slug} delay={0.05 + i * 0.04} as="li">
+                      <article>
+                        <Link
+                          href={`/notes/${n.slug}`}
+                          data-testid={`note-link-${n.slug}`}
+                          className="block py-8 md:py-10 group"
                         >
-                          {formatNoteDate(n.date)}
-                        </time>
-                        <span className="text-micro tracking-widest uppercase text-ink-faint">
-                          · {n.reading} read
-                        </span>
-                      </div>
-                      <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-500 ease-gentle">
-                        {n.title}
-                      </h2>
-                      <p className="mt-3 text-body text-ink-soft">
-                        {n.excerpt}
-                      </p>
-                      <span className="mt-5 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-500 ease-gentle">
-                        Read the note
-                        <span aria-hidden className="block w-8 h-px bg-current transition-[width] duration-500 ease-gentle group-hover:w-12" />
-                      </span>
-                    </Link>
-                  </Reveal>
-                ))}
-              </ul>
+                          <div className="flex items-baseline gap-4 flex-wrap">
+                            <time
+                              dateTime={n.date}
+                              className="text-micro tracking-widest uppercase text-ink-faint num-tab"
+                            >
+                              {formatNoteDate(n.date)}
+                            </time>
+                            <span className="text-micro tracking-widest uppercase text-ink-faint">
+                              &middot; {n.reading} read
+                            </span>
+                            {category && (
+                              <span className="text-micro tracking-widest uppercase text-ink-faint">
+                                &middot; {category.label}
+                              </span>
+                            )}
+                          </div>
+                          <h2 className="mt-3 font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-500 ease-gentle">
+                            {n.title}
+                          </h2>
+                          <p className="mt-3 text-body text-ink-soft">
+                            {n.excerpt}
+                          </p>
+                          <span className="mt-5 inline-flex items-center gap-3 text-small text-ink-muted group-hover:text-ink transition-colors duration-500 ease-gentle">
+                            Read the note
+                            <span
+                              aria-hidden
+                              className="block w-8 h-px bg-current transition-[width] duration-500 ease-gentle group-hover:w-12"
+                            />
+                          </span>
+                        </Link>
+                      </article>
+                    </Reveal>
+                  );
+                })}
+              </ol>
 
               <Reveal delay={0.2}>
                 <p className="mt-10 text-small text-ink-faint max-w-reading">
                   Future notes will appear here as they are written. If you
                   would like them sent to you when they are ready,{" "}
-                  <a href="/#intake" className="text-ink-muted hover:text-ink quiet-link transition-colors">
+                  <a
+                    href="/#intake"
+                    className="text-ink-muted hover:text-ink quiet-link transition-colors"
+                  >
                     leave us a quiet line
                   </a>
                   .

@@ -1,3 +1,5 @@
+import type { EditorialMode, TraditionReference } from "./taxonomy";
+
 export type PublicationKind =
   | "note"
   | "essay"
@@ -42,4 +44,6 @@ export interface Publication {
   coverImage?: PublicationCoverImage;
   readingTime: string;
   relatedPublications?: string[];
+  editorialMode?: EditorialMode;
+  traditionReference?: TraditionReference[];
 }

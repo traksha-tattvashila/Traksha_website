@@ -1,19 +1,38 @@
+import type { Note } from "../lib/notes";
+
 export interface PageMeta {
   title: string;
   description: string;
   ogTitle?: string;
   ogDescription?: string;
+  ogType?: "website" | "article";
+  canonicalUrl?: string;
+}
+
+export interface PublicationMeta extends PageMeta {
+  ogType: "article";
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
+  articleSection?: string;
+  articleTags?: string[];
+  articleAuthor?: string;
+  structuredData?: Record<string, unknown>;
 }
 
 const SITE_NAME = "Tattvashila";
+const SITE_URL = "https://tattvashila.com";
 const SEP = " \u2014 ";
 
 export function buildTitle(pageTitle: string): string {
   return `${pageTitle}${SEP}${SITE_NAME}`;
 }
 
+export function buildCanonicalUrl(path: string): string {
+  return `${SITE_URL}${path}`;
+}
+
 const BASE_DESCRIPTION =
-  "Tattvashila is a quiet body of work for grounded, conscious living. Awareness, responsibility and discipline — integrated into ordinary life.";
+  "Tattvashila is a quiet body of work for grounded, conscious living. Awareness, responsibility and discipline \u2014 integrated into ordinary life.";
 
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
@@ -21,15 +40,19 @@ export const PAGE_META: Record<string, PageMeta> = {
     description: BASE_DESCRIPTION,
     ogTitle: `${SITE_NAME}${SEP}Awareness, integrated into life.`,
     ogDescription:
-      "A quieter way to live with awareness — without leaving the world you've built.",
+      "A quieter way to live with awareness \u2014 without leaving the world you\u2019ve built.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/"),
   },
   philosophy: {
     title: buildTitle("Philosophy"),
     description:
-      "The working ideas behind Tattvashila. Awareness, responsibility, discipline, and conscious participation — carried into ordinary life.",
+      "The working ideas behind Tattvashila. Awareness, responsibility, discipline, and conscious participation \u2014 carried into ordinary life.",
     ogTitle: buildTitle("Philosophy"),
     ogDescription:
       "Awareness, integrated into ordinary life. The philosophical foundations of Tattvashila.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/philosophy"),
   },
   about: {
     title: buildTitle("Origin"),
@@ -38,6 +61,8 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogTitle: buildTitle("Origin"),
     ogDescription:
       "This did not begin as an idea. It began as a series of quiet observations.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/about"),
   },
   notes: {
     title: buildTitle("Quiet Notes"),
@@ -46,5 +71,47 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogTitle: buildTitle("Quiet Notes"),
     ogDescription:
       "Rare reflections, written when there is something honest worth saying.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/notes"),
   },
 };
+
+export function buildNotePublicationMeta(note: Note): PublicationMeta {
+  const canonical =
+    note.canonicalUrl ?? buildCanonicalUrl(`/notes/${note.slug}`);
+
+  const structuredData: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: note.title,
+    description: note.summary || note.excerpt,
+    datePublished: note.date,
+    ...(note.updatedAt ? { dateModified: note.updatedAt } : {}),
+    author: {
+      "@type": "Person",
+      name: note.signed,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    url: canonical,
+    inLanguage: note.locale === "hi" ? "hi-IN" : note.locale === "sa" ? "sa" : "en-GB",
+  };
+
+  return {
+    title: buildTitle(note.title),
+    description: note.summary || note.excerpt,
+    ogTitle: buildTitle(note.title),
+    ogDescription: note.summary || note.excerpt,
+    ogType: "article",
+    canonicalUrl: canonical,
+    articlePublishedTime: note.date,
+    articleModifiedTime: note.updatedAt,
+    articleSection: note.category,
+    articleTags: note.tags,
+    articleAuthor: note.signed,
+    structuredData,
+  };
+}
