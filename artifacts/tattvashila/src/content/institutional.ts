@@ -1,12 +1,13 @@
 export const BRAND = {
-  name:        "Tattvashila",
-  deva:        "तत्त्वशिला",
-  meaning:     "the foundation stone",
-  essence:     "a quiet body of work",
-  tagline:     "A quieter way to live with awareness — without leaving the world you've built.",
-  description: "A long-form, slowly-built body of work for grounded, conscious living.",
-  footerQuote: "A foundation is laid quietly, long before anything is built upon it.",
-  legal:       "Grounded in Dharma. Carried with integrity.",
+  name:             "Tattvashila",
+  deva:             "तत्त्वशिला",
+  meaning:          "the foundation stone",
+  essence:          "a quiet body of work",
+  tagline:          "A quieter way to live with awareness — without leaving the world you've built.",
+  description:      "A long-form, slowly-built body of work for grounded, conscious living.",
+  footerQuote:      "A foundation is laid quietly, long before anything is built upon it.",
+  footerStatement:  "Toward slower thought and longer continuity.",
+  legal:            "Grounded in Dharma. Carried with integrity.",
 } as const;
 
 export const EYEBROW = {
