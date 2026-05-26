@@ -1,10 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import QuietImage from "../QuietImage";
 import { SiteContainer, SectionGrid } from "../../layouts";
-import { EASE_GENTLE_ARRAY } from "../../tokens/motion";
+import { EASE_GENTLE } from "../../system/motion/easings";
+import { images } from "../../system/images/registry";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1400&q=80";
+const { heroThreshold } = images;
 
 export default function Threshold() {
   const reduce = useReducedMotion();
@@ -21,7 +21,7 @@ export default function Threshold() {
               data-testid="threshold-eyebrow"
               initial={reduce ? { opacity: 1 } : { opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.0, delay: 0.1, ease: EASE_GENTLE_ARRAY }}
+              transition={{ duration: 1.0, delay: 0.1, ease: EASE_GENTLE }}
               className="text-micro tracking-widest uppercase text-ink-muted mb-6 md:mb-8"
             >
               <span className="font-deva text-[0.95rem] tracking-normal normal-case mr-3 text-ink">तत्त्वशिला</span>
@@ -32,7 +32,7 @@ export default function Threshold() {
               data-testid="threshold-headline"
               initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.25, ease: EASE_GENTLE_ARRAY }}
+              transition={{ duration: 1.0, delay: 0.25, ease: EASE_GENTLE }}
               className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
             >
               A quieter way to live with awareness &mdash; without leaving the world you&rsquo;ve built.
@@ -42,7 +42,7 @@ export default function Threshold() {
               data-testid="threshold-sub"
               initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.45, ease: EASE_GENTLE_ARRAY }}
+              transition={{ duration: 1.0, delay: 0.45, ease: EASE_GENTLE }}
               className="mt-7 md:mt-9 text-lead text-ink-soft max-w-reading"
             >
               Modern life offers endless advice and very little steadiness.
@@ -78,19 +78,19 @@ export default function Threshold() {
           <motion.div
             initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.55, ease: EASE_GENTLE_ARRAY }}
+            transition={{ duration: 1.2, delay: 0.55, ease: EASE_GENTLE }}
             className="col-span-12 md:col-span-5"
           >
             <QuietImage
-              src={HERO_IMG}
-              alt="Soft morning light falling on a quiet, lived-in room"
+              src={heroThreshold.src}
+              alt={heroThreshold.alt}
               testId="threshold-image"
               aspectClass="aspect-[4/5] md:aspect-[4/5]"
-              fallbackTone="warm"
+              fallbackTone={heroThreshold.fallbackTone}
               className="rounded-[2px]"
             />
             <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
-              An ordinary morning, an ordinary page.
+              {heroThreshold.credit}
             </p>
           </motion.div>
         </SectionGrid>

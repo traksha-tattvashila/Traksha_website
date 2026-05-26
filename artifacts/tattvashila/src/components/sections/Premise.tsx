@@ -1,9 +1,9 @@
 import Reveal from "../Reveal";
 import QuietImage from "../QuietImage";
 import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
+import { images } from "../../system/images/registry";
 
-const PREMISE_IMG =
-  "https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?auto=format&fit=crop&w=1400&q=80";
+const { heroPremise } = images;
 
 export default function Premise() {
   return (
@@ -53,14 +53,14 @@ export default function Premise() {
 
               <Reveal delay={0.25} className="col-span-12 lg:col-span-5 lg:pt-4">
                 <QuietImage
-                  src={PREMISE_IMG}
-                  alt="A person reading a book between library shelves — quiet, ordinary attention"
+                  src={heroPremise.src}
+                  alt={heroPremise.alt}
                   testId="premise-image"
                   aspectClass="aspect-[4/5]"
-                  fallbackTone="warm"
+                  fallbackTone={heroPremise.fallbackTone}
                 />
                 <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
-                  The work of paying attention.
+                  {heroPremise.credit}
                 </p>
               </Reveal>
             </div>

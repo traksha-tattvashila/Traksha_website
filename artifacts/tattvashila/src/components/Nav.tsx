@@ -3,14 +3,8 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import Wordmark from "./Wordmark";
 import { SiteContainer } from "../layouts";
-import { EASE_GENTLE_ARRAY } from "../tokens/motion";
-
-const NAV_ITEMS = [
-  { label: "Philosophy", href: "/philosophy", isRoute: true },
-  { label: "The work",   href: "/#ecosystem",  isRoute: false },
-  { label: "Notes",      href: "/notes",        isRoute: true },
-  { label: "Origin",     href: "/about",        isRoute: true },
-] as const;
+import { EASE_GENTLE } from "../system/motion/easings";
+import { SITE_NAV } from "../content/navigation";
 
 export default function Nav() {
   const [location] = useLocation();
@@ -45,7 +39,7 @@ export default function Nav() {
             <Wordmark testId="nav-wordmark" />
 
             <nav className="hidden md:flex items-center gap-9" aria-label="Main navigation">
-              {NAV_ITEMS.map((item) =>
+              {SITE_NAV.map((item) =>
                 item.isRoute ? (
                   <Link
                     key={item.href}
@@ -91,6 +85,7 @@ export default function Nav() {
                 onClick={() => setMobileOpen(true)}
                 aria-label="Open navigation menu"
                 aria-expanded={mobileOpen}
+                aria-controls="mobile-nav"
                 data-testid="nav-hamburger"
                 className="inline-flex items-center justify-center w-9 h-9 text-ink-muted hover:text-ink transition-colors duration-300"
               >
@@ -108,14 +103,15 @@ export default function Nav() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-nav"
             key="mobile-nav"
             data-testid="mobile-nav"
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.35, ease: EASE_GENTLE_ARRAY } }}
-            exit={{ opacity: 0, transition: { duration: 0.25, ease: EASE_GENTLE_ARRAY } }}
+            animate={{ opacity: 1, transition: { duration: 0.35, ease: EASE_GENTLE } }}
+            exit={{ opacity: 0, transition: { duration: 0.25, ease: EASE_GENTLE } }}
             className="fixed inset-0 z-50 bg-bone/97 backdrop-blur-sm md:hidden flex flex-col"
           >
             <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-ink/10">
@@ -137,20 +133,18 @@ export default function Nav() {
               className="flex flex-col px-6 pt-10 pb-6 gap-1 flex-1"
               aria-label="Mobile navigation"
             >
-              {NAV_ITEMS.map((item, i) =>
+              {SITE_NAV.map((item, i) =>
                 item.isRoute ? (
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.05 + i * 0.04, ease: EASE_GENTLE_ARRAY } }}
+                    animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.05 + i * 0.04, ease: EASE_GENTLE } }}
                   >
                     <Link
                       href={item.href}
                       data-testid={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                       className={`block py-4 font-display text-display font-normal transition-colors duration-300 border-b border-ink/10${
-                        isActive(item.href)
-                          ? " text-ink"
-                          : " text-ink-muted hover:text-ink"
+                        isActive(item.href) ? " text-ink" : " text-ink-muted hover:text-ink"
                       }`}
                     >
                       {item.label}
@@ -160,7 +154,7 @@ export default function Nav() {
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.05 + i * 0.04, ease: EASE_GENTLE_ARRAY } }}
+                    animate={{ opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.05 + i * 0.04, ease: EASE_GENTLE } }}
                   >
                     <a
                       href={item.href}
@@ -176,7 +170,7 @@ export default function Nav() {
 
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { duration: 0.4, delay: 0.28, ease: EASE_GENTLE_ARRAY } }}
+                animate={{ opacity: 1, transition: { duration: 0.4, delay: 0.28, ease: EASE_GENTLE } }}
                 className="mt-auto pt-10"
               >
                 <a

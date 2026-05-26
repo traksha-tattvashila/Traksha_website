@@ -1,9 +1,13 @@
 import { Link } from "wouter";
 import Reveal from "../components/Reveal";
 import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
-import { NOTES_SORTED, formatNoteDate } from "../lib/notes";
+import { usePageMeta } from "../hooks/usePageMeta";
+import { PAGE_META } from "../content/metadata";
+import { NOTES_SORTED, formatNoteDate } from "../content/notes";
 
 export default function NotesIndexPage() {
+  usePageMeta(PAGE_META.notes);
+
   return (
     <PageLayout testId="notes-page">
 

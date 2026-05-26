@@ -1,7 +1,11 @@
 import Reveal from "../components/Reveal";
 import { PageLayout, SiteContainer, SectionShell, SectionGrid } from "../layouts";
+import { usePageMeta } from "../hooks/usePageMeta";
+import { PAGE_META } from "../content/metadata";
 
 export default function AboutPage() {
+  usePageMeta(PAGE_META.about);
+
   return (
     <PageLayout testId="about-page">
 

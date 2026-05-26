@@ -1,5 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ReactNode } from "react";
+import { EASE_GENTLE } from "../system/motion/easings";
+import { duration } from "../system/motion/durations";
 
 interface RevealProps {
   children: ReactNode;
@@ -24,9 +26,9 @@ export default function Reveal({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{
-        duration: reduce ? 0 : 0.85,
-        delay: reduce ? 0 : delay,
-        ease: [0.22, 0.61, 0.36, 1],
+        duration: reduce ? 0 : duration.reveal,
+        delay:    reduce ? 0 : delay,
+        ease:     EASE_GENTLE,
       }}
       className={className}
     >

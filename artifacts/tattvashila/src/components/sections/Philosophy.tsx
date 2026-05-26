@@ -1,29 +1,7 @@
 import { Link } from "wouter";
 import Reveal from "../Reveal";
 import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
-
-const PRINCIPLES = [
-  {
-    numeral: "I",
-    title: "Awareness, plainly.",
-    body: "Not a spiritual state — a working faculty. The ability to notice what is actually happening before reacting to it.",
-  },
-  {
-    numeral: "II",
-    title: "Responsibility, before identity.",
-    body: "The willingness to stand behind your own life — your decisions, your effects, your unfinished work — without flinching or performance.",
-  },
-  {
-    numeral: "III",
-    title: "Discipline, chosen.",
-    body: "The small, repeated structure that holds a life together. Not imposed from outside — chosen, and gradually made invisible.",
-  },
-  {
-    numeral: "IV",
-    title: "Conscious participation.",
-    body: "Practised within the life you already have: at the desk, in the conversation, in the difficult meeting. Not apart from the world.",
-  },
-];
+import { HOME_PRINCIPLES } from "../../content/principles";
 
 export default function Philosophy() {
   return (
@@ -55,7 +33,7 @@ export default function Philosophy() {
               className="mt-12 md:mt-16 divide-y divide-ink/10 border-y border-ink/15"
               data-testid="philosophy-principles"
             >
-              {PRINCIPLES.map((p, i) => (
+              {HOME_PRINCIPLES.map((p, i) => (
                 <Reveal key={p.numeral} delay={0.04 + i * 0.03} as="li">
                   <div className="grid grid-cols-12 gap-x-6 py-7 md:py-9">
                     <div className="col-span-12 md:col-span-2 mb-2 md:mb-0">

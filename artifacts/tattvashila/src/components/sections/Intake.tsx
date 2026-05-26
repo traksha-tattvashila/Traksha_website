@@ -2,7 +2,7 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "../Reveal";
 import { SiteContainer, SectionShell, SectionGrid } from "../../layouts";
-import { EASE_GENTLE_ARRAY } from "../../tokens/motion";
+import { EASE_GENTLE } from "../../system/motion/easings";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
 
@@ -152,7 +152,7 @@ export default function Intake() {
                   key="done"
                   data-testid="intake-success"
                   initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: EASE_GENTLE_ARRAY } }}
+                  animate={{ opacity: 1, y: 0, transition: { duration: 0.9, ease: EASE_GENTLE } }}
                   className="mt-12 md:mt-14 max-w-reading"
                 >
                   <p className="font-display text-2xl md:text-3xl font-normal text-ink leading-snug">

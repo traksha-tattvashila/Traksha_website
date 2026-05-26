@@ -1,16 +1,14 @@
-export const EASE_GENTLE_ARRAY = [0.22, 0.61, 0.36, 1] as const;
-export const EASE_GENTLE_CSS   = "cubic-bezier(0.22, 0.61, 0.36, 1)";
+/**
+ * Backward-compatible re-exports.
+ * Canonical motion definitions live in src/system/motion/.
+ * This file exists so existing imports continue to resolve during the transition.
+ */
+export {
+  EASE_GENTLE       as EASE_GENTLE_ARRAY,
+  EASE_GENTLE_CSS,
+} from "../system/motion/easings";
 
-export const durations = {
-  fast:     "300ms",
-  default:  "500ms",
-  slow:     "600ms",
-  verySlow: "1200ms",
-} as const;
-
-export const durationsFM = {
-  fast:     0.3,
-  default:  0.5,
-  slow:     0.65,
-  verySlow: 1.2,
-} as const;
+export {
+  duration          as durationsFM,
+  durationCSS       as durations,
+} from "../system/motion/durations";

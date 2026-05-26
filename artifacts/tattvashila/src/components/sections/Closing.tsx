@@ -1,56 +1,26 @@
 import { Link } from "wouter";
+import { ReactNode } from "react";
 import Reveal from "../Reveal";
 import Wordmark from "../Wordmark";
 import { SiteContainer } from "../../layouts";
+import { FOOTER_NAV, SOCIAL_LINKS } from "../../content/navigation";
+import { BRAND } from "../../content/institutional";
 
-const NAV_GROUPS = [
-  {
-    label: "The work",
-    links: [
-      { label: "Philosophy", href: "/philosophy", isRoute: true },
-      { label: "The dimensions", href: "/#ecosystem", isRoute: false },
-      { label: "The journey", href: "/#journey", isRoute: false },
-    ],
-  },
-  {
-    label: "About",
-    links: [
-      { label: "Origin", href: "/about", isRoute: true },
-      { label: "Reflective intake", href: "/#intake", isRoute: false },
-      { label: "Quiet Notes", href: "/notes", isRoute: true },
-    ],
-  },
-];
-
-interface SocialItem {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-}
-
-const SOCIAL: SocialItem[] = [
-  {
-    label: "Instagram",
-    href: "https://instagram.com/tattvashila",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="3" width="18" height="18" rx="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  {
-    label: "YouTube",
-    href: "https://youtube.com/@tattvashila",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="2.5" y="6" width="19" height="12" rx="3" />
-        <path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-];
+const SOCIAL_ICONS: Record<string, ReactNode> = {
+  Instagram: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  YouTube: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2.5" y="6" width="19" height="12" rx="3" />
+      <path d="M10.5 9.5l4.5 2.5-4.5 2.5z" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+};
 
 export default function Closing() {
   const year = new Date().getFullYear();
@@ -67,22 +37,22 @@ export default function Closing() {
             </Reveal>
             <Reveal delay={0.05}>
               <p className="mt-3 font-display text-base md:text-lg text-ink-soft leading-snug max-w-prose-wide">
-                A foundation is laid quietly, long before anything is built upon it.
+                {BRAND.footerQuote}
               </p>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-3 text-small text-ink-muted max-w-reading">
-                <span className="font-deva text-[0.95rem] tracking-normal text-ink mr-2">तत्त्वशिला</span>
-                — the foundation stone. A long-form, slowly-built body of work for grounded, conscious living.
+                <span className="font-deva text-[0.95rem] tracking-normal text-ink mr-2">{BRAND.deva}</span>
+                — {BRAND.meaning}. {BRAND.description}
               </p>
             </Reveal>
           </div>
 
-          {NAV_GROUPS.map((g, gi) => (
+          {FOOTER_NAV.map((g, gi) => (
             <Reveal key={g.label} delay={0.1 + gi * 0.04} className="col-span-6 md:col-span-3">
-              <p className="text-micro tracking-widest uppercase text-ink-faint mb-3">
+              <h3 className="text-micro tracking-widest uppercase text-ink-faint mb-3">
                 {g.label}
-              </p>
+              </h3>
               <ul className="space-y-2">
                 {g.links.map((l) => (
                   <li key={l.label}>
@@ -112,7 +82,7 @@ export default function Closing() {
 
         <Reveal delay={0.15}>
           <div className="mt-10 md:mt-12 flex items-center gap-5" data-testid="footer-social">
-            {SOCIAL.map((s) => (
+            {SOCIAL_LINKS.map((s) => (
               <a
                 key={s.label}
                 href={s.href}
@@ -122,7 +92,9 @@ export default function Closing() {
                 data-testid={`footer-social-${s.label.toLowerCase()}`}
                 className="inline-flex items-center justify-center w-9 h-9 text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle"
               >
-                <span className="block w-[18px] h-[18px]">{s.icon}</span>
+                <span className="block w-[18px] h-[18px]">
+                  {SOCIAL_ICONS[s.label]}
+                </span>
               </a>
             ))}
           </div>
@@ -133,13 +105,13 @@ export default function Closing() {
             data-testid="footer-meta"
             className="text-micro tracking-widest uppercase text-ink-faint num-tab"
           >
-            © {year} &nbsp;·&nbsp; Tattvashila
+            © {year} &nbsp;·&nbsp; {BRAND.name}
           </p>
           <p
             data-testid="footer-tagline"
             className="text-micro tracking-widest uppercase text-ink-faint"
           >
-            Grounded in Dharma. Carried with integrity.
+            {BRAND.legal}
           </p>
         </div>
       </SiteContainer>

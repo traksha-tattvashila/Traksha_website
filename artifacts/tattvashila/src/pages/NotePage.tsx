@@ -1,11 +1,24 @@
 import { Link, useParams } from "wouter";
 import Reveal from "../components/Reveal";
 import { PageLayout, SiteContainer, SectionGrid } from "../layouts";
-import { getNote, formatNoteDate } from "../lib/notes";
+import { usePageMeta } from "../hooks/usePageMeta";
+import { PAGE_META, buildTitle } from "../content/metadata";
+import { getNote, formatNoteDate } from "../content/notes";
 
 export default function NotePage() {
   const { slug } = useParams<{ slug: string }>();
   const note = getNote(slug);
+
+  const meta = note
+    ? {
+        title:          buildTitle(note.title),
+        description:    note.excerpt,
+        ogTitle:        buildTitle(note.title),
+        ogDescription:  note.excerpt,
+      }
+    : PAGE_META.notes;
+
+  usePageMeta(meta);
 
   if (!note) {
     return (
