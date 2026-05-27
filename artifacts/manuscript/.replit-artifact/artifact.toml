@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/manuscript/"
+title = "Manuscript Rendering Calibration"
+version = "1.0.0"
+id = "artifacts/manuscript"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/manuscript/" ]
+localPort = 25549
+
+[services.development]
+run = "pnpm --filter @workspace/manuscript run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/manuscript", "run", "build" ]
+publicDir = "artifacts/manuscript/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25549"
+BASE_PATH = "/manuscript/"
