@@ -1,0 +1,79 @@
+IMPORTANT CORRECTION:
+
+Do NOT create separate rendering applications, parallel preview environments, isolated manuscript sites, or standalone calibration projects.
+
+The manuscript rendering system must exist INSIDE the original Tattvashila institutional architecture.
+
+The existing Tattvashila website is the primary canonical environment.
+
+━━━━━━━━━━━━━━━
+CRITICAL DIRECTION
+━━━━━━━━━━━━━━━
+
+The recently created “Manuscript Rendering Calibration” environment must NOT become a separate website.
+
+Do NOT fragment the institution into multiple web properties.
+
+The rendering system must integrate into:
+
+• existing navigation
+• existing editorial architecture
+• existing atmosphere systems
+• existing Granthālaya foundations
+• existing institutional continuity
+
+━━━━━━━━━━━━━━━
+EXECUTE ONLY THESE ACTIONS
+━━━━━━━━━━━━━━━
+
+1. Remove standalone rendering-preview architecture
+2. Preserve all useful manuscript calibration code internally
+3. Integrate calibration systems into the existing Tattvashila codebase
+4. Keep only ONE canonical institutional website
+5. Attach manuscript rendering ONLY to Granthālaya routes
+6. Preserve existing navigation continuity
+7. Preserve existing editorial atmosphere
+
+━━━━━━━━━━━━━━━
+IMPORTANT ARCHITECTURAL RULE
+━━━━━━━━━━━━━━━
+
+Tattvashila is a single contemplative institution.
+
+NOT:
+multiple apps,
+multiple websites,
+parallel reading systems,
+isolated manuscript products,
+or detached preview environments.
+
+All manuscript rendering must feel like a natural continuation of the existing institution.
+
+━━━━━━━━━━━━━━━
+RENDERING INTEGRATION DIRECTION
+━━━━━━━━━━━━━━━
+
+The manuscript calibration work should become:
+
+• internal typography systems
+• internal prose rendering systems
+• internal Devanagari rendering systems
+• internal manuscript CSS foundations
+
+inside the existing Granthālaya architecture.
+
+Do NOT create separate deployable experiences.
+
+━━━━━━━━━━━━━━━
+VALIDATION
+━━━━━━━━━━━━━━━
+
+After correction verify:
+
+• only one website remains
+• original Tattvashila remains primary
+• Granthālaya remains integrated
+• manuscript rendering exists inside the institution
+• navigation continuity remains intact
+• no parallel preview product exists
+• no fragmented institutional identity exists

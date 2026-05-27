@@ -410,6 +410,187 @@ img.broken { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   MANUSCRIPT RENDERING SYSTEM
+   Canonical grammar derived from the Tattvaprashna frontispiece.
+   Bone-deep ground · Devanagari-first · Institutional gravity.
+   All manuscript surfaces inherit this visual language.
+═══════════════════════════════════════════════════════════════ */
+
+/* Frontispiece — canonical title page architecture */
+.ms-frontispiece {
+  background-color: var(--bone-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.ms-frontispiece-inner {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Series label — smallest element, Devanagari, tracked */
+.ms-series-label {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: 2.5rem;
+}
+
+/* Main Devanagari title — dominant, institutional weight */
+.ms-title-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(2.8rem, 6.5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+}
+
+/* Roman transliteration — subordinate, tracked */
+.ms-title-roman {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 2.25rem;
+}
+
+/* Manuscript rule — hairline, centered */
+.ms-rule {
+  width: 36px;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.18;
+  margin: 0 auto 2.25rem;
+}
+
+/* Subtitle — Devanagari, restrained */
+.ms-subtitle-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+}
+
+.ms-subtitle-roman {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  margin-bottom: 0;
+}
+
+/* Author attribution */
+.ms-author {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  margin-bottom: 0.3rem;
+}
+
+/* Frontispiece colophon — institution mark at foot */
+.ms-frontispiece-foot {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.ms-foot-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+}
+
+.ms-foot-sep {
+  width: 1px;
+  height: 0.7em;
+  background: var(--ink-faint);
+  opacity: 0.3;
+  display: inline-block;
+}
+
+.ms-foot-roman {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* Architectural silence — intentional pacing between sections */
+.ms-silence-sm { height: 4rem; }
+.ms-silence-md { height: 7rem; }
+.ms-silence-lg { height: 11rem; }
+
+/* Manuscript prose — Devanagari register */
+.ms-prose-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(1.02rem, 1.5vw, 1.125rem);
+  line-height: 2.1;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
+/* Manuscript prose — Roman register */
+.ms-prose-roman {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.92;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+  hyphens: auto;
+  hyphenate-limit-chars: 8 3 3;
+}
+.ms-prose-roman em  { font-style: italic; color: var(--ink); }
+.ms-prose-roman + .ms-prose-deva,
+.ms-prose-deva  + .ms-prose-roman { margin-top: 1.9em; }
+
+/* Chapter opening — Devanagari-first hierarchy */
+.ms-chapter-num {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+  margin-bottom: 0.55rem;
+}
+
+.ms-chapter-title-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.ms-chapter-title-roman {
+  font-size: 0.84rem;
+  letter-spacing: 0.1em;
+  font-style: italic;
+  color: var(--ink-faint);
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
    ACCESSIBILITY & REDUCED MOTION
 ═══════════════════════════════════════════════════════════════ */
 

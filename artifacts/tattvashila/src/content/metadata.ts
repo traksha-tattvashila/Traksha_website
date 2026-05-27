@@ -94,6 +94,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
     canonicalUrl: buildCanonicalUrl("/granthalaya"),
   },
+  tattvaprashna: {
+    title: buildTitle("Tattvaprashna — तत्त्वप्रश्न"),
+    description:
+      "A critical inquiry into human freedom, order, and responsibility. The pregrantha of the Tattvagrantha series — the necessary preparation.",
+    ogTitle: buildTitle("Tattvaprashna — तत्त्वप्रश्न"),
+    ogDescription:
+      "The prerequisite to all that follows. A critical inquiry into human freedom, order, and responsibility.",
+    ogType: "article",
+    canonicalUrl: buildCanonicalUrl("/granthalaya/tattvaprashna"),
+  },
 };
 
 export function buildNotePublicationMeta(note: Note): PublicationMeta {

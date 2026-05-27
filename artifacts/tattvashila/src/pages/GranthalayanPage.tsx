@@ -240,6 +240,24 @@ export default function GranthalayanPage() {
                     </div>
                   </Reveal>
                 )}
+
+                {/* Tattvaprashna — quiet entry into the manuscript */}
+                {gIdx === 0 && (
+                  <Reveal delay={0.22}>
+                    <div className="mt-10 md:mt-12 pt-8 border-t border-ink/8">
+                      <Link
+                        href="/granthalaya/tattvaprashna"
+                        className="inline-flex items-center gap-3 text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle group"
+                      >
+                        <span
+                          aria-hidden
+                          className="block w-5 h-px bg-current opacity-40 group-hover:opacity-70 transition-opacity duration-700"
+                        />
+                        <span>Enter the manuscript</span>
+                      </Link>
+                    </div>
+                  </Reveal>
+                )}
               </div>
 
             </SectionGrid>
