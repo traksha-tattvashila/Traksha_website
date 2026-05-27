@@ -591,6 +591,270 @@ img.broken { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   MANUSCRIPT LANGUAGE GATEWAY
+   Threshold screen — language selection before manuscript entry.
+═══════════════════════════════════════════════════════════════ */
+
+.ms-language-gateway {
+  background-color: var(--bone-deep);
+  padding: 6rem 2rem 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ms-gateway-inner {
+  width: 100%;
+  max-width: 420px;
+}
+
+.ms-gateway-label {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-faint);
+  margin-bottom: 2.5rem;
+}
+
+.ms-gateway-options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+}
+
+.ms-gateway-option {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(0, 31, 32, 0.08);
+}
+.ms-gateway-option:first-child {
+  border-top: 1px solid rgba(0, 31, 32, 0.08);
+}
+
+a.ms-gateway-option {
+  text-decoration: none;
+  transition: opacity 500ms ease;
+}
+a.ms-gateway-option:hover { opacity: 0.65; }
+
+.ms-gateway-option--inactive { opacity: 0.38; cursor: default; }
+
+.ms-gateway-option-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 1.08rem;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.ms-gateway-option-roman {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.ms-gateway-option-arrow {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.ms-gateway-option-note {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+}
+
+.ms-gateway-return {
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.ms-gateway-return:hover { color: var(--ink-muted); }
+
+/* ═══════════════════════════════════════════════════════════════
+   MANUSCRIPT READING SURFACE
+   Active reading environment — front matter + controlled chapters.
+═══════════════════════════════════════════════════════════════ */
+
+.ms-reading-surface {
+  background-color: var(--bone-deep);
+  padding-bottom: 8rem;
+}
+
+.ms-reading-col {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ms-reading-nav {
+  padding: 2.5rem 0 0;
+}
+
+.ms-reading-nav-link {
+  font-size: 0.73rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.ms-reading-nav-link:hover { color: var(--ink-muted); }
+
+/* Copyright / publication notice */
+.ms-copyright-section {
+  padding: 5.5rem 0 5rem;
+  text-align: center;
+}
+
+.ms-copyright-line {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.84rem;
+  line-height: 2.1;
+  color: var(--ink-faint);
+  display: block;
+}
+
+.ms-copyright-line--em {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.9rem;
+  line-height: 2.1;
+  color: var(--ink-muted);
+  display: block;
+}
+
+.ms-copyright-line--roman {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.78rem;
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  display: block;
+}
+
+.ms-copyright-gap { height: 1.6rem; display: block; }
+
+/* Hairline rule — full column width */
+.ms-rule-full {
+  width: 100%;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.09;
+}
+
+/* Section heading — small tracked label */
+.ms-section-heading {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Centered verse prose — लेखक का कथन */
+.ms-prose-deva-center {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(0.97rem, 1.4vw, 1.07rem);
+  line-height: 2.2;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.ms-prose-deva-center p { margin-bottom: 2em; }
+.ms-prose-deva-center p:last-child { margin-bottom: 0; }
+
+/* Author sign-off */
+.ms-signoff {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.09em;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 2.25rem;
+}
+
+/* अनुक्रमणिका */
+.ms-anukramanika-section {
+  padding: 5.5rem 0 6rem;
+}
+
+.ms-anukramanika-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ms-anukramanika-item {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--ink-muted);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 31, 32, 0.07);
+}
+.ms-anukramanika-item:first-child {
+  border-top: 1px solid rgba(0, 31, 32, 0.07);
+}
+
+/* Chapter opening section */
+.ms-chapter-opening-section {
+  padding: 0 0 5rem;
+}
+
+.ms-chapter-rule-line {
+  width: 48px;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.13;
+  margin: 1.5rem 0 2.5rem;
+}
+
+/* Chapter paragraph — left-aligned, optimal Devanagari measure */
+.ms-prose-deva-para {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(1.0rem, 1.45vw, 1.09rem);
+  line-height: 2.12;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+  margin-bottom: 1.85em;
+}
+.ms-prose-deva-para:last-of-type { margin-bottom: 0; }
+
+/* Chapter continues marker */
+.ms-chapter-continues {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ink-faint);
+  opacity: 0.45;
+  margin-top: 3.5rem;
+  letter-spacing: 0.35em;
+}
+
+/* Reading footer */
+.ms-reading-footer {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid rgba(0, 31, 32, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════
    ACCESSIBILITY & REDUCED MOTION
 ═══════════════════════════════════════════════════════════════ */
 

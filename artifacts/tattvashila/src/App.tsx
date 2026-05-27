@@ -7,6 +7,7 @@ import PhilosophyPage from "./pages/PhilosophyPage";
 import ArchivePage from "./pages/ArchivePage";
 import GranthalayanPage from "./pages/GranthalayanPage";
 import TattvaprashnaPage from "./pages/TattvaprashnaPage";
+import TattvaprashnaManuscriptPage from "./pages/TattvaprashnaManuscriptPage";
 import NotFound from "./pages/not-found";
 
 function Router() {
@@ -19,8 +20,9 @@ function Router() {
       <Route path="/philosophy"                      component={PhilosophyPage}    />
       <Route path="/archive"                         component={ArchivePage}       />
       <Route path="/granthalaya"                     component={GranthalayanPage}  />
-      <Route path="/granthalaya/tattvaprashna"       component={TattvaprashnaPage} />
-      <Route                                         component={NotFound}          />
+      <Route path="/granthalaya/tattvaprashna"       component={TattvaprashnaPage}           />
+      <Route path="/granthalaya/tattvaprashna/hindi" component={TattvaprashnaManuscriptPage} />
+      <Route                                         component={NotFound}                    />
     </Switch>
   );
 }
