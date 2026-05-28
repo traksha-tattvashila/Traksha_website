@@ -1024,6 +1024,92 @@ export default function TattvaprashnaManuscriptPage() {
             </section>
           </Reveal>
 
+          {/* ════════════════════════════════════
+              SECTION: अध्याय 3
+              Controlled activation — opening movement only.
+              Source: canon/tattvaprashna-source-of-truth.md, lines 621–652
+              Rendered through the terminal definition of freedom.
+              Chapter continues beyond this section.
+          ════════════════════════════════════ */}
+          <Reveal delay={0.02}>
+            <section
+              aria-label="अध्याय 3 — स्वतंत्रता और उसकी क़ीमत"
+              data-testid="tattvaprashna-chapter3"
+              className="ms-chapter-opening-section"
+            >
+
+              <p className="ms-chapter-num">अध्याय ३</p>
+              <h2 className="ms-chapter-title-deva">स्वतंत्रता और उसकी क़ीमत</h2>
+              <div className="ms-chapter-rule-line" />
+
+              {/* ══════════════════════════════════════
+                  Movement A — Freedom as burden
+                  The paradox; animals vs. humans; the price never understood.
+                  Source: lines 626–652
+              ══════════════════════════════════════ */}
+
+              {/* Block F1 — Opening paradox */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता को प्रायः एक उपहार के रूप में देखा जाता है।<br />
+                वास्तव में, वह एक बोझ है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block F2 — Nature does not give animals freedom's burden */}
+              <p className="ms-prose-deva-lines">
+                प्रकृति पशु को स्वतंत्रता का भार नहीं देती।<br />
+                उनका आचरण वृत्ति से संचालित होता है,<br />
+                पर्यावरण उनके विकल्प सीमित करता है,<br />
+                और परिणाम तुरंत सामने आ जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block F3 — The animal's temporal freedom */}
+              <p className="ms-prose-deva-lines">
+                पशु आने वाले कल का भार अपने विवेक पर नहीं ढोता।<br />
+                वह बीते हुए कल के लिए उत्तरदायी नहीं होता।<br />
+                उसका जीवन सीमित, किन्तु सुरक्षित परिधि में घटित होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block F4 — Human life is different; the power to choose beyond instinct */}
+              <p className="ms-prose-deva-lines">
+                मानव जीवन ऐसा नहीं है।<br />
+                मनुष्य होना केवल जीवित रहना नहीं है।<br />
+                यह वृत्ति से परे चुनने की शक्ति रखना है —<br />
+                भूख के विरुद्ध,<br />
+                भय के विरुद्ध,<br />
+                लाभ के विरुद्ध,<br />
+                और कभी-कभी स्वयं के हित के विरुद्ध भी काम करने की शक्ति।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block F5 — This power is celebrated; its price rarely understood */}
+              <p className="ms-prose-deva-lines">
+                इस शक्ति का उत्सव मनाया जाता है,<br />
+                इसे माँगा जाता है,<br />
+                और इसकी रक्षा की जाती है।<br />
+                पर इसकी क़ीमत को शायद ही समझा जाता है।
+              </p>
+
+              {/* Silence before the terminal definition */}
+              <div className="ms-silence-md" />
+
+              {/* Block F6 — The opening movement's terminal definition */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता सीमा का अभाव नहीं है।<br />
+                वह उत्तरदायित्व की उपस्थिति है।
+              </p>
+
+              <p className="ms-chapter-continues">· · ·</p>
+
+            </section>
+          </Reveal>
+
           <div className="ms-silence-lg" />
 
           {/* ════════════════════════════════════
