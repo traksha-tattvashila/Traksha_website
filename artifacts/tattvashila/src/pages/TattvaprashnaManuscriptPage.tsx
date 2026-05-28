@@ -685,6 +685,98 @@ export default function TattvaprashnaManuscriptPage() {
                 किन्तु मनुष्य को इस प्राकृतिक परिधि में छोड़ नहीं दिया गया है।
               </p>
 
+              {/* ══════════════════════════════════════
+                  Movement B — धर्म's entry; the moral distinction
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 461–504
+                  Rendering through the self-governance declaration.
+                  Remaining chapter movements deferred.
+              ══════════════════════════════════════ */}
+
+              {/* Architectural silence — source --- between movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block D1 — धर्म's entry: the moment moral responsibility appears */}
+              <p className="ms-prose-deva-lines">
+                जिस क्षण नैतिक उत्तरदायित्व प्रकट होता है,<br />
+                उसी क्षण केवल ऋत पर्याप्त नहीं रह जाता।<br />
+                यह धर्म का प्रवेश होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D2 — Definition pair: description vs. demand */}
+              <p className="ms-prose-deva-lines">
+                धर्म उस बात का विवरण नहीं है जो घटित होती है।<br />
+                धर्म उस बात की माँग है जिसे बनाए रखा जाना चाहिए।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D3 — Contrast structure: ऋत vs. धर्म (जहाँ…वहाँ x2) */}
+              <p className="ms-prose-deva-lines">
+                जहाँ ऋत प्रकृति का संचालन करता है,<br />
+                वहाँ धर्म आचरण को संचालित करता है।<br />
+                जहाँ ऋत स्वतः संतुलन बनाए रखता है,<br />
+                वहाँ धर्म चयन की अपेक्षा करता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D4 — ऋत cannot be broken; धर्म can be violated */}
+              <p className="ms-prose-deva-lines">
+                ऋत को तोड़ा नहीं जा सकता,<br />
+                पर धर्म का उल्लंघन संभव है —<br />
+                और इसी कारण उसका संरक्षण आवश्यक हो जाता है।
+              </p>
+
+              {/* Architectural silence — source --- between sub-movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block D5 — This distinction is not philosophical ornament */}
+              <p className="ms-prose-deva-para">
+                यह भेद कोई दार्शनिक सजावट नहीं है।
+                यही कारण है कि नैतिकता के अभाव में
+                मानवीय जीवन खतरनाक बन जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D6 — When the human tries to live only by ऋत */}
+              <p className="ms-prose-deva-lines">
+                जब मनुष्य केवल ऋत के अनुसार जीने का प्रयास करता है —<br />
+                केवल वृत्ति, लाभ, भूख, इच्छा और अस्तित्व के आधार पर —<br />
+                तो वह निर्दोषता की ओर नहीं लौटता।<br />
+                वह संघर्ष में उतर जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D7 — What works in the animal becomes destructive in the human */}
+              <p className="ms-prose-deva-lines">
+                जो पशु में सहज रूप से कार्य करता है,<br />
+                वही मनुष्य में विनाशकारी बन जाता है,<br />
+                क्योंकि मनुष्य के पास शक्ति होती है,<br />
+                पर वृत्तिजन्य सीमाएँ नहीं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D8 — The three amplifications; धर्म's necessity */}
+              <p className="ms-prose-deva-lines">
+                बुद्धि इच्छा को बढ़ा देती है।<br />
+                स्मृति द्वेष को लंबा कर देती है।<br />
+                तकनीक वृत्ति को अनेक गुना बढ़ा देती है।<br />
+                धर्म के बिना, ऋत मनुष्य के हाथ में हिंसक हो जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D9 — Nature does not govern the human; the human must govern himself */}
+              <p className="ms-prose-deva-lines">
+                प्रकृति मनुष्य को नियंत्रित नहीं करती।<br />
+                मनुष्य को स्वयं को नियंत्रित करना पड़ता है।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
