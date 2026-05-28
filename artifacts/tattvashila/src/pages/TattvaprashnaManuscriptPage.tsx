@@ -1896,6 +1896,49 @@ export default function TattvaprashnaManuscriptPage() {
                 जो देखने में सरल, पर भीतर से अधूरे होते हैं।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement B — Denial of burden; three modes of avoidance;
+                  transferred consequence; fragmentation.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1015–1040
+              ══════════════════════════════════════ */}
+
+              {/* Block O1 — Denial is attractive; many choose it */}
+              <p className="ms-prose-deva-lines">
+                इस भार से इनकार करना आकर्षक लगता है।<br />
+                और अनेक लोग ऐसा करते भी हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block O2 — Three modes of denial: impulse / silence / confusion */}
+              <p className="ms-prose-deva-lines">
+                कुछ आवेग को अपनाते हैं,<br />
+                और उसे सभ्यता कहते हैं।<br />
+                कुछ मौन को चुनते हैं,<br />
+                और उसे तटस्थता कहते हैं।<br />
+                कुछ उत्तरदायित्व को भ्रम में घोल देते हैं,<br />
+                और उसे स्वतंत्रता कहते हैं।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block O3 — Denial does not end the burden; it transfers the price */}
+              <p className="ms-prose-deva-lines">
+                पर इनकार भार को समाप्त नहीं करता।<br />
+                वह केवल उसकी क़ीमत दूसरों पर डाल देता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block O4 — Where responsibility is not taken up, it falls on another */}
+              <p className="ms-prose-deva-lines">
+                जहाँ उत्तरदायित्व नहीं उठाया जाता,<br />
+                वहाँ उसका भार किसी और को वहन करना पड़ता है।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
