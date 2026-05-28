@@ -1997,6 +1997,82 @@ export default function TattvaprashnaManuscriptPage() {
                 यह सामाजिक भी है।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement D — Social dimension of burden; trustworthiness;
+                  civilizational decay through refusal of shared burden.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1061–1090
+              ══════════════════════════════════════ */}
+
+              {/* Block Q1 — Humans do not live alone; every act shapes the world others inhabit */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य अकेले नहीं जीते।<br />
+                हर कर्म, हर चूक, हर उपेक्षा उस संसार को आकार देती है<br />
+                जिसमें अन्य लोग जीते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block Q2 — Family, society, nation run on trustworthy conduct, not desire */}
+              <p className="ms-prose-deva-lines">
+                परिवार, समाज और राष्ट्र केवल इच्छा से नहीं चलते।<br />
+                वे विश्वसनीय आचरण से चलते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block Q3 — Trustworthiness as the expressed form of responsibility
+                  OCR note: "व्यक्त रूप" restored from corrupted source */}
+              <p className="ms-prose-deva-lines">
+                विश्वसनीयता उत्तरदायित्व का व्यक्त रूप है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block Q4 — Civilizations fall not because people err but because they refuse their share */}
+              <p className="ms-prose-deva-lines">
+                सभ्यताएँ इसलिए नहीं गिरतीं कि लोग भूल करते हैं।<br />
+                वे इसलिए गिरती हैं<br />
+                क्योंकि लोग अपने हिस्से का भार उठाने से इनकार कर देते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block Q5 — Order, freedom, dignity endure only when sufficient people accept duty */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था, स्वतंत्रता और गरिमा तभी टिकती हैं<br />
+                जब पर्याप्त लोग अपने दायित्व को स्वीकार करते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block Q6 — This acceptance is not identical for all; wisdom demands sufficiency, not perfection */}
+              <p className="ms-prose-deva-lines">
+                यह स्वीकार सभी के लिए समान नहीं होता।<br />
+                न सभी एक-सा भार उठाते हैं,<br />
+                न ऐसा अपेक्षित है।<br />
+                बुद्धि पूर्णता की माँग नहीं करती।<br />
+                वह पर्याप्त उत्तरदायित्व की अपेक्षा करती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block Q7 — Being imperfect is acceptable; being careless is not */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य का त्रुटिहीन न होना स्वीकार्य है।<br />
+                पर उसका लापरवाह होना अस्वीकार्य है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block Q8 — The silent law on which civilizations rest */}
+              <p className="ms-prose-deva-lines">
+                यही वह मौन नियम है<br />
+                जिस पर सभ्यताएँ टिकी रहती हैं।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
