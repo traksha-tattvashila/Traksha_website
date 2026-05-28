@@ -1105,6 +1105,93 @@ export default function TattvaprashnaManuscriptPage() {
                 वह उत्तरदायित्व की उपस्थिति है।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement B — Freedom multiplying consequence
+                  The price; restraint-less societies; degeneration.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 654–695
+              ══════════════════════════════════════ */}
+
+              {/* Block G1 — Choice multiplies consequence */}
+              <p className="ms-prose-deva-lines">
+                जहाँ विकल्प प्रकट होता है,<br />
+                वहाँ परिणाम का विस्तार होता है।<br />
+                मनुष्य का कोई भी चुनाव<br />
+                केवल उसी क्षण तक सीमित नहीं रहता।<br />
+                वह परिवार को प्रभावित करता है,<br />
+                समाज में उतरता है,<br />
+                पीढ़ियों तक पहुँचता है,<br />
+                और संस्था का स्वरूप गढ़ देता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block G2 — Anaphoric: the irreversibility of free action */}
+              <p className="ms-prose-deva-lines">
+                कहे गए शब्द लौटाए नहीं जा सकते।<br />
+                छोड़ी गई हिंसा वापस नहीं बुलाई जा सकती।<br />
+                उपेक्षित लापरवाही परंपरा बन जाती है।<br />
+                स्वतंत्रता भाव को गुणा करती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block G3 — Central assertion: freedom without restraint is dangerous */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण संयम के बिना स्वतंत्रता खतरनाक होती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block G4 — Three-tier contrast: animal / child / human */}
+              <p className="ms-prose-deva-lines">
+                पशु को वृत्ति सीमित करती है।<br />
+                बालक को अज्ञान सीमित करता है।<br />
+                मनुष्य को विधि और विवेक सीमित करना चाहिए।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block G5 — Without these limits: erosion from within */}
+              <p className="ms-prose-deva-lines">
+                इन सीमाओं के बिना स्वतंत्रता ऊपर नहीं उठाती।<br />
+                वह भीतर से क्षरण उत्पन्न करती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block G6 — Society that teaches freedom without its price */}
+              <p className="ms-prose-deva-lines">
+                जो समाज स्वतंत्रता सिखाता है,<br />
+                पर उसकी क़ीमत नहीं सिखाता,<br />
+                वह बुद्धि का नहीं,<br />
+                केवल इच्छा का शिक्षण देता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block G7 — The human type such a society produces
+                  OCR note: corrupted noun resolved as "व्यक्ति" */}
+              <p className="ms-prose-deva-lines">
+                ऐसा समाज ऐसे व्यक्ति उत्पन्न करता है<br />
+                जो अधिकार तो माँगते हैं,<br />
+                पर कर्तव्य से बचते हैं;<br />
+                जो परिणाम के बिना चुनाव चाहते हैं;<br />
+                और जो आवेग को सभ्यता समझ बैठते हैं।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block G8 — Terminal statement of Movement B */}
+              <p className="ms-prose-deva-lines">
+                ऐसी स्वतंत्रता मुक्ति नहीं देती।<br />
+                वह विघटन उत्पन्न करती है।<br />
+                वह व्यक्ति को उसके भीतर से तोड़ती है,<br />
+                और समाज को उसके आधार से।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
