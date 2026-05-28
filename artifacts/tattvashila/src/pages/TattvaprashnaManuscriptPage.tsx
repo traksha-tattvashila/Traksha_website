@@ -1801,6 +1801,106 @@ export default function TattvaprashnaManuscriptPage() {
             </section>
           </Reveal>
 
+          {/* ════════════════════════════════════
+              SECTION: अध्याय 5
+              Controlled activation — opening movement only.
+              Source: canon/tattvaprashna-source-of-truth.md, lines 984–1013
+              Rendered through the first canonical section break.
+              Chapter continues beyond this section.
+          ════════════════════════════════════ */}
+          <Reveal delay={0.02}>
+            <section
+              aria-label="अध्याय 5 — मनुष्य होने का भार"
+              data-testid="tattvaprashna-chapter5"
+              className="ms-chapter-opening-section"
+            >
+
+              <p className="ms-chapter-num">अध्याय ५</p>
+              <h2 className="ms-chapter-title-deva">मनुष्य होने का भार</h2>
+              <div className="ms-chapter-rule-line" />
+
+              {/* ══════════════════════════════════════
+                  Movement A — The burden of being human;
+                  animals free of it; memory, guilt, regret;
+                  the permanent tension between desire and duty.
+                  Source: lines 984–1013
+              ══════════════════════════════════════ */}
+
+              {/* Block N1 — Opening inversion: not a privilege without price */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होना बिना मूल्य का विशेषाधिकार नहीं है।<br />
+                यह उद्देश्य के साथ सौंपा गया भार है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block N2 — When responsibility enters, ease departs */}
+              <p className="ms-prose-deva-lines">
+                जैसे ही उत्तरदायित्व जीवन में प्रवेश करता है,<br />
+                सहजता विदा हो जाती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block N3 — Animals are free of this burden */}
+              <p className="ms-prose-deva-lines">
+                पशु इस भार से मुक्त हैं।<br />
+                वे आचरण करते हैं,<br />
+                प्रतिक्रिया देते हैं,<br />
+                और बिना अर्थ का लेखा रखे आगे बढ़ जाते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block N4 — The human cannot; the five-verb descent */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य ऐसा नहीं कर सकता।<br />
+                वह स्मरण करता है।<br />
+                वह अनुमान लगाता है।<br />
+                वह मूल्यांकन करता है।<br />
+                और वह पश्चाताप भी करता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block N5 — The power to choose against instinct eliminates escape from consequence */}
+              <p className="ms-prose-deva-lines">
+                वृत्ति के विरुद्ध चुनने की शक्ति,<br />
+                परिणाम से पलायन की संभावना समाप्त कर देती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block N6 — This burden is not given by society; it arises from freedom's nature */}
+              <p className="ms-prose-deva-lines">
+                यह भार केवल समाज द्वारा नहीं दिया जाता।<br />
+                यह मानव स्वतंत्रता के स्वभाव से उत्पन्न होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block N7 — The permanent tension; human life takes shape within it */}
+              <p className="ms-prose-deva-lines">
+                चुनने की शक्ति इच्छा और कर्तव्य के बीच<br />
+                स्थायी तनाव उत्पन्न करती है।<br />
+                और इसी तनाव में मानव जीवन आकार लेता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block N8 — The attempt to avoid discomfort; incomplete solutions */}
+              <p className="ms-prose-deva-lines">
+                यह असहजता से बचने का प्रयास है,<br />
+                समाधान खोजने का नहीं।<br />
+                और इसी प्रयास से अनेक विकल्प जन्म लेते हैं —<br />
+                जो देखने में सरल, पर भीतर से अधूरे होते हैं।
+              </p>
+
+              <p className="ms-chapter-continues">· · ·</p>
+
+            </section>
+          </Reveal>
+
           <div className="ms-silence-lg" />
 
           {/* ════════════════════════════════════
