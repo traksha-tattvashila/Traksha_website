@@ -1939,6 +1939,64 @@ export default function TattvaprashnaManuscriptPage() {
                 वहाँ उसका भार किसी और को वहन करना पड़ता है।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement C — Conscience beneath denial; inner knowing;
+                  suppressed but not erased; pleasure cannot satisfy.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1038–1059
+              ══════════════════════════════════════ */}
+
+              {/* Block P1 — The burden manifests first in conscience */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होने का भार सबसे पहले अंतःकरण में प्रकट होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block P2 — Conscience is not a social construction; an inner knowing */}
+              <p className="ms-prose-deva-lines">
+                विवेक कोई सामाजिक रचना नहीं है।<br />
+                यह एक आंतरिक बोध है,<br />
+                जो चुनाव और परिणाम के सामने आते ही जाग्रत होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block P3 — Can be suppressed but not erased; accumulates; returns */}
+              <p className="ms-prose-deva-lines">
+                उसे कुछ समय दबाया जरूर जा सकता है,<br />
+                पर मिटाया नहीं जा सकता।<br />
+                वह संचित होता है,<br />
+                और अंततः अशांति, कड़वाहट या निरर्थकता के रूप में लौट आता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block P4 — Pleasure alone cannot satisfy; it is transient; responsibility is permanent */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण केवल सुख मानव जीवन को तृप्त नहीं कर सकता।<br />
+                सुख क्षणिक है।<br />
+                उत्तरदायित्व स्थायी है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block P5 — A life avoiding duty does not become lighter; it becomes heavier */}
+              <p className="ms-prose-deva-lines">
+                कर्तव्य से बचा हुआ जीवन हल्का नहीं होता।<br />
+                वह अर्थहीन होकर और अधिक भारी हो जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block P6 — This burden is not only personal; it is also social */}
+              <p className="ms-prose-deva-lines">
+                यह भार केवल व्यक्तिगत नहीं है।<br />
+                यह सामाजिक भी है।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
