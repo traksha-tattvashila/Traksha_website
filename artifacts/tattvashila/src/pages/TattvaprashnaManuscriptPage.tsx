@@ -243,13 +243,18 @@ export default function TattvaprashnaManuscriptPage() {
           <div className="ms-silence-lg" />
 
           {/* ════════════════════════════════════
-              SECTION: अध्याय 1 — नियंत्रित प्रवेश
-              Controlled activation — opening only.
+              SECTION: अध्याय 1
+              Controlled activation — full first arc.
+              Source: canon/tattvaprashna-source-of-truth.md
+              Confirmed: PDFs Tattvaprashna_1779906308414.pdf
+                         and Tattvaprashna_1779929348057.pdf
+              Rendered through para 10 (उत्तरदायित्व आरोपित होता है।)
+              Chapter continues beyond this section.
           ════════════════════════════════════ */}
           <Reveal>
             <section
               aria-label="अध्याय 1 — मनुष्य क्या है?"
-              data-testid="tattvaprashna-chapter1-opening"
+              data-testid="tattvaprashna-chapter1"
               className="ms-chapter-opening-section"
             >
 
@@ -257,13 +262,7 @@ export default function TattvaprashnaManuscriptPage() {
               <h2 className="ms-chapter-title-deva">मनुष्य क्या है?</h2>
               <div className="ms-chapter-rule-line" />
 
-              {/*
-                All text below is extracted verbatim from
-                canon/tattvaprashna-source-of-truth.md (Chapter 1).
-                Second PDF (Tattvaprashna_1779906308414.pdf) provides
-                the cleaner OCR confirming these paragraphs.
-              */}
-
+              {/* Para 1 — Opening frame */}
               <p className="ms-prose-deva-para">
                 किसी भी सभ्यता के लिए स्वतंत्रता की बात करने से पहले यह समझना
                 आवश्यक है कि वास्तव में स्वतंत्र कौन है। अधिकार की चर्चा से
@@ -272,15 +271,95 @@ export default function TattvaprashnaManuscriptPage() {
                 कि "मनुष्य" होने का अर्थ क्या है।
               </p>
 
+              {/* Para 2 */}
               <p className="ms-prose-deva-para">
                 यह कोई काव्यात्मक प्रश्न नहीं है। यह एक मूलभूत प्रश्न है।
               </p>
 
+              {/* Para 3 */}
               <p className="ms-prose-deva-para">
                 नैतिकता, समाज, इच्छा, सत्ता, अनुशासन और पतन — इन सभी क्षेत्रों
                 में जो भ्रम दिखाई देता है, उसका मूल कारण यह है। यदि मनुष्य की
                 परिभाषा अस्पष्ट हो, तो आगे उत्पन्न होने वाला प्रत्येक निष्कर्ष
                 भी भ्रमित होगा।
+              </p>
+
+              {/* Para 4 — Modern thought critique */}
+              <p className="ms-prose-deva-para">
+                आधुनिक चिंतन प्रायः शरीर से आरंभ करता है। वह इंद्रियों, मस्तिष्क,
+                व्यवहार, आनुवंशिकता और अनुकूलन का अध्ययन करता है, और फिर मनुष्य
+                को पशु के अवलोकन के विस्तार के रूप में समझाने का प्रयास करता है।
+                यह पद्धति ऊपर से वैज्ञानिक प्रतीत होती है, किन्तु भीतर ही भीतर
+                एक गहरी भूल कर बैठती है। यह यह मान लेती है कि रूप की समानता,
+                अस्तित्व की समानता है।
+              </p>
+
+              {/* Para 5 — Form does not determine responsibility */}
+              <p className="ms-prose-deva-para">
+                किन्तु रूप कभी भी उत्तरदायित्व का मापदंड नहीं रहा। एक बालक और
+                एक प्रौढ़ का शरीर समान हो सकता है, पर दोनों से समान
+                उत्तरदायित्व की अपेक्षा नहीं की जाती। एक औज़ार और एक शस्त्र
+                एक ही धातु से निर्मित हो सकते हैं, पर नैतिक दायित्व केवल शस्त्र
+                से जुड़ा होता है। केवल संरचना से उत्तरदायित्व निर्धारित नहीं होता।
+              </p>
+
+              {/* Para 6 — Intelligence measures capacity, not duty */}
+              <p className="ms-prose-deva-para">
+                यदि मनुष्य केवल एक उन्नत पशु मात्र होता, तो बुद्धि से सब कुछ
+                समझाया जा सकता था। किन्तु बुद्धि क्षमता को मापती है, दायित्व
+                को नहीं। पशु भी सीखते हैं, सहयोग करते हैं, अपनी संतति के लिए
+                त्याग करते हैं, इच्छा को सीमित करते हैं, और कभी-कभी अद्भुत
+                सामंजस्य भी दिखाते हैं। इन तथ्यों से इंकार नहीं है। किन्तु वहाँ
+                एक निर्णायक तत्व अनुपस्थित है।
+              </p>
+
+              {/* Para 7 — Anaphoric declaration on animal accountability */}
+              <p className="ms-prose-deva-lines">
+                किसी पशु को नैतिक रूप से उत्तरदायी नहीं ठहराया जाता।<br />
+                किसी पशु को अन्याय के लिए दोषी नहीं माना जाता।<br />
+                किसी पशु पर अपराधबोध, विधि, पश्चाताप या अजनबियों के प्रति
+                कर्तव्य का भार नहीं डाला जाता।<br />
+                किसी पशु से यह अपेक्षा नहीं की जाती कि वह अपने कर्म को
+                "क्या होना चाहिए था" के प्रकाश में उचित ठहराए।<br />
+                पशु व्यवस्था के भीतर जीते हैं, पर उस व्यवस्था के लिए
+                उत्तरदायी नहीं होते।<br />
+                यही सीमा है।
+              </p>
+
+              {/* Para 8 — ऋत and धर्म */}
+              <p className="ms-prose-deva-para">
+                पशु ऋत के भीतर अस्तित्व में रहते हैं — वह प्राकृतिक व्यवस्था
+                जो वृत्ति, ऋतु, जीवन-रक्षा और जातिगत व्यवहार को संचालित करती
+                है। मनुष्य धर्म के अधीन जन्म लेता है — एक ऐसा नैतिक दायित्व
+                जो वृत्ति से उत्पन्न नहीं होता, बल्कि उससे ऊपर खड़ा होता है।
+              </p>
+
+              <p className="ms-prose-deva-lines">
+                ऋत यह बताता है कि क्या घटित होता है।<br />
+                धर्म यह माँग करता है कि क्या बनाए रखा जाना चाहिए।
+              </p>
+
+              {/* Para 9 — The moment of crossing */}
+              <p className="ms-prose-deva-para">
+                जिस क्षण किसी प्राणी से यह अपेक्षा की जाती है कि वह सिद्धांत
+                के कारण इच्छा को रोके, दोष स्वीकार करे, अपने कर्म का औचित्य
+                प्रस्तुत करे, स्वार्थ से परे जाकर संरक्षण दे, और परिणाम से नहीं
+                बल्कि अंतरात्मा से उत्तर दे — उस क्षण वह एक भिन्न कोटि में
+                प्रवेश करता है।
+              </p>
+
+              <p className="ms-prose-deva-para">
+                यह कोटि न तो शिक्षा से प्राप्त होती है, न प्रशिक्षण से, और
+                न ही क्रमिक विकास से। न बुद्धि और न अनुकूलन इस सीमा को
+                पार कराते हैं।
+              </p>
+
+              {/* Para 10 — Closing declaration */}
+              <p className="ms-prose-deva-lines">
+                उत्तरदायित्व कोई जैविक गुण नहीं है।<br />
+                यह भाषा की भाँति सीखा नहीं जाता।<br />
+                यह उत्क्रांति द्वारा अर्जित नहीं होता।<br />
+                उत्तरदायित्व आरोपित होता है।
               </p>
 
               <p className="ms-chapter-continues">· · ·</p>

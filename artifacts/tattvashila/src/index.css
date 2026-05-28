@@ -834,6 +834,18 @@ a.ms-gateway-option:hover { opacity: 0.65; }
 }
 .ms-prose-deva-para:last-of-type { margin-bottom: 0; }
 
+/* Anaphoric or short-line declarative block —
+   manuscript lines that are neither flowing prose nor verse:
+   short statements with intentional anaphora or sparse cadence. */
+.ms-prose-deva-lines {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: clamp(1.0rem, 1.45vw, 1.09rem);
+  line-height: 2.35;
+  color: var(--ink-soft);
+  margin-bottom: 1.85em;
+}
+.ms-prose-deva-lines:last-of-type { margin-bottom: 0; }
+
 /* Chapter continues marker */
 .ms-chapter-continues {
   text-align: center;
