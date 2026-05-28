@@ -1706,7 +1706,97 @@ export default function TattvaprashnaManuscriptPage() {
                 उसका विकृत पुनरागमन होता है।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement D — True order transparent and internally held;
+                  Sanatan understanding; chapter close.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 941–978
+              ══════════════════════════════════════ */}
+
+              {/* Block M1 — True order is transparent: known, accepted, enacted */}
+              <p className="ms-prose-deva-lines">
+                सच्ची व्यवस्था पारदर्शी होती है।<br />
+                वह जानी जाती है,<br />
+                स्वीकारी जाती है,<br />
+                और निभाई जाती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block M2 — Sanatan: order held from within, not imposed from without */}
+              <p className="ms-prose-deva-lines">
+                सनातन चिंतन में<br />
+                व्यवस्था केवल बाहर से थोपी नहीं जाती।<br />
+                वह भीतर से धारण की जाती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block M3 — When inner restraint diminishes; when both weaken, collapse is certain */}
+              <p className="ms-prose-deva-lines">
+                जब आंतरिक संयम घटता है,<br />
+                तो बाहरी विधि कठोर होती है।<br />
+                और जब दोनों क्षीण होते हैं,<br />
+                तो पतन निश्चित होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block M4 — Not a warning; this is reality's law */}
+              <p className="ms-prose-deva-lines">
+                यह कोई चेतावनी नहीं।<br />
+                यह यथार्थ का विधान है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block M5 — Human needs order not because weak but because capable */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य इसलिए नहीं व्यवस्था का अधिकारी है<br />
+                क्योंकि वह कमज़ोर है,
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              <p className="ms-prose-deva-lines">
+                बल्कि इसलिए क्योंकि वह सक्षम है —<br />
+                निर्माण में भी,<br />
+                विनाश में भी;<br />
+                रक्षा में भी,<br />
+                शोषण में भी।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block M6 — Order binds capacity in service of continuity */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था, क्षमता को निरंतरता की सेवा में बाँधती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block M7 — Chapter's self-statement: not control but inner restraint */}
+              <p className="ms-prose-deva-lines">
+                यह अध्याय नियंत्रण का आग्रह नहीं करता।<br />
+                यह अंतःसंयम का आग्रह करता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block M8 — Terminal: being human is choosing within order */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होना<br />
+                केवल चुनना नहीं है।<br />
+                मनुष्य होना<br />
+                व्यवस्था के भीतर चुनना है।
+              </p>
+
+              {/* Chapter 4 — architectural close */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
