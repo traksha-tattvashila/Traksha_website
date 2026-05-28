@@ -118,7 +118,7 @@ export default function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.45, ease: EASE_GENTLE } }}
             exit={{ opacity: 0, transition: { duration: 0.3, ease: EASE_GENTLE } }}
-            className="fixed inset-0 z-50 bg-bone/98 md:hidden flex flex-col"
+            className="fixed inset-0 z-50 bg-bone md:hidden flex flex-col"
           >
             <div className="flex items-center justify-between px-7 pt-5 pb-5 border-b border-ink/10">
               <Wordmark testId="mobile-nav-wordmark" />
