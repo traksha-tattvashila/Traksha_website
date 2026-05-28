@@ -1546,6 +1546,82 @@ export default function TattvaprashnaManuscriptPage() {
                 न मार्ग देती है, न मर्यादा।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement B — Civilizational necessity of order;
+                  the human distinction; institutions as conscious necessity.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 862–897
+              ══════════════════════════════════════ */}
+
+              {/* Block K1 — Every stable civilization formed structure */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण हर स्थायी मानव समाज ने —<br />
+                काल, भूगोल और भाषा से परे —<br />
+                व्यवस्था के स्वरूप गढ़े।<br />
+                जहाँ —<br />
+                कानून,<br />
+                परंपरा,<br />
+                अनुशासन,<br />
+                कर्तव्य,<br />
+                और परिणाम<br />
+                दमन से नहीं,<br />
+                आवश्यकता से उत्पन्न हुए।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block K2 — Order is necessary because humans can intentionally harm */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था इसलिए आवश्यक है<br />
+                क्योंकि मनुष्य जानबूझकर हानि पहुँचा सकता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block K3 — Three-part animal/human distinction */}
+              <p className="ms-prose-deva-lines">
+                पशु प्रतिद्वंद्विता करते हैं,<br />
+                पर षड्यंत्र नहीं करते।<br />
+                मनुष्य दोनों कर सकता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              <p className="ms-prose-deva-lines">
+                पशु मार सकते हैं,<br />
+                पर व्यवस्था का शोषण नहीं करते।<br />
+                मनुष्य कर सकता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              <p className="ms-prose-deva-lines">
+                पशु त्याग कर सकते हैं,<br />
+                पर त्याग को गुण नहीं बताते।<br />
+                मनुष्य ऐसा कर सकता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block K4 — The power of intentionality turns disorder into destruction */}
+              <p className="ms-prose-deva-lines">
+                उद्देश्य की शक्ति,<br />
+                अव्यवस्था को विनाश में बदल देती है।<br />
+                इसलिए व्यवस्था,<br />
+                मानवता की शत्रु नहीं है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block K5 — Order is the condition keeping humanity within the human
+                  OCR note: "    त" restored as "स्थिति" */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था वह स्थिति है<br />
+                जिस कारण मानवता, मानव में बनी रहती है।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
