@@ -436,6 +436,78 @@ export default function TattvaprashnaManuscriptPage() {
                 नैतिक और आध्यात्मिक व्यवस्था की अभिव्यक्ति के रूप में।
               </p>
 
+              {/* ══════════════════════════════════════
+                  Movement B — Dharmic designation
+                  Spiritual appointment; moral nature.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 341–380
+                  Rendering through the first-truth declaration.
+                  Closing reflective movement (lines 384–407) deferred.
+              ══════════════════════════════════════ */}
+
+              {/* Architectural silence — between movements, reflecting source --- */}
+              <div className="ms-silence-lg" />
+
+              {/* Block 21 — Human as dharmic bearer */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होना जन्म से प्रदत्त है,<br />
+                क्योंकि मनुष्य धर्म को वहन करने में सक्षम होता है।<br />
+                यह तार्किक उपस्थिति नहीं है,<br />
+                बल्कि आध्यात्मिक नियुक्ति है।
+              </p>
+
+              {/* Block 22 — Dharma arrives with birth */}
+              <p className="ms-prose-deva-lines">
+                धर्म का दायित्व जन्म के साथ आता है,<br />
+                यह सीखने से प्राप्त नहीं होता।
+              </p>
+
+              {/* Block 23 — Sanatan texts on dharmic identity */}
+              <p className="ms-prose-deva-para">
+                इसी कारण सनातन ग्रन्थ मानव होने की क्षमता को
+                जैविक वृत्ति से नहीं जोड़ते — वे उसे धार्मिक
+                पहचान से जोड़ते हैं।
+              </p>
+
+              {/* Silence — source --- between the two sub-movements */}
+              <div className="ms-silence-md" />
+
+              {/* Block 24 — The meaning of being human */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होने का अर्थ<br />
+                केवल जीवन का जीव-धारक होना नहीं है।<br />
+                इसका अर्थ है —<br />
+                धर्म को जाँचने की शक्ति रखना।
+              </p>
+
+              {/* Block 25a — Expectation on those who hold this power */}
+              <p className="ms-prose-deva-lines">
+                जो इस शक्ति से संपन्न हैं,<br />
+                उनसे इसके उपयोग की अपेक्षा की जाती है।
+              </p>
+
+              {/* Block 25b — Not a privilege */}
+              <p className="ms-prose-deva-lines">
+                यह एक विशेषाधिकार नहीं है<br />
+                जिसे त्यागा और भुलाया जा सके।<br />
+                यह एक दायित्व है जिसे स्वीकार करना है।
+              </p>
+
+              {/* Silence before the formal declaration */}
+              <div className="ms-silence-sm" />
+
+              {/* Block 26a — Formal declaration prefix */}
+              <p className="ms-prose-deva-para">
+                अतः मनुष्य होने का प्रथम तथ्य यह है:
+              </p>
+
+              {/* Block 26b — The first truth */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य एक नैतिक प्राणी है।<br />
+                न इसलिए कि वह ऐसा चाहता है,<br />
+                बल्कि इसलिए कि उसकी स्वतंत्रता<br />
+                उसे इससे मुक्त नहीं होने देती।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
