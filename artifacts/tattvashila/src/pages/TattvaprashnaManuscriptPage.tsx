@@ -574,6 +574,125 @@ export default function TattvaprashnaManuscriptPage() {
           </Reveal>
 
           {/* ════════════════════════════════════
+              SECTION: अध्याय 2
+              Controlled activation — opening movement only.
+              Source: canon/tattvaprashna-source-of-truth.md, lines 409–458
+              Rendered through the ऋत boundary statement.
+              Chapter continues beyond this section.
+          ════════════════════════════════════ */}
+          <Reveal delay={0.02}>
+            <section
+              aria-label="अध्याय 2 — ऋत और धर्म का भेद"
+              data-testid="tattvaprashna-chapter2"
+              className="ms-chapter-opening-section"
+            >
+
+              <p className="ms-chapter-num">अध्याय २</p>
+              <h2 className="ms-chapter-title-deva">ऋत और धर्म का भेद</h2>
+              <p className="ms-chapter-subtitle-deva">अस्तित्व की दो व्यवस्थाएँ</p>
+              <div className="ms-chapter-rule-line" />
+
+              {/* ══════════════════════════════════════
+                  Movement A — ऋत: the cosmic order
+                  Definition, enumeration, negation.
+                  Source: lines 415–441
+              ══════════════════════════════════════ */}
+
+              {/* Block C1 — Opening: the universe is not accidental */}
+              <p className="ms-prose-deva-lines">
+                यह ब्रह्मांड किसी आकस्मिकता से संचालित नहीं होता।<br />
+                ऋतुएँ आती हैं,<br />
+                नक्षत्र अपने निश्चित मार्ग पर चलते हैं,<br />
+                शरीर स्वयं को पुनः स्थापित करता है,<br />
+                जातियाँ आगे बढ़ती हैं,<br />
+                और जीवन कुछ ऐसे नियमों के अंतर्गत निरंतर चलता रहता है<br />
+                जो किसी से अनुमति नहीं माँगते।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C2 — This regularity is not morality; it is order */}
+              <p className="ms-prose-deva-lines">
+                यह अंत-निहित नियमितता नैतिकता नहीं है।<br />
+                यह व्यवस्था है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C3 — Sanatan thought names it ऋत */}
+              <p className="ms-prose-deva-para">
+                सनातन चिंतन इस व्यवस्था को ऋत कहता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C4 — Definition of ऋत with enumeration */}
+              <p className="ms-prose-deva-lines">
+                ऋत प्रकृति की वह संरचना है<br />
+                जिसके अनुसार वस्तुएँ तब गतिमान होती हैं<br />
+                जब उन्हें उनके हाल पर छोड़ दिया जाए।<br />
+                सूर्य का उदय,<br />
+                वर्षा का होना,<br />
+                पशु की वृत्तियाँ,<br />
+                जन्म और मृत्यु का चक्र —<br />
+                ये सभी ऋत के अंतर्गत आते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C5 — ऋत's three negations */}
+              <p className="ms-prose-deva-lines">
+                ऋत विचार नहीं करता,<br />
+                निर्णय नहीं करता,<br />
+                क्षमा नहीं करता।<br />
+                वह केवल कार्य करता है।
+              </p>
+
+              {/* Architectural silence — source --- between sub-movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block C6 — Animals exist wholly within ऋत */}
+              <p className="ms-prose-deva-para">
+                पशु पूर्णतः ऋत के भीतर ही जीवन जीते हैं।
+                उनका जीवन वृत्ति, पर्यावरण और वंशानुगत प्रतिरूप
+                द्वारा आकार लेता है।
+              </p>
+
+              {/* Block C7 — Animal acts: no moral conflict */}
+              <p className="ms-prose-deva-lines">
+                जब कोई पशु हिंसा करता है,<br />
+                संगम करता है,<br />
+                त्याग करता है,<br />
+                परित्याग करता है,<br />
+                रक्षा करता है<br />
+                या बलिदान देता है,<br />
+                तो उसमें कोई नैतिक संघर्ष नहीं होता।<br />
+                उससे प्रकृति की अपेक्षा से अधिक कुछ नहीं माँगा जाता।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C8 — No animal can violate ऋत */}
+              <p className="ms-prose-deva-lines">
+                कोई पशु ऋत का उल्लंघन नहीं कर सकता,<br />
+                क्योंकि उसके पास उससे बाहर जाने की क्षमता नहीं होती।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block C9 — But the human is not left within this boundary */}
+              <p className="ms-prose-deva-para">
+                किन्तु मनुष्य को इस प्राकृतिक परिधि में छोड़ नहीं दिया गया है।
+              </p>
+
+              <p className="ms-chapter-continues">· · ·</p>
+
+            </section>
+          </Reveal>
+
+          <div className="ms-silence-lg" />
+
+          {/* ════════════════════════════════════
               READING FOOTER
           ════════════════════════════════════ */}
           <Reveal delay={0.04}>

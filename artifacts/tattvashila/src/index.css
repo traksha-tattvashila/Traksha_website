@@ -590,6 +590,16 @@ img.broken { display: none; }
   margin-bottom: 2rem;
 }
 
+.ms-chapter-subtitle-deva {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    MANUSCRIPT LANGUAGE GATEWAY
    Threshold screen — language selection before manuscript entry.
