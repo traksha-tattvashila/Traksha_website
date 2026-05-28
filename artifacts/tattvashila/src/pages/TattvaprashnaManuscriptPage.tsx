@@ -1458,6 +1458,99 @@ export default function TattvaprashnaManuscriptPage() {
             </section>
           </Reveal>
 
+          {/* ════════════════════════════════════
+              SECTION: अध्याय 4
+              Controlled activation — opening movement only.
+              Source: canon/tattvaprashna-source-of-truth.md, lines 826–868
+              Rendered through the first canonical section break.
+              Chapter continues beyond this section.
+          ════════════════════════════════════ */}
+          <Reveal delay={0.02}>
+            <section
+              aria-label="अध्याय 4 — मानवता को व्यवस्था की आवश्यकता क्यों है?"
+              data-testid="tattvaprashna-chapter4"
+              className="ms-chapter-opening-section"
+            >
+
+              <p className="ms-chapter-num">अध्याय ४</p>
+              <h2 className="ms-chapter-title-deva">मानवता को व्यवस्था की आवश्यकता क्यों है?</h2>
+              <div className="ms-chapter-rule-line" />
+
+              {/* ══════════════════════════════════════
+                  Movement A — Order misunderstood; nature's contrast;
+                  freedom without structure turns against itself.
+                  Source: lines 826–868
+              ══════════════════════════════════════ */}
+
+              {/* Block J1 — Order misunderstood as bondage */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था को अक्सर बंधन समझ लिया जाता है।<br />
+                वास्तव में, वही स्वतंत्रता को जीने योग्य बनाती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block J2 — Nature needs no instruction in order */}
+              <p className="ms-prose-deva-lines">
+                प्रकृति को व्यवस्था सिखानी नहीं पड़ती।<br />
+                नदियाँ बहती हैं,<br />
+                ऋतुएँ परिवर्तित होती हैं,<br />
+                और जीव निश्चित क्रम में आचरण करते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block J3 — Nature self-corrects; humans do not have this facility */}
+              <p className="ms-prose-deva-lines">
+                प्रकृति में अव्यवस्था परिणाम द्वारा स्वयं सुधर जाती है।<br />
+                मनुष्य को यह सुविधा प्राप्त नहीं है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block J4 — Where choice enters, order must be consciously maintained */}
+              <p className="ms-prose-deva-lines">
+                जहाँ विकल्प का प्रवेश होता है,<br />
+                वहाँ व्यवस्था को सचेत रूप से बनाए रखना पड़ता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block J5 — Human decisions; when directionless, desires collide
+                  OCR note: "निर्णय अनेक होते हैं" — "अनेक" restored from corrupted "एक" */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य केवल कर्म नहीं करता।<br />
+                वह निर्णय करता है।<br />
+                निर्णय अनेक होते हैं।<br />
+                और जब वे दिशाहीन होते हैं,<br />
+                तो उनके भाव टकराते हैं।<br />
+                इच्छा इच्छा से टकराती है।<br />
+                शक्ति शक्ति से।<br />
+                और भय भय को जन्म देता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block J6 — Terminal assertion: freedom without order turns against itself */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था के बिना स्वतंत्रता स्वयं के विरुद्ध हो जाती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block J7 — Freedom as power only while structure holds it */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता तभी तक शक्ति है,<br />
+                जब तक उसे धारण करने की संरचना हो।<br />
+                संरचना के बिना स्वतंत्रता<br />
+                न मार्ग देती है, न मर्यादा।
+              </p>
+
+              <p className="ms-chapter-continues">· · ·</p>
+
+            </section>
+          </Reveal>
+
           <div className="ms-silence-lg" />
 
           {/* ════════════════════════════════════
