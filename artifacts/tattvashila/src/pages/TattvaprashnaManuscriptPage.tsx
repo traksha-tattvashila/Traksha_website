@@ -874,7 +874,152 @@ export default function TattvaprashnaManuscriptPage() {
                 ये सभी धर्म का उल्लंघन हैं।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              {/* ══════════════════════════════════════
+                  Movement D — Modern confusion; dharma's necessity; Sanatan placement
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 553–619
+                  This movement closes अध्याय २.
+              ══════════════════════════════════════ */}
+
+              {/* Architectural silence — source --- between movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block E1 — Modern life's confusion: ऋत treated as sufficient */}
+              <p className="ms-prose-deva-para">
+                आधुनिक जीवन का भ्रम इसी से उत्पन्न होता है कि ऋत को
+                मनुष्य के लिए पर्याप्त मान लिया जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E2 — The three slogans and their limit */}
+              <p className="ms-prose-deva-lines">
+                "प्रकृति का अनुसरण करो",<br />
+                "स्वयं बनो",<br />
+                "जो ठीक लगे वही करो" —<br />
+                ये वाक्य तब तक निर्दोष प्रतीत होते हैं,<br />
+                जब तक शक्ति का प्रवेश नहीं करती।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E3 — Three negations: instinct, desire, existence */}
+              <p className="ms-prose-deva-lines">
+                वृत्ति न्याय को नहीं जानती।<br />
+                इच्छा गरिमा को नहीं पहचानती।<br />
+                अस्तित्व दुर्बल की रक्षा नहीं करता।
+              </p>
+
+              {/* Silence before the isolated declaration */}
+              <div className="ms-silence-md" />
+
+              {/* Block E4 — Isolated: only dharma does */}
+              <p className="ms-prose-deva-lines">
+                केवल धर्म करता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block E5 — Why dharma exists */}
+              <p className="ms-prose-deva-lines">
+                धर्म इसलिए अस्तित्व में है<br />
+                क्योंकि मनुष्य गलत चयन कर सकता है।<br />
+                उसका उद्देश्य स्वतंत्रता को दबाना नहीं,<br />
+                बल्कि उसे जीवित रखना है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E6 — Dharma is not optional */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण धर्म वैकल्पिक नहीं है।<br />
+                वह वह शर्त है जिसके अंतर्गत<br />
+                मानवीय स्वतंत्रता स्वयं को नष्ट किए बिना बनी रह सकती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E7 — Two consequences: society and individual */}
+              <p className="ms-prose-deva-lines">
+                जो समाज धर्म को त्याग देता है,<br />
+                वह मुक्त नहीं होता — वह अस्थिर हो जाता है।<br />
+                जो मनुष्य धर्म को अस्वीकार करता है,<br />
+                वह प्रामाणिक नहीं बनता —<br />
+                वह स्वयं के लिए और दूसरों के लिए खतरनाक बन जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E8 — The chapter's philosophical summary */}
+              <p className="ms-prose-deva-lines">
+                ऋत सृष्टि को गतिमान रखता है।<br />
+                धर्म मानवता को स्वयं को नष्ट करने से रोकता है।
+              </p>
+
+              {/* Architectural silence — source --- between sub-movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block E9 — Sanatan placement: neither against nor dissolved in nature */}
+              <p className="ms-prose-deva-lines">
+                इसलिए सनातन परंपरा<br />
+                न तो मनुष्य को प्रकृति के विरुद्ध खड़ा करती है,<br />
+                न ही उसे प्रकृति में विलीन कर देती है।<br />
+                वह उसे वृत्ति से ऊपर<br />
+                और उत्तरदायित्व के अधीन स्थापित करती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E10 — What is expected of the human */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य से न पशु का अनुकरण अपेक्षित है,<br />
+                न अंधाधुंध प्रकृति-शासन।<br />
+                उससे अपेक्षा है कि वह स्वयं का शासन करे।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E11 — This governance does not happen by itself */}
+              <p className="ms-prose-deva-lines">
+                यह शासन स्वतः नहीं होता।<br />
+                इसे सिखाना पड़ता है,<br />
+                स्मरण कराना पड़ता है,<br />
+                पुनः स्थापित करना पड़ता है<br />
+                और इसकी रक्षा करनी पड़ती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E12 — Why every society develops law, discipline, and sanction */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण प्रत्येक मानवीय समाज<br />
+                विधि, नीति, अनुशासन और दंड का विकास करता है।<br />
+                ये संस्कृति की कल्पनाएँ नहीं हैं।<br />
+                ये स्वतंत्रता के भार के प्रति प्रतिक्रियाएँ हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block E13 — The chapter's defining declaration */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होना ऋत और धर्म के बीच जीना है —<br />
+                एक ओर हाथ में प्रकृति की शक्ति,<br />
+                दूसरी ओर अंतरात्मा पर व्यवस्था का दायित्व।
+              </p>
+
+              {/* Silence before the terminal statement */}
+              <div className="ms-silence-md" />
+
+              {/* Block E14 — Terminal statement; chapter close */}
+              <p className="ms-prose-deva-lines">
+                जब तक यह भेद स्पष्ट नहीं होता,<br />
+                स्वतंत्रता बोझ नहीं बनती —<br />
+                और बोझ बने बिना वह विनाश करती रहती है।
+              </p>
+
+              {/* Chapter-end architecture */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
