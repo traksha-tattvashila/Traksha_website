@@ -834,6 +834,20 @@ a.ms-gateway-option:hover { opacity: 0.65; }
 }
 .ms-prose-deva-para:last-of-type { margin-bottom: 0; }
 
+/* Genealogical lineage chain — a structural notation element:
+   a sequence of names/stages separated by arrows.
+   Distinct from prose and from verse. Subdued, centered, manuscript-like. */
+.ms-lineage-chain {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  text-align: center;
+  margin: 2.25rem 0 2rem;
+  opacity: 0.7;
+}
+
 /* Anaphoric or short-line declarative block —
    manuscript lines that are neither flowing prose nor verse:
    short statements with intentional anaphora or sparse cadence. */

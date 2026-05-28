@@ -362,6 +362,80 @@ export default function TattvaprashnaManuscriptPage() {
                 उत्तरदायित्व आरोपित होता है।
               </p>
 
+              {/* ─── Canonical section break (---) between the declaration
+                  and the Sanatan tradition movement ─── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement A — Sanatan tradition's account of human origin
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 297–338
+                  Confirmed: first PDF extraction + OCR reconstruction notes
+              ══════════════════════════════════════ */}
+
+              {/* Block 11 — Sanatan opening */}
+              <p className="ms-prose-deva-para">
+                इसी कारण सनातन परंपरा मनुष्य को ऐसा पशु नहीं मानती जिसने
+                बाद में नैतिकता सीखी हो। वह चेतन वंश की बात करती है।
+              </p>
+
+              {/* Block 12 — Manu Svayambhuva */}
+              <p className="ms-prose-deva-para">
+                सृष्टि के प्रथम प्रकट सिद्धांत के अनुसार: ब्रह्मा से मनु
+                स्वायंभुव उत्पन्न होते हैं — उनके प्रिय पुत्र — जिन्हें
+                मानवीय व्यवस्था का दायित्व सौंपा गया।
+              </p>
+
+              {/* Block 13 */}
+              <p className="ms-prose-deva-para">
+                मनु कोई प्रतीक मात्र नहीं हैं, न ही कोई काव्यात्मक कल्पना।
+                उन्हें प्रथम मानव जनक, धर्म के वहनकर्ता और मानवीय विधि व
+                सामाजिक निरंतरता के आरंभकर्ता के रूप में बताया गया है।
+              </p>
+
+              {/* Block 14 */}
+              <p className="ms-prose-deva-para">
+                किन्तु ग्रन्थ यह भी स्पष्ट करते हैं कि मनु अकेले मानव
+                संसार की स्थापना नहीं कर सकते।
+              </p>
+
+              {/* Block 15 — Shatarupa */}
+              <p className="ms-prose-deva-para">
+                इसी कारण शतरूपा का प्रादुर्भाव होता है — प्रथम स्त्री का —
+                जो मनु के साथ मानवीय संयोग का सूत्र धारण करती है।
+              </p>
+
+              {/* Block 16 — Not biological, but dharmic */}
+              <p className="ms-prose-deva-lines">
+                यह कोई जैव गुणन नहीं है।<br />
+                यह धार्मिक निरंतरता की स्थापना है।
+              </p>
+
+              {/* Block 17 — Manudharm: the essence */}
+              <p className="ms-prose-deva-para">
+                मनुधर्म का सार यह है कि मनुष्य को पशुता से ऊपर उठाया
+                जाए — आहार, निद्रा, भय, मैथुन — इनसे परे। पर वह परे
+                जाना वैराग्य नहीं है। वह नियंत्रित, उद्देश्यपूर्ण,
+                उत्तरदायी जीवन है।
+              </p>
+
+              {/* Block 18 — Manudharm does not punish instinct */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण मनुधर्म वृत्ति को दंडित नहीं करता।<br />
+                वह उसे सीमाएँ देता है।
+              </p>
+
+              {/* Block 19 — Lineage chain: structural notation */}
+              <p className="ms-lineage-chain">
+                ब्रह्मा → मनु स्वायंभुव → शतरूपा → वंश परंपरा
+              </p>
+
+              {/* Block 20 — Closing of this movement */}
+              <p className="ms-prose-deva-para">
+                इस प्रकार सनातन ग्रन्थ मानवता की उत्पत्ति को केवल
+                जीव-विज्ञान की घटना के रूप में नहीं समझाते, बल्कि एक
+                नैतिक और आध्यात्मिक व्यवस्था की अभिव्यक्ति के रूप में।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
