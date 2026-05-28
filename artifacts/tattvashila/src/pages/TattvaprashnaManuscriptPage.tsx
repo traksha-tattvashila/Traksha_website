@@ -508,7 +508,67 @@ export default function TattvaprashnaManuscriptPage() {
                 उसे इससे मुक्त नहीं होने देती।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              {/* ══════════════════════════════════════
+                  Movement C — Closing reflective movement
+                  The perpetual question; the chapter's final arc.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 384–407
+                  This completes अध्याय १.
+              ══════════════════════════════════════ */}
+
+              {/* Architectural silence — between the first-truth declaration and closing reflection */}
+              <div className="ms-silence-lg" />
+
+              {/* Block 27a — The perpetual question */}
+              <p className="ms-prose-deva-lines">
+                यह पूछना कि 'मनुष्य क्या है' —<br />
+                यह कोई ऐतिहासिक जिज्ञासा नहीं है।<br />
+                यह एक निरंतर जिज्ञासा है<br />
+                जो प्रत्येक पीढ़ी पूछने के लिए विवश है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block 27b — Anaphoric consequence sequence */}
+              <p className="ms-prose-deva-lines">
+                और जब तक यह उत्तर नहीं मिलता,<br />
+                तब तक जो भी निर्णय लिए जाएँ —<br />
+                चाहे वे स्वतंत्रता के बारे में हों,<br />
+                चाहे शासन के बारे में,<br />
+                चाहे शिक्षा के बारे में —<br />
+                वे सभी अपूर्ण होंगे।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block 27c — The question demands an answer */}
+              <p className="ms-prose-deva-lines">
+                यह प्रश्न अधूरा नहीं रहता।<br />
+                यह उत्तर माँगता है।<br />
+                और वह उत्तर पाने की ओर बढ़ने का उपकरण है —<br />
+                धर्म, व्यवस्था और उत्तरदायित्व।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block 27d — The chapter's self-declaration */}
+              <p className="ms-prose-deva-lines">
+                तत्त्वप्रश्न का यह आरंभ —<br />
+                एक प्रश्न के साथ —<br />
+                इसीलिए।
+              </p>
+
+              {/* Silence before the terminal question */}
+              <div className="ms-silence-md" />
+
+              {/* Block 27e — The terminal question; chapter close */}
+              <p className="ms-prose-deva-center">
+                मनुष्य क्या है?
+              </p>
+
+              {/* Chapter-end architecture */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
