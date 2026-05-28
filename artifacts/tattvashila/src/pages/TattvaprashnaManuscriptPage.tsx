@@ -1294,7 +1294,166 @@ export default function TattvaprashnaManuscriptPage() {
                 तो कोई भी उन्नति उस त्रुटि की पूर्ति नहीं कर पाती।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement D — Modern paradox; character formation; chapter close
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 746–810
+              ══════════════════════════════════════ */}
+
+              {/* Block I1 — The modern paradox: unprepared freedom */}
+              <p className="ms-prose-deva-lines">
+                आधुनिक जीवन की विडंबना यह नहीं है<br />
+                कि मनुष्य स्वतंत्र हो गया।<br />
+                विडंबना यह है<br />
+                कि वह तैयारी के बिना स्वतंत्र हो गया।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I2 — Preparation for freedom is character, not education */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता की तैयारी<br />
+                केवल शिक्षा नहीं है।<br />
+                वह चरित्र का संस्कार है —<br />
+                संयम,<br />
+                उत्तरदायित्व,<br />
+                साहस,<br />
+                और आत्म-नियंत्रण का।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I3 — The untrained hand analogy */}
+              <p className="ms-prose-deva-lines">
+                जो इनसे अशिक्षित है,<br />
+                वह स्वतंत्रता को<br />
+                बिना हानि के धारण नहीं कर सकता,<br />
+                जैसे बिना अभ्यास का हाथ<br />
+                शस्त्र धारण नहीं कर सकता।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I4 — Freedom amplifies what already exists within */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता मनुष्य के भीतर<br />
+                जो पहले से विद्यमान है,<br />
+                उसी को बढ़ा देती है।<br />
+                जहाँ विवेक है,<br />
+                वहाँ स्वतंत्रता गरिमा उत्पन्न करती है।<br />
+                जहाँ आवेग है,<br />
+                वहाँ स्वतंत्रता अराजकता उत्पन्न करती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I5 — Not all freedoms are equal */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण सभी स्वतंत्रताएँ समान नहीं होतीं।<br />
+                तैयारी के बिना दी गई स्वतंत्रता<br />
+                क्रूरता बन जाती है —<br />
+                स्वयं के लिए भी<br />
+                और दूसरों के लिए भी।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I6 — Freedom's burden falls most on those who deny its price */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता का भार<br />
+                सबसे अधिक उन पर पड़ता है<br />
+                जो उसकी क़ीमत से इनकार करते हैं।
+              </p>
+
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* Block I7 — Being human is answering for choices */}
+              <p className="ms-prose-deva-lines">
+                मनुष्य होना केवल चुनना नहीं है।<br />
+                मनुष्य होना<br />
+                अपने चुनाव के लिए उत्तर देना है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I8 — Responsibility cannot be delegated */}
+              <p className="ms-prose-deva-lines">
+                यह उत्तरदायित्व<br />
+                न प्रकृति को सौंपा जा सकता है,<br />
+                न समाज को,<br />
+                न समय को।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I9 — Individual discernment and the structures that protect it */}
+              <p className="ms-prose-deva-lines">
+                यह व्यक्ति के विवेक पर<br />
+                और उन संरचनाओं पर आधारित है<br />
+                जो उस विवेक की रक्षा करती हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I10 — Where structures weaken, freedom becomes burden */}
+              <p className="ms-prose-deva-lines">
+                जहाँ ये संरचनाएँ कमज़ोर पड़ती हैं,<br />
+                वहाँ स्वतंत्रता<br />
+                वरदान नहीं,<br />
+                भार बन जाती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block I11 — Sanatan's call: earn freedom continuously */}
+              <p className="ms-prose-deva-lines">
+                सनातन<br />
+                मनुष्य से स्वतंत्रता त्यागने को नहीं कहती।<br />
+                वह कहती है —
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              <p className="ms-prose-deva-lines">
+                इसे निरंतर अर्जित करो।<br />
+                संयम से।<br />
+                अनुशासन से।<br />
+                उत्तरदायित्व से।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I12 — Freedom is not permanent property; it is an effort */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता स्थायी संपत्ति नहीं है।<br />
+                वह एक प्रयास है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block I13 — Only those willing to bear the price hold its power */}
+              <p className="ms-prose-deva-lines">
+                केवल वही<br />
+                जो उसकी क़ीमत वहन करने को तैयार है,<br />
+                उसकी शक्ति का अधिकारी है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block I14 — Chapter's self-statement: not against freedom */}
+              <p className="ms-prose-deva-lines">
+                यह अध्याय<br />
+                स्वतंत्रता के विरुद्ध नहीं है।<br />
+                यह बिना चुकाई गई स्वतंत्रता के विरुद्ध है।
+              </p>
+
+              {/* Chapter 3 — architectural close */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
