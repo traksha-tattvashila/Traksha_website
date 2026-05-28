@@ -1622,6 +1622,90 @@ export default function TattvaprashnaManuscriptPage() {
                 जिस कारण मानवता, मानव में बनी रहती है।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement C — Where order collapses; morality requires structure;
+                  order as protector of virtue.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 898–935
+              ══════════════════════════════════════ */}
+
+              {/* Block L1 — Where order is absent: force, pleasure, noise */}
+              <p className="ms-prose-deva-lines">
+                जहाँ व्यवस्था नहीं होती,<br />
+                वहाँ बल दुर्बलता पर हावी होता है।<br />
+                भोग गरिमा को कुचल देता है।<br />
+                शोर सत्य का स्थान ले लेता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block L2 — Even compassion becomes unsafe */}
+              <p className="ms-prose-deva-lines">
+                ऐसी स्थिति में<br />
+                दया भी असुरक्षित हो जाती है,<br />
+                क्योंकि उसका दुरुपयोग सरल होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block L3 — Anarchy does not liberate; it promotes cruelty */}
+              <p className="ms-prose-deva-lines">
+                अराजकता मुक्ति नहीं देती।<br />
+                वह निर्दयता को बढ़ावा देती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block L4 — Order precedes morality */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण<br />
+                व्यवस्था नैतिकता से पहले आती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block L5 — Triple descent: goodwill / courage / intelligence fail without structure */}
+              <p className="ms-prose-deva-lines">
+                संरचना के बिना<br />
+                सद्भावना भी विफल हो जाती है।<br />
+                सीमा के बिना साहस<br />
+                लापरवाही बन जाता है।<br />
+                संयम के बिना बुद्धि<br />
+                कपट में बदल जाती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block L6 — Order does not suppress virtue; it protects it */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था, सद्गुण को दबाती नहीं।<br />
+                वह उसकी रक्षा करती है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block L7 — Order demands not equality but clarity and continuity of responsibility
+                  OCR note: "-ता" before "और निरंतरता" restored as "स्पष्टता" */}
+              <p className="ms-prose-deva-lines">
+                व्यवस्था समानता नहीं माँगती।<br />
+                वह उत्तरदायित्व की<br />
+                स्पष्टता और निरंतरता माँगती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block L8 — When order is misread as oppression; the distorted return */}
+              <p className="ms-prose-deva-lines">
+                जब व्यवस्था को<br />
+                उत्पीड़न समझ लिया जाता है,<br />
+                तो समाज उसके बिना<br />
+                जीने का प्रयास करता है।<br />
+                परिणाम व्यवस्था का अंत नहीं,<br />
+                उसका विकृत पुनरागमन होता है।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
