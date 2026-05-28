@@ -777,6 +777,103 @@ export default function TattvaprashnaManuscriptPage() {
                 मनुष्य को स्वयं को नियंत्रित करना पड़ता है।
               </p>
 
+              {/* ══════════════════════════════════════
+                  Movement C — Morality, freedom, धर्म as alignment
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 506–551
+                  Rendering through the three-beat consequence triad.
+                  Modern confusion passage (lines 553–619) deferred.
+              ══════════════════════════════════════ */}
+
+              {/* Architectural silence — source --- between movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block D10 — Morality exists only where freedom exists */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण नैतिकता प्रकृति में नहीं होती।<br />
+                वह केवल वहाँ होती है जहाँ स्वतंत्रता होती है।<br />
+                नदी को नीति की आवश्यकता नहीं होती।<br />
+                शिकारी को विधि की आवश्यकता नहीं होती।<br />
+                परन्तु मनुष्य, जो वृत्ति के विरुद्ध चयन कर सकता है,<br />
+                उसे वृत्ति से ऊपर किसी मानक की आवश्यकता होती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D11 — That standard is dharma */}
+              <p className="ms-prose-deva-lines">
+                वही मानक धर्म है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D12 — What dharma actually is */}
+              <p className="ms-prose-deva-para">
+                धर्म को प्रायः परंपरा, अनुष्ठान या विश्वास के रूप में समझ
+                लिया जाता है। वास्तव में धर्म स्वतंत्रता और उत्तरदायित्व
+                के बीच का संरेखण है। वह सिद्धांत जो यह सुनिश्चित करता है
+                कि शक्ति शिकार में न बदले और स्वतंत्रता अराजकता में न
+                बदल जाए।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D13 — Living by dharma is not denial of nature */}
+              <p className="ms-prose-deva-lines">
+                धर्म के अनुसार जीने का अर्थ प्रकृति का निषेध करना नहीं है।<br />
+                इसका अर्थ है —<br />
+                प्रकृति के भीतर स्वयं का शासन करना।
+              </p>
+
+              {/* Architectural silence — source --- between sub-movements */}
+              <div className="ms-silence-lg" />
+
+              {/* Block D14 — ऋत operates independently of human conduct */}
+              <p className="ms-prose-deva-lines">
+                ऋत मनुष्य के आचरण से स्वतंत्र रूप से कार्य करता रहता है।<br />
+                सूर्य धर्म और अधर्म दोनों के लिए समान रूप से उदित होता है।<br />
+                प्रकृति न सद्गुण को पुरस्कार देती है,<br />
+                न क्रूरता को दंडित करती है।<br />
+                यह उत्तरदायित्व पूर्णतः मानवीय क्षेत्र का है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D15 — Where dharma is absent, order collapses */}
+              <p className="ms-prose-deva-lines">
+                जहाँ धर्म अनुपस्थित होता है,<br />
+                वहाँ व्यवस्था ढह जाती है,<br />
+                भले ही प्रकृति चलती रहती हो।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D16 — Societies disintegrate when human restraint fails */}
+              <p className="ms-prose-deva-lines">
+                इसी कारण समाज तब विघटित होते हैं<br />
+                जब प्रकृति विफल होती है — ऐसा नहीं —<br />
+                बल्कि तब, जब मानवीय संयम विफल हो जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D17 — Three-beat consequence triad */}
+              <p className="ms-prose-deva-lines">
+                जब इच्छा दायित्व के बिना संचालित होती है,<br />
+                संबंध टूटते हैं।<br />
+                जब शक्ति उत्तरदायित्व के बिना प्रयोग होती है,<br />
+                हिंसा फैलती है।<br />
+                जब स्वतंत्रता बिना मूल्य चुकाए माँगी जाती है,<br />
+                उत्तरदायित्व लुप्त हो जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block D18 — None of these violate ऋत; all violate धर्म */}
+              <p className="ms-prose-deva-lines">
+                इनमें से कोई भी ऋत का उल्लंघन नहीं है।<br />
+                ये सभी धर्म का उल्लंघन हैं।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
