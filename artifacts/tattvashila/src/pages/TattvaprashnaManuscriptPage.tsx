@@ -1192,6 +1192,108 @@ export default function TattvaprashnaManuscriptPage() {
                 और समाज को उसके आधार से।
               </p>
 
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement C — Sanatan understanding of freedom; dharma's direction
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 697–740
+              ══════════════════════════════════════ */}
+
+              {/* Block H1 — Freedom as capacity in Sanatan thought */}
+              <p className="ms-prose-deva-lines">
+                सनातन चिंतन में स्वतंत्रता कभी अंतिम लक्ष्य नहीं रही।<br />
+                वह एक क्षमता रही —<br />
+                सही चुनने की,<br />
+                स्वयं को रोकने की,<br />
+                दूसरों की रक्षा करने की,<br />
+                और असुविधाजनक होने पर भी<br />
+                विधि को थामे रखने की।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H2 — Declarative: freedom without responsibility is not liberation */}
+              <p className="ms-prose-deva-lines">
+                उत्तरदायित्व के बिना स्वतंत्रता मुक्ति नहीं है।<br />
+                वह व्यवस्था का त्याग है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H3 — Dharma gives freedom direction */}
+              <p className="ms-prose-deva-lines">
+                इसलिए धर्म स्वतंत्रता का विरोध नहीं करता।<br />
+                वह उसे दिशा देता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block H4 — Dharma's single question */}
+              <p className="ms-prose-deva-lines">
+                धर्म एक ही प्रश्न उपस्थित करता है:<br />
+                जब मैं अन्यथा करने के लिए स्वतंत्र हूँ,<br />
+                तब मुझे क्या थामे रखना चाहिए?
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H5 — Contrast: without and with the question */}
+              <p className="ms-prose-deva-lines">
+                इस प्रश्न के बिना स्वतंत्रता<br />
+                भोग में गिर जाती है।<br />
+                इसके साथ स्वतंत्रता<br />
+                अर्थ प्राप्त करती है।
+              </p>
+
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* Block H6 — The price set by reality, not society */}
+              <p className="ms-prose-deva-lines">
+                स्वतंत्रता की क़ीमत समाज नहीं लगाता।<br />
+                वह यथार्थ स्वयं लगाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H7 — Reality's answer to unrestrained freedom */}
+              <p className="ms-prose-deva-lines">
+                जब स्वतंत्रता संयम के बिना प्रयुक्त होती है,<br />
+                तो यथार्थ विघटन के रूप में उत्तर देता है —<br />
+                टूटा हुआ विश्वास,<br />
+                खंडित परिवार,<br />
+                डगमगाती संस्थाएँ,<br />
+                और अस्थिर मन।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H8 — Nature holds; human life loses balance */}
+              <p className="ms-prose-deva-lines">
+                प्रकृति अपना क्रम बनाए रखती है,<br />
+                पर मानव जीवन असंतुलित हो जाता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H9 — Every enduring civilization understood this */}
+              <p className="ms-prose-deva-lines">
+                हर वह सभ्यता जो टिक पाई,<br />
+                इस सत्य को समझती थी।<br />
+                स्वतंत्रता सदा अनुशासन से जुड़ी थी,<br />
+                शक्ति दायित्व से,<br />
+                और इच्छा परिणाम से।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block H10 — When balance breaks, no progress compensates */}
+              <p className="ms-prose-deva-lines">
+                जब यह संतुलन टूटता है,<br />
+                तो कोई भी उन्नति उस त्रुटि की पूर्ति नहीं कर पाती।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
