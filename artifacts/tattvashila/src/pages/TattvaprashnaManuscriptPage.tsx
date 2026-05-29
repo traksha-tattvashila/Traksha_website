@@ -2073,7 +2073,104 @@ export default function TattvaprashnaManuscriptPage() {
                 जिस पर सभ्यताएँ टिकी रहती हैं।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              <div className="ms-silence-sm" />
+
+              {/* ══════════════════════════════════════
+                  Movement E — The load distribution; collapse when burden is refused;
+                  force filling the void of absent accountability.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1092–1103
+              ══════════════════════════════════════ */}
+
+              {/* Block R1 — Some carry more; most carry their necessary share */}
+              <p className="ms-prose-deva-lines">
+                कुछ लोग अधिक भार वहन करते हैं।<br />
+                अधिकांश लोग अपना आवश्यक भार वहन करते हैं।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block R2 — When balance breaks: structures loosen; trust erodes; force fills the void */}
+              <p className="ms-prose-deva-lines">
+                यह संतुलन तब टूटता है —<br />
+                जब बहुत से लोग लाभ चाहते हैं,<br />
+                पर दायित्व नहीं।<br />
+                तो संरचनाएँ शिथिल होने लगती हैं,<br />
+                विश्वास का आधार क्षीण पड़ जाता है,<br />
+                सहयोग का स्थान रिक्त हो जाता है,<br />
+                और उस रिक्तता में बल स्वयं को व्यवस्था के रूप में स्थापित कर लेता है।
+              </p>
+
+              {/* ── Canonical section break (---) ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement F — Sanatan tradition; burden as meaning, not escape;
+                  responsibility accepted is strength; the chapter's terminal statement.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1105–1131
+                  OCR uncertainties:
+                    S1: "सनातन परंपरा [?]" — best candidate; alternate: "सनातन धर्म"
+                    S6: "बल्कि स्थापना [?]" — best candidate; alternate: "प्रतिष्ठा"
+              ══════════════════════════════════════ */}
+
+              {/* Block S1 — Sanatan tradition offers not release from burden but meaning within it */}
+              <p className="ms-prose-deva-lines">
+                सनातन परंपरा इस भार से मुक्ति का वादा नहीं करती।<br />
+                वह उसे अर्थ प्रदान करती है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block S2 — Responsibility joined to dharma ceases to be pressure; it becomes purpose */}
+              <p className="ms-prose-deva-lines">
+                धर्म से जुड़ा उत्तरदायित्व दबाव नहीं रहता।<br />
+                वह उद्देश्य बन जाता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block S3 — Understanding and accepting this burden is strength; fleeing it is not rebellion but neglect */}
+              <p className="ms-prose-deva-lines">
+                इस भार को समझकर स्वीकार करना बल है।<br />
+                और उससे पलायन करना विद्रोह नहीं,<br />
+                उपेक्षा है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block S4 — History advances not by removing responsibility but by understanding, accepting, honouring it */}
+              <p className="ms-prose-deva-lines">
+                इतिहास उत्तरदायित्व हटाने से आगे नहीं बढ़ता।<br />
+                वह तब आगे बढ़ता है<br />
+                जब उत्तरदायित्व को समझा, स्वीकार किया और सम्मान दिया जाता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block S5 — Human life is not for lightness but for meaning; the four-step descent */}
+              <p className="ms-prose-deva-lines">
+                मानव जीवन हल्का होने के लिए नहीं है।<br />
+                वह अर्थपूर्ण होने के लिए है।<br />
+                अर्थ के लिए भार आवश्यक है।<br />
+                भार के लिए उत्तरदायित्व।<br />
+                और उत्तरदायित्व के लिए स्वीकृति।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block S6 — Terminal statement: this is the burden of being human —
+                  not punishment, not pride, but placement.
+                  OCR: "बल्कि स्थापना [?]" — best candidate rendered; alternate: "प्रतिष्ठा" */}
+              <p className="ms-prose-deva-lines">
+                यही मनुष्य होने का भार है —<br />
+                न दंड।<br />
+                न गर्व।<br />
+                बल्कि स्थापना।
+              </p>
+
+              {/* ── Chapter 5 canonical close ── */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
