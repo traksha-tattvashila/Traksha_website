@@ -2175,6 +2175,62 @@ export default function TattvaprashnaManuscriptPage() {
             </section>
           </Reveal>
 
+          {/* ════════════════════════════════════
+              SECTION: लेखकीय वक्तव्य — उपसंहार
+              Controlled activation — opening movement only.
+              Source: canon/tattvaprashna-source-of-truth.md, lines 1136–1155
+              Section continues beyond this movement.
+          ════════════════════════════════════ */}
+          <Reveal delay={0.02}>
+            <section
+              aria-label="लेखकीय वक्तव्य — उपसंहार"
+              data-testid="tattvaprashna-lekhakyavaktavya"
+              className="ms-chapter-opening-section"
+            >
+
+              <p className="ms-chapter-num">लेखकीय वक्तव्य</p>
+              <h2 className="ms-chapter-title-deva">उपसंहार</h2>
+              <div className="ms-chapter-rule-line" />
+
+              {/* ── Canonical section break (---) after heading ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement I — Completion of Tattvaprashna; not a conclusion
+                  but a positioning; its task was to open, not answer.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1140–1155
+              ══════════════════════════════════════ */}
+
+              {/* Block T1 — Here Tattvaprashna concludes; not a proclamation of conclusions */}
+              <p className="ms-prose-deva-lines">
+                यहाँ तत्त्वप्रश्न का समापन होता है।<br />
+                यह ग्रंथ किसी निष्कर्ष की घोषणा नहीं करता<br />
+                और न ही सिद्धांत की स्थापना करता है।<br />
+                इसका प्रयोजन केवल इतना था<br />
+                कि मनुष्य को उसकी स्थिति के सामने खड़ा किया जाए —<br />
+                स्वतंत्रता, व्यवस्था और उत्तरदायित्व के उस मूल संदर्भ में,<br />
+                जहाँ से किसी भी वास्तविक जिज्ञासा का जन्म होता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block T2 — This pre-grantham gave no answers; its task was to clarify questions.
+                  OCR: "इसका कार्य प्रश्नों को स्पष्ट [?] करना था" — best candidate rendered.
+                  OCR: "जहाँ भ्रम हट जाए [?]" — best candidate rendered. */}
+              <p className="ms-prose-deva-lines">
+                इस पूर्व-ग्रंथ ने उत्तर नहीं दिए,<br />
+                क्योंकि इसका दायित्व उत्तर देना नहीं था।<br />
+                इसका कार्य प्रश्नों को स्पष्ट करना था,<br />
+                उस बिंदु तक,<br />
+                जहाँ भ्रम हट जाए<br />
+                और पलायन संभव न रहे।
+              </p>
+
+              <p className="ms-chapter-continues">· · ·</p>
+
+            </section>
+          </Reveal>
+
           <div className="ms-silence-lg" />
 
           {/* ════════════════════════════════════
