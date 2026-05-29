@@ -2226,6 +2226,46 @@ export default function TattvaprashnaManuscriptPage() {
                 और पलायन संभव न रहे।
               </p>
 
+              {/* ── Canonical section break (---) after Movement I ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement II — Tattvaprashna as a pūrva-grantham, not a complete work;
+                  where it brings the reader; curiosity formed but path still to open;
+                  questions become existential.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1157–1172
+                  OCR uncertainty: "प्रश्न [?] अब बौद्धिक नहीं रहे" — best candidate rendered.
+              ══════════════════════════════════════ */}
+
+              {/* Block U1 — Tattvaprashna is a pūrva-grantham; it brings the reader to a threshold */}
+              <p className="ms-prose-deva-lines">
+                तत्त्वप्रश्न इस अर्थ में एक पूर्ण ग्रंथ नहीं,<br />
+                बल्कि एक पूर्व-ग्रंथ है।<br />
+                यह वहाँ तक ले आता है,<br />
+                जहाँ मनुष्य यह समझने लगता है<br />
+                कि वह क्या है,<br />
+                किस भार के साथ खड़ा है,<br />
+                और किससे मुक्त होने का दावा वह अब नहीं कर सकता।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block U2 — Curiosity has taken shape; the path still remains to open */}
+              <p className="ms-prose-deva-lines">
+                यहाँ जिज्ञासा आकार ले चुकी है,<br />
+                पर मार्ग अभी खुलना शेष है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block U3 — The questions are no longer merely intellectual; they have become existential.
+                  OCR: "    अब बौ क नह रहे" — corrupted opening noun.
+                  Best reconstruction: "प्रश्न अब बौद्धिक नहीं रहे" — rendered without [?]. */}
+              <p className="ms-prose-deva-lines">
+                प्रश्न अब बौद्धिक नहीं रहे;<br />
+                वे अस्तित्वगत बन चुके हैं।
+              </p>
+
               <p className="ms-chapter-continues">· · ·</p>
 
             </section>
