@@ -2266,7 +2266,76 @@ export default function TattvaprashnaManuscriptPage() {
                 वे अस्तित्वगत बन चुके हैं।
               </p>
 
-              <p className="ms-chapter-continues">· · ·</p>
+              {/* ── Canonical section break (---) after Movement II ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement III — From here the TattvaGrantha series begins;
+                  the shift is in level, not subject; the triple contrast.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1177–1191
+              ══════════════════════════════════════ */}
+
+              {/* Block V1 — From here the TattvaGrantha series begins */}
+              <p className="ms-prose-deva-lines">
+                यहाँ से तत्त्वग्रंथ शृंखला का आरंभ होता है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block V2 — Where Tattvaprashna awakened; Tattvagrantham will present direction;
+                  the shift is in level, not subject */}
+              <p className="ms-prose-deva-lines">
+                जहाँ तत्त्वप्रश्न ने मनुष्य को उसके भार के प्रति जाग्रत किया,<br />
+                वहाँ तत्त्वग्रंथ उस भार के साथ चलने की दिशा प्रस्तुत करेगा।<br />
+                यह परिवर्तन विषय का नहीं, स्तर का है।
+              </p>
+
+              <div className="ms-silence-sm" />
+
+              {/* Block V3 — The triple contrast: not right to freedom but its conduct;
+                  not need for order but its interior establishment;
+                  not acceptance of responsibility but its descent into life */}
+              <p className="ms-prose-deva-lines">
+                अब आगे चर्चा<br />
+                स्वतंत्रता के अधिकार पर नहीं,<br />
+                बल्कि उसके निर्वाह पर होगी;<br />
+                व्यवस्था की आवश्यकता पर नहीं,<br />
+                बल्कि उसके अंतःस्थापन पर होगी;<br />
+                और उत्तरदायित्व की स्वीकृति पर नहीं,<br />
+                बल्कि उसके जीवन में अवतरण पर होगी।
+              </p>
+
+              {/* ── Canonical section break (---) after Movement III ── */}
+              <div className="ms-silence-lg" />
+
+              {/* ══════════════════════════════════════
+                  Movement IV — The boundary statement; this is not a chapter's end
+                  but a sīmā-rekhā; inquiry falls silent; alignment begins;
+                  Tattvaprashna completes its work.
+                  Source: canon/tattvaprashna-source-of-truth.md, lines 1193–1202
+              ══════════════════════════════════════ */}
+
+              {/* Block W1 — Not a chapter's end but a boundary; inquiry falls silent */}
+              <p className="ms-prose-deva-lines">
+                अतः यह बिंदु किसी अध्याय का अंत नहीं,<br />
+                बल्कि एक सीमा-रेखा है।<br />
+                यहाँ विराम लेते हैं और अनुशासन आरंभ होता है।<br />
+                यहाँ जिज्ञासा मौन धारण करती है<br />
+                और संरेखण का काल प्रारंभ होता है।
+              </p>
+
+              <div className="ms-silence-md" />
+
+              {/* Block W2 — Terminal statement: Tattvaprashna completes its work */}
+              <p className="ms-prose-deva-lines">
+                इस प्रकार तत्त्वप्रश्न — एक पूर्व-ग्रंथ — अपना कार्य पूर्ण करता है,<br />
+                और इसी क्षण से तत्त्वग्रंथ : खंड प्रथम का प्रवेश आरंभ होता है।
+              </p>
+
+              {/* ── Terminal manuscript seal ── */}
+              <div className="ms-silence-lg" />
+              <hr className="ms-rule-full" />
+              <div className="ms-silence-lg" />
 
             </section>
           </Reveal>
