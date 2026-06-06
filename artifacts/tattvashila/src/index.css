@@ -537,6 +537,24 @@ img.broken { display: none; }
 .ms-silence-sm { height: 4rem; }
 .ms-silence-md { height: 7rem; }
 .ms-silence-lg { height: 11rem; }
+.ms-silence-xl { height: 16rem; }
+
+/* Threshold — देहली — the wordless pause before the text begins.
+   One restrained inscribed mark, held in the longest silence. */
+.ms-threshold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ms-threshold-mark {
+  font-family: "Tiro Devanagari Hindi", serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em; /* optical centering for trailing tracking */
+  color: var(--ink-faint);
+  opacity: 0.55;
+}
 
 /* Manuscript prose — Devanagari register */
 .ms-prose-deva {

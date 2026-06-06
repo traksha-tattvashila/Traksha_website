@@ -64,6 +64,33 @@ export default function Ecosystem() {
               ))}
             </ul>
 
+            {/* A genuine invitation toward the manuscript library */}
+            <Reveal delay={0.16}>
+              <div className="mt-12 md:mt-14 pt-8 border-t border-ink/10 max-w-reading">
+                <p className="text-body text-ink-soft">
+                  The institution&rsquo;s manuscripts are gathered in the{" "}
+                  <Link
+                    href="/granthalaya"
+                    className="text-ink-muted hover:text-ink quiet-link transition-colors"
+                  >
+                    Granthālaya
+                  </Link>
+                  {" "}&mdash; its library of long-composed texts, held until they are ready.
+                </p>
+                <Link
+                  href="/granthalaya"
+                  data-testid="home-enter-granthalaya"
+                  className="group mt-5 inline-flex items-center gap-3 text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle"
+                >
+                  <span
+                    aria-hidden
+                    className="block w-5 h-px bg-current opacity-40 group-hover:opacity-70 transition-opacity duration-700"
+                  />
+                  <span>Enter the Granthālaya</span>
+                </Link>
+              </div>
+            </Reveal>
+
             <Reveal delay={0.2}>
               <p className="mt-10 text-small text-ink-faint max-w-reading">
                 Currently &mdash;{" "}

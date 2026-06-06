@@ -5,24 +5,32 @@ import NotesIndexPage from "./pages/NotesIndexPage";
 import NotePage from "./pages/NotePage";
 import PhilosophyPage from "./pages/PhilosophyPage";
 import ArchivePage from "./pages/ArchivePage";
-import GranthalayanPage from "./pages/GranthalayanPage";
-import TattvaprashnaPage from "./pages/TattvaprashnaPage";
-import TattvaprashnaManuscriptPage from "./pages/TattvaprashnaManuscriptPage";
+import GranthalayaEntryPage from "./pages/GranthalayaEntryPage";
+import GranthaCataloguePage from "./pages/GranthaCataloguePage";
+import GranthaDetailPage from "./pages/GranthaDetailPage";
+import GranthaFrontispiecePage from "./pages/GranthaFrontispiecePage";
+import ManuscriptRoute from "./pages/ManuscriptRoute";
 import NotFound from "./pages/not-found";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/"                                component={HomePage}          />
-      <Route path="/about"                           component={AboutPage}         />
-      <Route path="/notes"                           component={NotesIndexPage}    />
-      <Route path="/notes/:slug"                     component={NotePage}          />
-      <Route path="/philosophy"                      component={PhilosophyPage}    />
-      <Route path="/archive"                         component={ArchivePage}       />
-      <Route path="/granthalaya"                     component={GranthalayanPage}  />
-      <Route path="/granthalaya/tattvaprashna"       component={TattvaprashnaPage}           />
-      <Route path="/granthalaya/tattvaprashna/hindi" component={TattvaprashnaManuscriptPage} />
-      <Route                                         component={NotFound}                    />
+      <Route path="/"                           component={HomePage}                />
+      <Route path="/about"                      component={AboutPage}               />
+      <Route path="/notes"                      component={NotesIndexPage}          />
+      <Route path="/notes/:slug"                component={NotePage}                />
+      <Route path="/philosophy"                 component={PhilosophyPage}          />
+      <Route path="/archive"                    component={ArchivePage}             />
+
+      {/* ── Granthālaya — staged manuscript flow ── */}
+      {/* Order matters: more specific segments precede the :slug catch. */}
+      <Route path="/granthalaya"                component={GranthalayaEntryPage}    />
+      <Route path="/granthalaya/catalogue"      component={GranthaCataloguePage}    />
+      <Route path="/granthalaya/:slug/enter"    component={GranthaFrontispiecePage} />
+      <Route path="/granthalaya/:slug/:lang"    component={ManuscriptRoute}         />
+      <Route path="/granthalaya/:slug"          component={GranthaDetailPage}       />
+
+      <Route                                    component={NotFound}                />
     </Switch>
   );
 }

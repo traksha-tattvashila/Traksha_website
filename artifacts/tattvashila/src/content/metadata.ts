@@ -94,6 +94,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
     canonicalUrl: buildCanonicalUrl("/granthalaya"),
   },
+  catalogue: {
+    title: buildTitle("The Catalogue — Granthālaya"),
+    description:
+      "The manuscript catalogue of Tattvashila — the works of the Granthālaya in their intended order, each held until ready.",
+    ogTitle: buildTitle("The Catalogue — Granthālaya"),
+    ogDescription:
+      "The works of the Granthālaya, in their intended order. Each held until ready.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/granthalaya/catalogue"),
+  },
   tattvaprashna: {
     title: buildTitle("Tattvaprashna — तत्त्वप्रश्न"),
     description:

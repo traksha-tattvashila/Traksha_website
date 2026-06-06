@@ -294,7 +294,7 @@ export default function ArchivePage() {
                           {g.devanagari}
                         </p>
                         <p className="mt-3 text-small text-ink-faint leading-relaxed max-w-reading">
-                          {g.paragraphs[0]}
+                          {g.detailSections[0]?.paragraphs[0]}
                         </p>
                       </div>
                     </div>

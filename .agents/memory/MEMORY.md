@@ -1,0 +1,1 @@
+- [.migration-backup stale workflows](migration-backup-workflows.md) — the `.migration-backup/*` workflows always fail and must be ignored; only `artifacts/*` are real.

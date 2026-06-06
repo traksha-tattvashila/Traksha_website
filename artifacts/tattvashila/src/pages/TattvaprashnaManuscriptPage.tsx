@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import Reveal from "../components/Reveal";
 import { PageLayout } from "../layouts";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useReadingPosition } from "../hooks/useReadingPosition";
 
 export default function TattvaprashnaManuscriptPage() {
   usePageMeta({
@@ -9,6 +10,9 @@ export default function TattvaprashnaManuscriptPage() {
     description:
       "तत्त्वप्रश्न — मानव स्वतंत्रता, व्यवस्था और उत्तरदायित्व पर एक विवेचनात्मक ग्रंथ। Vikram A. Mitra।",
   });
+
+  // The reader resumes where the text was left — silently, no announcement.
+  useReadingPosition("tattvaprashna/hindi");
 
   return (
     <PageLayout testId="tattvaprashna-manuscript">
@@ -19,7 +23,7 @@ export default function TattvaprashnaManuscriptPage() {
           {/* ── Reading Navigation ── */}
           <nav className="ms-reading-nav" aria-label="Manuscript navigation">
             <Link
-              href="/granthalaya/tattvaprashna"
+              href="/granthalaya/tattvaprashna/enter"
               className="ms-reading-nav-link"
             >
               <span aria-hidden>←</span>
@@ -238,9 +242,19 @@ export default function TattvaprashnaManuscriptPage() {
           <div className="ms-rule-full" />
 
           {/* ════════════════════════════════════
-              SILENCE
+              THRESHOLD — देहली
+              The final pause before the text begins.
+              Wordless. The longest silence in the manuscript.
           ════════════════════════════════════ */}
-          <div className="ms-silence-lg" />
+          <div className="ms-silence-xl" />
+          <div
+            className="ms-threshold"
+            aria-label="देहली"
+            data-testid="tattvaprashna-threshold"
+          >
+            <span className="ms-threshold-mark" aria-hidden>॥</span>
+          </div>
+          <div className="ms-silence-xl" />
 
           {/* ════════════════════════════════════
               SECTION: अध्याय 1
