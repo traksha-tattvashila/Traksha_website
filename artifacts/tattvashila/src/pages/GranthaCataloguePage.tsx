@@ -101,16 +101,16 @@ export default function GranthaCataloguePage() {
                         {g.subtitle}
                       </p>
 
-                      {/* Status + way forward */}
+                      {/* Status + Pravesh (entry into the grantha) */}
                       <div className="col-span-12 md:col-span-3 self-center mt-3 md:mt-0 pl-9 md:pl-0 md:text-right">
                         <span className="text-micro tracking-widest uppercase text-ink-faint">
                           {g.compositionState}
                         </span>
                         <span
                           aria-hidden
-                          className="mt-2 hidden md:flex items-center justify-end gap-2 text-small text-ink-muted opacity-50 group-hover:opacity-90 transition-opacity duration-500"
+                          className="mt-2 hidden md:flex items-baseline justify-end gap-2 text-small text-ink-muted opacity-50 group-hover:opacity-90 transition-opacity duration-500"
                         >
-                          <span>{g.hasManuscript ? "Read" : "On the work"}</span>
+                          <span className="font-deva">प्रवेश</span>
                           <span>→</span>
                         </span>
                       </div>
