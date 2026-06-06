@@ -11,7 +11,7 @@ export default function Philosophy() {
           <div className="col-span-12 md:col-span-3">
             <Reveal>
               <p className="text-micro tracking-widest uppercase text-ink-muted">
-                II &nbsp;·&nbsp; The ideas
+                II &nbsp;·&nbsp; What it believes
               </p>
             </Reveal>
           </div>

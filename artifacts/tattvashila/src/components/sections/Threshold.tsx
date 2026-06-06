@@ -25,7 +25,7 @@ export default function Threshold() {
               className="text-micro tracking-widest uppercase text-ink-muted mb-6 md:mb-8"
             >
               <span className="font-deva text-[0.95rem] tracking-normal normal-case mr-3 text-ink">तत्त्वशिला</span>
-              <span className="align-middle">— a quiet body of work</span>
+              <span className="align-middle">— an institution for grounded, conscious living</span>
             </motion.p>
 
             <motion.h1
@@ -46,9 +46,9 @@ export default function Threshold() {
               className="mt-7 md:mt-9 text-lead text-ink-soft max-w-reading"
             >
               Modern life offers endless advice and very little steadiness.
-              Tattvashila is a body of work for people who want awareness,
-              responsibility and discipline to be ordinary again &mdash; integrated
-              into work, family and the years ahead.
+              Tattvashila is an institution for grounded, conscious living &mdash;
+              restoring awareness, responsibility and discipline as ordinary, and
+              carrying them into work, family and the years ahead.
             </motion.p>
 
             <motion.div
@@ -70,7 +70,7 @@ export default function Threshold() {
                 data-testid="threshold-cta-secondary"
                 className="text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle quiet-link"
               >
-                Stay in touch
+                Stay in correspondence
               </a>
             </motion.div>
           </div>

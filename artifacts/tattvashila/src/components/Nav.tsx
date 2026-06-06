@@ -73,7 +73,7 @@ export default function Nav() {
                 className="ml-1 inline-flex items-center gap-3 text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle group"
               >
                 <span className="block w-5 h-px bg-current opacity-40 group-hover:opacity-70 transition-opacity duration-700" aria-hidden />
-                <span>Stay in touch</span>
+                <span>Stay in correspondence</span>
               </a>
             </nav>
 
@@ -84,7 +84,7 @@ export default function Nav() {
                 data-testid="nav-intake-cta-mobile"
                 className="text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
               >
-                Stay in touch
+                Stay in correspondence
               </a>
               <button
                 onClick={() => setMobileOpen(true)}
@@ -186,7 +186,7 @@ export default function Nav() {
                   className="inline-flex items-center gap-4 text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle"
                 >
                   <span className="block w-6 h-px bg-current opacity-40" aria-hidden />
-                  <span>Stay in touch</span>
+                  <span>Stay in correspondence</span>
                 </a>
               </motion.div>
             </nav>

@@ -2,8 +2,9 @@ import { PageLayout } from "../layouts";
 import Threshold from "../components/sections/Threshold";
 import Premise from "../components/sections/Premise";
 import Philosophy from "../components/sections/Philosophy";
-import Ecosystem from "../components/sections/Ecosystem";
-import Journey from "../components/sections/Journey";
+import KnowledgeRecord from "../components/sections/KnowledgeRecord";
+import Traksha from "../components/sections/Traksha";
+import Composition from "../components/sections/Composition";
 import Intake from "../components/sections/Intake";
 import { usePageMeta } from "../hooks/usePageMeta";
 import { PAGE_META } from "../content/metadata";
@@ -16,8 +17,9 @@ export default function HomePage() {
       <Threshold />
       <Premise />
       <Philosophy />
-      <Ecosystem />
-      <Journey />
+      <KnowledgeRecord />
+      <Traksha />
+      <Composition />
       <Intake />
     </PageLayout>
   );

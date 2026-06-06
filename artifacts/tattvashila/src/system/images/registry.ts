@@ -19,7 +19,7 @@ export const images = {
   heroPremise: {
     src: bookAndTea,
     alt: "A Tattvashila book resting on a low wooden table beside a dark ceramic cup, dappled light across the surface",
-    credit: "A body of work, held quietly.",
+    credit: "Held quietly, over time.",
     aspectHint: "4/5",
     fallbackTone: "warm",
     loading: "eager",

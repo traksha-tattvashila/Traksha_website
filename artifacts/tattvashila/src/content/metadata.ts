@@ -32,7 +32,7 @@ export function buildCanonicalUrl(path: string): string {
 }
 
 const BASE_DESCRIPTION =
-  "Tattvashila is a quiet body of work for grounded, conscious living. Awareness, responsibility and discipline \u2014 integrated into ordinary life.";
+  "Tattvashila is an institution for grounded, conscious living. Awareness, responsibility and discipline \u2014 integrated into ordinary life.";
 
 export const PAGE_META: Record<string, PageMeta> = {
   home: {
@@ -57,7 +57,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   about: {
     title: buildTitle("Origin"),
     description:
-      "Tattvashila is not a movement, a startup, or a personal vision. It is a long body of work, put together carefully.",
+      "Tattvashila is not a movement, a startup, or a personal vision. It is an institution, built carefully over time.",
     ogTitle: buildTitle("Origin"),
     ogDescription:
       "This did not begin as an idea. It began as a series of quiet observations.",
