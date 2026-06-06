@@ -26,11 +26,15 @@ _Populate as you build — short repo map plus pointers to the source-of-truth f
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- **Institutional structure is locked at v1.0.** `canon/institutional-constitution.md` is the **single source of truth** for what Tattvashila is and how it is structured. All navigation, content, and implementation decisions must conform to it.
+- Tattvashila is the **Institution** (a Saṃsthā), organized into three layers: **Foundation** (Philosophy, Origin), **Knowledge & Record** (Granthālaya, Notes, Archive), and **Traksha** (the technology backbone / implementation layer — TRK Identity, Tattvapeetha, Raksha, Shreetattva, Vanatattva, Volunteer Systems, TattvaCoin, and future functions).
+- **Granthālaya is one wing** (a manuscript library within Knowledge & Record) — not the homepage identity and not the institution itself.
+- **Traksha is not a product.** It is the implementation layer through which all practical systems operate; everything lives inside one canonical website (no fragmentation into separate web properties).
+- The `canon/` documents remain authoritative on manuscript composition, language, rendering fidelity, and preservation. On **structure**, the Constitution is supreme.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Tattvashila is an institution for grounded, conscious living. Its public website expresses the Foundation (Philosophy, Origin) and the Knowledge & Record (Granthālaya manuscript library, Notes, Archive); its practical functions operate through the Traksha implementation layer. See `canon/institutional-constitution.md` for the authoritative structure.
 
 ## User preferences
 
@@ -42,4 +46,6 @@ _Populate as you build — sharp edges, "always run X before Y" rules._
 
 ## Pointers
 
+- **`canon/institutional-constitution.md` — authoritative institutional structure (Constitutional Structure Locked v1.0).** Read before any structural, navigation, or content change.
+- `canon/` — manuscript composition, canonical language, rendering fidelity, and preservation governance.
 - See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
