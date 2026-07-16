@@ -28,14 +28,14 @@ export default function Composition() {
                   readiness. Manuscripts are being composed for the{" "}
                   <Link
                     href="/granthalaya"
-                    className="text-ink hover:text-river quiet-link transition-colors"
+                    className="text-ink hover:text-river quiet-link transition-colors duration-700 ease-gentle"
                   >
                     Granthālaya
                   </Link>
                   ; reflections appear in the{" "}
                   <Link
                     href="/notes"
-                    className="text-ink hover:text-river quiet-link transition-colors"
+                    className="text-ink hover:text-river quiet-link transition-colors duration-700 ease-gentle"
                   >
                     Notes
                   </Link>

@@ -98,7 +98,7 @@ export default function Nav() {
               <a
                 href="/#intake"
                 data-testid="nav-intake-cta-mobile"
-                className="hidden xs:block text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
+                className="text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
               >
                 Stay in correspondence
               </a>

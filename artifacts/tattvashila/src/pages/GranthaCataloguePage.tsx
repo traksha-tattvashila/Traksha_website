@@ -35,7 +35,7 @@ export default function GranthaCataloguePage() {
 
             <div className="col-span-12 md:col-span-9 pb-4 md:pb-6">
               <Reveal delay={0.04}>
-                <h1 className="font-display text-hero font-normal text-ink leading-[1.08] tracking-tight max-w-prose-wide">
+                <h1 className="font-display text-hero font-normal text-ink leading-[1.1] tracking-tight max-w-prose-wide">
                   The works, in their intended order.
                 </h1>
               </Reveal>

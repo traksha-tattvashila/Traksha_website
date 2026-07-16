@@ -16,19 +16,19 @@ export default function Closing() {
       <SiteContainer>
 
         {/* ── Institutional closing statement ── */}
-        <div className="grid grid-cols-12 gap-x-8 md:gap-x-12">
+        <div className="grid grid-cols-12 gap-x-8 md:gap-x-12 lg:gap-x-14 xl:gap-x-16">
           <div className="col-span-12 md:col-span-3 hidden md:block" aria-hidden />
           <div className="col-span-12 md:col-span-9">
             <Reveal>
               <p
                 data-testid="footer-closing-statement"
-                className="font-display text-display-xl font-normal text-ink leading-[1.14] tracking-tight max-w-prose-wide"
+                className="font-display text-display-xl font-normal text-ink leading-[1.16] tracking-tight max-w-prose-wide"
               >
                 {BRAND.footerQuote}
               </p>
             </Reveal>
             <Reveal delay={0.07}>
-              <p className="mt-5 text-small text-ink-faint tracking-wide">
+              <p className="mt-6 text-small text-ink-faint tracking-wide">
                 {BRAND.footerStatement}
               </p>
             </Reveal>
@@ -36,7 +36,7 @@ export default function Closing() {
         </div>
 
         {/* ── Identity mark + institutional navigation ── */}
-        <div className="mt-20 md:mt-24 grid grid-cols-12 gap-x-8 md:gap-x-12 gap-y-12 md:gap-y-0">
+        <div className="mt-20 md:mt-24 grid grid-cols-12 gap-x-8 md:gap-x-12 lg:gap-x-14 xl:gap-x-16 gap-y-12 md:gap-y-0">
 
           {/* Institutional marks — wordmark + Devanagari + meaning */}
           <div className="col-span-12 md:col-span-3">

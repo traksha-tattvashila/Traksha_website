@@ -87,7 +87,7 @@ textarea:focus:not(:focus-visible) {
 input:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--river);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 1px;
 }
 
@@ -111,23 +111,23 @@ a:focus-visible {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
   width: 100%;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
-              opacity  700ms cubic-bezier(0.22, 0.61, 0.36, 1);
-  opacity: 0.35;
+  transition: transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity  600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 0.30;
 }
 .quiet-link:hover::after {
   transform: scaleX(1);
-  opacity: 0.55;
+  opacity: 0.50;
 }
 .quiet-link.is-active::after {
   transform: scaleX(1);
-  opacity: 0.55;
+  opacity: 0.50;
 }
 
 /* ═══════════════════════════════════════════════════════════════

@@ -50,7 +50,7 @@ export default function NotesIndexPage() {
               <Reveal delay={0.05}>
                 <h1
                   data-testid="notes-headline"
-                  className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
+                  className="font-display text-hero font-normal text-ink leading-[1.1] tracking-tight"
                 >
                   Rare reflections, written when there is something honest worth saying.
                 </h1>
@@ -102,7 +102,7 @@ export default function NotesIndexPage() {
                             >
                               {formatNoteDate(n.date)}
                             </time>
-                            <span className="text-micro tracking-widests uppercase text-ink-faint">
+                            <span className="text-micro tracking-widest uppercase text-ink-faint">
                               &middot; {n.reading} read
                             </span>
                             {category && (
@@ -140,7 +140,7 @@ export default function NotesIndexPage() {
                   would like them sent to you when they are ready,{" "}
                   <a
                     href="/#intake"
-                    className="text-ink-muted hover:text-ink quiet-link transition-colors"
+                    className="text-ink-muted hover:text-ink quiet-link transition-colors duration-700 ease-gentle"
                   >
                     leave us a quiet line
                   </a>

@@ -53,7 +53,7 @@ export default function Premise() {
                       <Link
                         href="/about"
                         data-testid="homepage-origin-link"
-                        className="text-ink hover:text-river quiet-link transition-colors"
+                        className="text-ink hover:text-river quiet-link transition-colors duration-700 ease-gentle"
                       >
                         Origin
                       </Link>

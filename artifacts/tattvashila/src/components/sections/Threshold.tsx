@@ -33,7 +33,7 @@ export default function Threshold() {
               initial={reduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.25, ease: EASE_GENTLE }}
-              className="font-display text-hero font-normal text-ink leading-[1.12] tracking-tight"
+              className="font-display text-hero font-normal text-ink leading-[1.1] tracking-tight"
             >
               A quieter way to live with awareness &mdash; without leaving the world you&rsquo;ve built.
             </motion.h1>
@@ -92,7 +92,7 @@ export default function Threshold() {
               loading="eager"
               fetchPriority="high"
             />
-            <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
+            <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
               {heroThreshold.credit}
             </p>
           </motion.div>

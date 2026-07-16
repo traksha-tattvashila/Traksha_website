@@ -74,7 +74,7 @@ export default function PhilosophyPage() {
               <Reveal delay={0.05}>
                 <h1
                   data-testid="philosophy-headline"
-                  className="font-display text-hero font-normal text-ink leading-[1.08] tracking-tight max-w-prose-wide"
+                  className="font-display text-hero font-normal text-ink leading-[1.1] tracking-tight max-w-prose-wide"
                 >
                   Awareness, integrated into ordinary life.
                 </h1>
@@ -130,7 +130,7 @@ export default function PhilosophyPage() {
                             fallbackTone="warm"
                             className="rounded-[2px]"
                           />
-                          <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
+                          <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
                             {images.journeyWalk.credit}
                           </p>
                         </div>

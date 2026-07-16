@@ -36,7 +36,7 @@ export default function PublicationSequence({
             <p className="font-display text-xl font-normal text-ink-muted group-hover:text-ink transition-colors duration-700 ease-gentle leading-[1.3]">
               {previous.title}
             </p>
-            <p className="mt-2 text-micro tracking-widests uppercase text-ink-faint num-tab">
+            <p className="mt-2 text-micro tracking-widest uppercase text-ink-faint num-tab">
               {formatNoteDate(previous.date)}
             </p>
           </Link>

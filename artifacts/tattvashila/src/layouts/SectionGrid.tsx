@@ -14,7 +14,7 @@ export default function SectionGrid({
   const alignClass = { start: "items-start", center: "items-center", end: "items-end" }[align];
 
   const parts = [
-    "grid grid-cols-12 md:gap-x-12 xl:gap-x-16",
+    "grid grid-cols-12 md:gap-x-12 lg:gap-x-14 xl:gap-x-16",
     gapY,
     alignClass,
     className ?? "",

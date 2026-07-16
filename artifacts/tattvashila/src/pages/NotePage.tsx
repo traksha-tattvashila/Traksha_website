@@ -132,7 +132,7 @@ export default function NotePage() {
                   <Reveal delay={0.14}>
                     <p
                       itemProp="description"
-                      className="mt-5 md:mt-7 text-lead text-ink-soft max-w-reading leading-relaxed"
+                      className="mt-5 md:mt-7 text-lead text-ink-soft max-w-reading"
                     >
                       {note.summary}
                     </p>

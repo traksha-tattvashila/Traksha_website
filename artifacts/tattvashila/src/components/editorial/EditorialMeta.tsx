@@ -27,7 +27,7 @@ export default function EditorialMeta({
 
   return (
     <div
-      className={`flex flex-wrap items-baseline gap-x-4 gap-y-1 ${className}`}
+      className={`flex flex-wrap items-baseline gap-x-5 gap-y-1 ${className}`}
       aria-label="Publication metadata"
     >
       <time

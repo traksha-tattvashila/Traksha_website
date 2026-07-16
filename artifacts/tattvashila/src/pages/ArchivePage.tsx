@@ -74,7 +74,7 @@ export default function ArchivePage() {
               <Reveal delay={0.04}>
                 <h1
                   data-testid="archive-headline"
-                  className="font-display text-hero font-normal text-ink leading-[1.08] tracking-tight max-w-prose-wide"
+                  className="font-display text-hero font-normal text-ink leading-[1.1] tracking-tight max-w-prose-wide"
                 >
                   A complete institutional record of all publications.
                 </h1>
@@ -199,7 +199,7 @@ export default function ArchivePage() {
                                     </span>
                                   </div>
 
-                                  <h3 className="font-display text-title font-normal text-ink leading-[1.2] group-hover:text-river-soft transition-colors duration-700 ease-gentle tracking-tight max-w-prose-wide">
+                                  <h3 className="font-display text-title font-normal text-ink leading-[1.18] group-hover:text-river-soft transition-colors duration-700 ease-gentle tracking-tight max-w-prose-wide">
                                     {note.title}
                                   </h3>
 
@@ -286,7 +286,7 @@ export default function ArchivePage() {
                       <div className="min-w-0">
                         <Link
                           href="/granthalaya"
-                          className="font-display text-title font-normal text-ink-soft hover:text-ink transition-colors duration-700 ease-gentle tracking-tight leading-[1.2] quiet-link"
+                          className="font-display text-title font-normal text-ink-soft hover:text-ink transition-colors duration-700 ease-gentle tracking-tight leading-[1.18] quiet-link"
                         >
                           {g.title}
                         </Link>
@@ -418,7 +418,7 @@ export default function ArchivePage() {
                     fallbackTone="warm"
                     className="rounded-[2px]"
                   />
-                  <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
+                  <p className="mt-3 text-micro tracking-widest uppercase text-ink-faint">
                     {images.archiveBooks.credit}
                   </p>
                 </div>
