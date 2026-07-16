@@ -7,6 +7,10 @@ interface QuietImageProps {
   className?: string;
   aspectClass?: string;
   fallbackTone?: "warm" | "river" | "stone";
+  /** Controls browser lazy-loading. Defaults to "lazy" — pass "eager" only for above-the-fold hero images. */
+  loading?: "eager" | "lazy";
+  /** Hint to browser for fetch priority. Pass "high" on the primary LCP image. */
+  fetchPriority?: "high" | "low" | "auto";
 }
 
 const TONES: Record<string, string> = {
@@ -22,9 +26,11 @@ export default function QuietImage({
   className = "",
   aspectClass = "aspect-[4/5]",
   fallbackTone = "warm",
+  loading = "lazy",
+  fetchPriority,
 }: QuietImageProps) {
   const imgRef = useRef<HTMLImageElement | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded]   = useState(false);
   const [errored, setErrored] = useState(false);
 
   useEffect(() => {
@@ -48,12 +54,15 @@ export default function QuietImage({
       }
     >
       {!errored && (
+        // eslint-disable-next-line jsx-a11y/img-redundant-alt
         <img
           ref={imgRef}
           src={src}
           alt={alt}
-          loading="eager"
+          loading={loading}
           decoding="async"
+          // fetchPriority is a standard React 19 prop on <img>
+          fetchPriority={fetchPriority}
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
           className={`absolute inset-0 w-full h-full object-cover img-warm transition-opacity duration-[1200ms] ease-gentle ${

@@ -81,6 +81,7 @@ export default function Threshold() {
             transition={{ duration: 1.2, delay: 0.55, ease: EASE_GENTLE }}
             className="col-span-12 md:col-span-5"
           >
+            {/* Primary LCP image — eager load with high fetch priority */}
             <QuietImage
               src={heroThreshold.src}
               alt={heroThreshold.alt}
@@ -88,6 +89,8 @@ export default function Threshold() {
               aspectClass="aspect-[4/5] md:aspect-[4/5]"
               fallbackTone={heroThreshold.fallbackTone}
               className="rounded-[2px]"
+              loading="eager"
+              fetchPriority="high"
             />
             <p className="mt-4 text-micro tracking-widest uppercase text-ink-faint">
               {heroThreshold.credit}

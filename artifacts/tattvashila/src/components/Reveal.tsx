@@ -1,15 +1,38 @@
 import { motion, useReducedMotion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 import { ReactNode } from "react";
 import { EASE_GENTLE } from "../system/motion/easings";
 import { duration } from "../system/motion/durations";
+
+type MotionTag = "div" | "section" | "p" | "h1" | "h2" | "h3" | "li" | "span";
+
+/**
+ * Pre-built map from tag name → Framer Motion component.
+ * Avoids dynamic property access on `motion`, removing the need for @ts-ignore.
+ */
+const MOTION_COMPONENTS: Record<MotionTag, React.FC<HTMLMotionProps<any>>> = {
+  div:     motion.div,
+  section: motion.section,
+  p:       motion.p,
+  h1:      motion.h1,
+  h2:      motion.h2,
+  h3:      motion.h3,
+  li:      motion.li,
+  span:    motion.span,
+};
 
 interface RevealProps {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "section" | "p" | "h1" | "h2" | "h3" | "li" | "span";
+  as?: MotionTag;
 }
 
+/**
+ * Scroll-triggered entrance animation for Tattvashila.
+ * Motion is architectural, quiet, and intentional.
+ * Respects prefers-reduced-motion — shows content immediately if set.
+ */
 export default function Reveal({
   children,
   delay = 0,
@@ -17,8 +40,7 @@ export default function Reveal({
   as = "div",
 }: RevealProps) {
   const reduce = useReducedMotion();
-  // @ts-ignore
-  const Tag = motion[as] as any;
+  const Tag = MOTION_COMPONENTS[as];
 
   return (
     <Tag

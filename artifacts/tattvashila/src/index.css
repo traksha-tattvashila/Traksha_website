@@ -10,7 +10,7 @@
 :root {
   --bone:         #ECE7DC;
   --bone-light:   #F3EEE5;
-  --bone-deep:    #E3DCCF;
+  --bone-deep:    #E2DCCD;
   --ink:          #001F20;
   --ink-soft:     #0D2A2C;
   --ink-muted:    #3A4F51;
@@ -77,9 +77,18 @@ input, textarea {
   font-feature-settings: inherit;
 }
 
-input:focus,
-textarea:focus {
+/* Mouse/touch users: suppress default outline (the border-b colour change is sufficient) */
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Keyboard users: provide a clear, visible focus ring */
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 2px;
+  border-radius: 1px;
 }
 
 button:focus-visible,

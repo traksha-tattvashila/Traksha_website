@@ -9,9 +9,12 @@ import { SITE_NAV } from "../content/navigation";
 export default function Nav() {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  // Close mobile nav on route change
   useEffect(() => { setMobileOpen(false); }, [location]);
 
+  // Keyboard dismiss for mobile overlay
   useEffect(() => {
     if (!mobileOpen) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setMobileOpen(false); };
@@ -19,10 +22,19 @@ export default function Nav() {
     return () => document.removeEventListener("keydown", onKey);
   }, [mobileOpen]);
 
+  // Body scroll lock while mobile nav is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
+
+  // Scroll depth detection — adds a subtle shadow once page is scrolled
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll(); // sync on mount
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   function isActive(href: string) {
     return location === href;
@@ -32,7 +44,11 @@ export default function Nav() {
     <>
       <header
         data-testid="site-nav"
-        className="fixed top-0 inset-x-0 z-30 backdrop-blur-md bg-bone/88 border-b border-ink/8"
+        className={[
+          "fixed top-0 inset-x-0 z-30 backdrop-blur-md bg-bone/88 border-b border-ink/8",
+          "transition-shadow duration-700 ease-gentle",
+          scrolled ? "shadow-[0_2px_16px_rgba(0,31,32,0.05)]" : "",
+        ].filter(Boolean).join(" ")}
       >
         <SiteContainer>
           <div className="h-[68px] md:h-[80px] flex items-center justify-between">
@@ -82,7 +98,7 @@ export default function Nav() {
               <a
                 href="/#intake"
                 data-testid="nav-intake-cta-mobile"
-                className="text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
+                className="hidden xs:block text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
               >
                 Stay in correspondence
               </a>

@@ -1,37 +1,49 @@
+import { lazy, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter } from "wouter";
+
+// HomePage is loaded eagerly — it is the entry point and most visited route.
+// All other pages are lazy-loaded for bundle optimisation.
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import NotesIndexPage from "./pages/NotesIndexPage";
-import NotePage from "./pages/NotePage";
-import PhilosophyPage from "./pages/PhilosophyPage";
-import ArchivePage from "./pages/ArchivePage";
-import GranthalayaEntryPage from "./pages/GranthalayaEntryPage";
-import GranthaCataloguePage from "./pages/GranthaCataloguePage";
-import GranthaDetailPage from "./pages/GranthaDetailPage";
-import GranthaFrontispiecePage from "./pages/GranthaFrontispiecePage";
-import ManuscriptRoute from "./pages/ManuscriptRoute";
-import NotFound from "./pages/not-found";
+
+const AboutPage             = lazy(() => import("./pages/AboutPage"));
+const NotesIndexPage        = lazy(() => import("./pages/NotesIndexPage"));
+const NotePage              = lazy(() => import("./pages/NotePage"));
+const PhilosophyPage        = lazy(() => import("./pages/PhilosophyPage"));
+const ArchivePage           = lazy(() => import("./pages/ArchivePage"));
+const GranthalayaEntryPage  = lazy(() => import("./pages/GranthalayaEntryPage"));
+const GranthaCataloguePage  = lazy(() => import("./pages/GranthaCataloguePage"));
+const GranthaDetailPage     = lazy(() => import("./pages/GranthaDetailPage"));
+const GranthaFrontispiecePage = lazy(() => import("./pages/GranthaFrontispiecePage"));
+const ManuscriptRoute       = lazy(() => import("./pages/ManuscriptRoute"));
+const NotFound              = lazy(() => import("./pages/not-found"));
+
+/** Minimal bone-coloured shell shown while a lazy page chunk loads. */
+function PageShell() {
+  return <div className="min-h-screen bg-bone" aria-hidden="true" />;
+}
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/"                           component={HomePage}                />
-      <Route path="/about"                      component={AboutPage}               />
-      <Route path="/notes"                      component={NotesIndexPage}          />
-      <Route path="/notes/:slug"                component={NotePage}                />
-      <Route path="/philosophy"                 component={PhilosophyPage}          />
-      <Route path="/archive"                    component={ArchivePage}             />
+    <Suspense fallback={<PageShell />}>
+      <Switch>
+        <Route path="/"                           component={HomePage}                />
+        <Route path="/about"                      component={AboutPage}               />
+        <Route path="/notes"                      component={NotesIndexPage}          />
+        <Route path="/notes/:slug"                component={NotePage}                />
+        <Route path="/philosophy"                 component={PhilosophyPage}          />
+        <Route path="/archive"                    component={ArchivePage}             />
 
-      {/* ── Granthālaya — staged manuscript flow ── */}
-      {/* Order matters: more specific segments precede the :slug catch. */}
-      <Route path="/granthalaya"                component={GranthalayaEntryPage}    />
-      <Route path="/granthalaya/catalogue"      component={GranthaCataloguePage}    />
-      <Route path="/granthalaya/:slug/enter"    component={GranthaFrontispiecePage} />
-      <Route path="/granthalaya/:slug/:lang"    component={ManuscriptRoute}         />
-      <Route path="/granthalaya/:slug"          component={GranthaDetailPage}       />
+        {/* ── Granthālaya — staged manuscript flow ── */}
+        {/* Order matters: more specific segments precede the :slug catch. */}
+        <Route path="/granthalaya"                component={GranthalayaEntryPage}    />
+        <Route path="/granthalaya/catalogue"      component={GranthaCataloguePage}    />
+        <Route path="/granthalaya/:slug/enter"    component={GranthaFrontispiecePage} />
+        <Route path="/granthalaya/:slug/:lang"    component={ManuscriptRoute}         />
+        <Route path="/granthalaya/:slug"          component={GranthaDetailPage}       />
 
-      <Route                                    component={NotFound}                />
-    </Switch>
+        <Route                                    component={NotFound}                />
+      </Switch>
+    </Suspense>
   );
 }
 
