@@ -14,7 +14,7 @@ router.post("/intake", async (req, res) => {
     const firstIssue = parsed.error.issues[0];
     const field = firstIssue?.path?.[0] ?? "field";
     const msg = firstIssue?.message ?? "Invalid input";
-    res.status(422).json({ detail: `${field}: ${msg}` });
+    res.status(422).json({ detail: `${String(field)}: ${msg}` });
     return;
   }
 
