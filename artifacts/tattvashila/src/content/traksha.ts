@@ -1,61 +1,26 @@
 export interface TrakshaFunction {
   name: string;
-  deva?: string;
   essence: string;
   status: string;
 }
 
 export const TRAKSHA_FUNCTIONS: TrakshaFunction[] = [
   {
-    name: "TRK Identity",
+    name: "TRK — Constitutional Identity",
     essence:
-      "The identity foundation of the backbone — how a person is known across the institution's systems.",
+      "A verified identity, earned through authenticity and time, not activity or popularity.",
     status: "In active development",
   },
   {
-    name: "Tattvapeetha",
-    deva: "तत्त्वपीठा",
+    name: "Tattvapeetha — Growth",
     essence:
-      "A progressive ground for human development — the inner work that precedes everything else.",
-    status: "Becoming available",
+      "Structured paths for learning, open to anyone, requiring nothing else first.",
+    status: "In active development",
   },
   {
-    name: "Raksha",
-    deva: "रक्षा",
+    name: "Tattvaloka — Participation",
     essence:
-      "Care for what is fragile — safety, dignity and quiet protection across the years of a life.",
-    status: "On the horizon",
-  },
-  {
-    name: "Shreetattva",
-    deva: "श्रीतत्त्वा",
-    essence:
-      "A considered space for women's wellness — embodied, honest, unadorned by trend.",
-    status: "On the horizon",
-  },
-  {
-    name: "Vanatattva",
-    deva: "वनतत्त्वा",
-    essence:
-      "A considered space for men's wellness — physical, emotional, relational. Without bravado.",
-    status: "On the horizon",
-  },
-  {
-    name: "Volunteer Systems",
-    essence:
-      "The institution's structures for participation and service, coordinated through the backbone.",
-    status: "On the horizon",
-  },
-  {
-    name: "TattvaCoin",
-    essence:
-      "An institutional instrument for sustaining the work over time.",
-    status: "On the horizon",
-  },
-  {
-    name: "Future Institutional Functions",
-    essence:
-      "Further practical functions, added within the backbone as they are ready.",
-    status: "—",
+      "Where people will post and respond to each other — without algorithms, scores, or vanity metrics.",
+    status: "In active development",
   },
 ];
