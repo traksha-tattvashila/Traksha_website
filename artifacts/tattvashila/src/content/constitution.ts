@@ -12,7 +12,7 @@ export interface ConstitutionSection {
 export const CONSTITUTION_SECTIONS: ConstitutionSection[] = [
   {
     label: "TRK \u2014 Identity",
-    text: "A verified identity, earned through authenticity and time. Not through frequency of posting, not through popularity, not through payment. Once issued, it is permanent \u2014 never reused, never purchased, never recreated.",
+    text: "A verified identity, earned over time. Verification currently confirms a real, unique person \u2014 email, mobile, and a live presence check. Deeper document verification will be added as resources allow. Not through frequency of posting, not through popularity, not through payment. Once issued, it is permanent \u2014 never reused, never purchased, never recreated.",
   },
   {
     label: "Tattvaloka \u2014 Participation",
