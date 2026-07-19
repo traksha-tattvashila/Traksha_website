@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 
 const AboutPage             = lazy(() => import("./pages/AboutPage"));
 const ContactPage           = lazy(() => import("./pages/ContactPage"));
+const ConstitutionPage      = lazy(() => import("./pages/ConstitutionPage"));
 const OriginPage            = lazy(() => import("./pages/OriginPage"));
 const NotesIndexPage        = lazy(() => import("./pages/NotesIndexPage"));
 const NotePage              = lazy(() => import("./pages/NotePage"));
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/"                           component={HomePage}                />
         <Route path="/about"                      component={AboutPage}               />
         <Route path="/contact"                    component={ContactPage}             />
+        <Route path="/constitution"               component={ConstitutionPage}        />
         <Route path="/origin"                     component={OriginPage}              />
         <Route path="/notes"                      component={NotesIndexPage}          />
         <Route path="/notes/:slug"                component={NotePage}                />

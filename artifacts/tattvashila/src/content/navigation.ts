@@ -28,6 +28,7 @@ export const SITE_NAV: NavItem[] = [
   { label: "Origin",      href: "/origin",        isRoute: true  },
   { label: "About",       href: "/about",         isRoute: true  },
   { label: "Contact",     href: "/contact",       isRoute: true  },
+  { label: "Constitution", href: "/constitution", isRoute: true  },
 ];
 
 export const FOOTER_NAV: FooterNavGroup[] = [

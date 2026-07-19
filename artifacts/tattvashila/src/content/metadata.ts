@@ -114,6 +114,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
     canonicalUrl: buildCanonicalUrl("/granthalaya/catalogue"),
   },
+  constitution: {
+    title: buildTitle("Constitution"),
+    description:
+      "A plain record of the principles Tattvashila holds itself to \u2014 written down so they can be checked against, not just claimed.",
+    ogTitle: buildTitle("Constitution"),
+    ogDescription:
+      "How Tattvashila is governed \u2014 identity, participation, and growth, stated plainly.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/constitution"),
+  },
   contact: {
     title: buildTitle("Contact"),
     description:
