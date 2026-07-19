@@ -251,7 +251,7 @@ export const GRANTHALAYA_INTRO = {
     "The works held here are long in composition. They are not articles or essays. They are manuscripts \u2014 sustained, systematic, institutionally committed texts that take the time they require.",
   ],
   institutionalNote: [
-    "Tattvashila does not publish to maintain presence. Each manuscript in the Grantha\u0304laya will take whatever time it requires. There is no schedule. There is only the text.",
+    "Each manuscript in the Grantha\u0304laya will take whatever time it requires. There is no schedule. There is only the text.",
     "When a manuscript is ready, it will appear here. Not before.",
   ],
 } as const;
