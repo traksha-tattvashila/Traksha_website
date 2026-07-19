@@ -25,7 +25,8 @@ export const SITE_NAV: NavItem[] = [
   { label: "Archive",     href: "/archive",       isRoute: true  },
   { label: "Notes",       href: "/notes",         isRoute: true  },
   { label: "Granthālaya", href: "/granthalaya",   isRoute: true  },
-  { label: "Origin",      href: "/about",         isRoute: true  },
+  { label: "Origin",      href: "/origin",        isRoute: true  },
+  { label: "About",       href: "/about",         isRoute: true  },
 ];
 
 export const FOOTER_NAV: FooterNavGroup[] = [
@@ -40,7 +41,8 @@ export const FOOTER_NAV: FooterNavGroup[] = [
   {
     label: "About",
     links: [
-      { label: "Origin",            href: "/about",   isRoute: true  },
+      { label: "Origin",            href: "/origin",  isRoute: true  },
+      { label: "About",             href: "/about",   isRoute: true  },
       { label: "Quiet Notes",       href: "/notes",   isRoute: true  },
       { label: "Reflective intake", href: "/#intake", isRoute: false },
     ],

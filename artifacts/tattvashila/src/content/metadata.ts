@@ -55,6 +55,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     canonicalUrl: buildCanonicalUrl("/philosophy"),
   },
   about: {
+    title: buildTitle("About"),
+    description:
+      "Tattvashila is an institution for grounded, conscious living \u2014 awareness, responsibility and discipline, carried into ordinary life.",
+    ogTitle: buildTitle("About"),
+    ogDescription:
+      "What Tattvashila is, who holds it, and what\u2019s here.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/about"),
+  },
+  origin: {
     title: buildTitle("Origin"),
     description:
       "Tattvashila is not a movement, a startup, or a personal vision. It is an institution, built carefully over time.",
@@ -62,7 +72,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogDescription:
       "This did not begin as an idea. It began as a series of quiet observations.",
     ogType: "website",
-    canonicalUrl: buildCanonicalUrl("/about"),
+    canonicalUrl: buildCanonicalUrl("/origin"),
   },
   notes: {
     title: buildTitle("Quiet Notes"),

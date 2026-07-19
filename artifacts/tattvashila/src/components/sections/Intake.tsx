@@ -15,7 +15,7 @@ const NEXT_PATHS = [
   },
   {
     label: "Origin",
-    href: "/about",
+    href: "/origin",
     description: "Understand why Tattvashila was founded.",
   },
   {
