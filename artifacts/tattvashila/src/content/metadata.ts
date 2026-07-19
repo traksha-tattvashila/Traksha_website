@@ -114,6 +114,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     ogType: "website",
     canonicalUrl: buildCanonicalUrl("/granthalaya/catalogue"),
   },
+  contact: {
+    title: buildTitle("Contact"),
+    description:
+      "Write to Tattvashila directly. No support desk, no routing \u2014 a direct address for questions, corrections, or correspondence.",
+    ogTitle: buildTitle("Contact"),
+    ogDescription:
+      "Write to us directly \u2014 a question, a correction, or a response to something you\u2019ve read.",
+    ogType: "website",
+    canonicalUrl: buildCanonicalUrl("/contact"),
+  },
   tattvaprashna: {
     title: buildTitle("Tattvaprashna — तत्त्वप्रश्न"),
     description:
