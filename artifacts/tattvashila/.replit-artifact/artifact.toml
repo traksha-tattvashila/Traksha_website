@@ -5,10 +5,6 @@ version = "1.0.0"
 id = "artifacts/tattvashila"
 router = "path"
 
-[[integratedSkills]]
-name = "react-vite"
-version = "1.0.0"
-
 [[services]]
 name = "web"
 paths = [ "/" ]
@@ -19,8 +15,8 @@ run = "pnpm --filter @workspace/tattvashila run dev"
 
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/tattvashila", "run", "build" ]
-publicDir = "artifacts/tattvashila/dist/public"
 serve = "static"
+publicDir = "artifacts/tattvashila/dist/public"
 
 [[services.production.rewrites]]
 from = "/*"
