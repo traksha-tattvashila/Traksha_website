@@ -40,7 +40,6 @@ export const ORIGIN_SECTIONS: OriginSection[] = [
     paragraphs: [
       "Tattvashila is being held primarily by Vikramaditya Mitra, working with a small group of contributors across different fields \u2014 quietly, without a marketing rhythm, and without an interest in scale for its own sake.",
       "There is no founder figure to follow, no lineage to inherit, no movement being recruited for. The project has been deliberately kept free of personality, the language plain, and the work itself the only thing a reader is asked to meet.",
-      "An institution is not a brand. It does not grow through attention. It deepens through use \u2014 through the steady accumulation of work that earns its place in a library rather than in a feed. That is the form Tattvashila has chosen, and it shapes every decision about what is published, when, and in what form.",
       "The name appears here as a matter of accountability, not authority. Other contributors and any further detail will be introduced only when the work itself makes that useful \u2014 not before, and not for marketing.",
     ],
   },
