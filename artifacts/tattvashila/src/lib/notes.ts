@@ -53,7 +53,7 @@ export const NOTES: Note[] = [
       "It will feel pointless at first. It will feel inefficient. It will feel like wasted time. Stay with it anyway. The quietness is not the absence of doing. It is the presence of you.",
       "Most of what we are calling Tattvashila is built around this very small act, repeated patiently, until it begins to change the texture of an ordinary life.",
     ],
-    signed: "Vikramaditya Mitra",
+    signed: "Vikram A. Mitra",
 
     date: "2026-05-09",
     reading: "5 min",
