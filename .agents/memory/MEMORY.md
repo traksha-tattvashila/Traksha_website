@@ -1,1 +1,2 @@
 - [.migration-backup stale workflows](migration-backup-workflows.md) — the `.migration-backup/*` workflows always fail and must be ignored; only `artifacts/*` are real.
+- [Tattvashila Tailwind v4 migration](tattvashila-tailwind-migration.md) — v3→v4 CSS conversion pattern; how to translate tailwind.config.ts tokens into @theme blocks.

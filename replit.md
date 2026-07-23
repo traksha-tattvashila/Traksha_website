@@ -1,28 +1,29 @@
-# [Project name]
+# Tattvashila
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+An institution for grounded, conscious living — a public website expressing the Foundation (Philosophy, Origin) and Knowledge & Record (Granthālaya manuscript library, Notes, Archive).
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- Workflow `artifacts/tattvashila: web` — runs the frontend on port 19271 (preview at `/`)
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `pnpm --filter @workspace/tattvashila run typecheck` — frontend typecheck only
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: React + Vite + Tailwind v4 (`@tailwindcss/vite`), wouter routing
+- Fonts: Fraunces (display), Instrument Sans (UI), Tiro Devanagari Hindi (manuscript)
+- Motion: Framer Motion with `EASE_GENTLE = cubic-bezier(0.22, 0.61, 0.36, 1)`
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/tattvashila/src/` — all frontend source
+- `artifacts/tattvashila/src/pages/` — 15 route components (Home, Philosophy, Notes, Granthālaya flow, Archive, Origin, Constitution, Contact, About, 404)
+- `artifacts/tattvashila/src/content/` — all static content data (notes, granthalaya, principles, navigation, taxonomy)
+- `artifacts/tattvashila/src/tokens/` — design tokens (colors, typography, motion, spacing)
+- `artifacts/tattvashila/src/system/` — motion easings, image registry
+- `artifacts/tattvashila/src/index.css` — Tailwind v4 `@theme` (all colour/type tokens) + custom CSS classes
+- `canon/` — manuscript composition, canonical language, rendering governance
 
 ## Architecture decisions
 

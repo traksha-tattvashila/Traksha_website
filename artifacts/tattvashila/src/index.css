@@ -1,11 +1,78 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* ═══════════════════════════════════════════════════════════════
-   DESIGN TOKENS
-   Civilizational palette — warm ivory, deep institutional ink.
-═══════════════════════════════════════════════════════════════ */
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS  —  Tailwind v4 @theme registration
+   All custom colour / typography / motion tokens live here so
+   Tailwind can emit the corresponding utility classes.
+───────────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Colours ── */
+  --color-bone:         #ECE7DC;
+  --color-bone-light:   #F3EEE5;
+  --color-bone-deep:    #E2DCCD;
+  --color-ink:          #001F20;
+  --color-ink-soft:     #0D2A2C;
+  --color-ink-muted:    #3A4F51;
+  --color-ink-faint:    #6E7E80;
+  --color-river:        #2A5158;
+  --color-river-deep:   #1D3E44;
+  --color-river-soft:   #4A6C72;
+  --color-river-wash:   #8AA3A8;
+  --color-river-faint:  #7A9DA3;
+
+  /* ── Font families ── */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans:    "Instrument Sans", system-ui, sans-serif;
+  --font-deva:    "Tiro Devanagari Hindi", serif;
+
+  /* ── Font sizes (size + line-height pairs) ── */
+  --text-micro:        0.75rem;
+  --text-micro--line-height: 1.5;
+  --text-caption:      0.8125rem;
+  --text-caption--line-height: 1.56;
+  --text-small:        0.9375rem;
+  --text-small--line-height: 1.62;
+  --text-body:         1.0625rem;
+  --text-body--line-height: 1.75;
+  --text-lead:         1.1875rem;
+  --text-lead--line-height: 1.70;
+  --text-title:        clamp(1.4rem, 2.4vw, 1.85rem);
+  --text-title--line-height: 1.22;
+  --text-subhead:      clamp(1.5rem, 2.6vw, 2.05rem);
+  --text-subhead--line-height: 1.20;
+  --text-display:      clamp(1.65rem, 3.1vw, 2.3rem);
+  --text-display--line-height: 1.18;
+  --text-display-xl:   clamp(1.9rem, 4vw, 2.9rem);
+  --text-display-xl--line-height: 1.14;
+  --text-hero:         clamp(2rem, 4.5vw, 3.15rem);
+  --text-hero--line-height: 1.08;
+
+  /* ── Letter spacing ── */
+  --tracking-wider:  0.08em;
+  --tracking-widest: 0.15em;
+
+  /* ── Max widths ── */
+  --max-width-reading:      40rem;
+  --max-width-prose-wide:   46rem;
+  --max-width-reading-lg:   56rem;
+  --max-width-reading-slim: 34rem;
+  --max-width-site:         1400px;
+
+  /* ── Transition easing ── */
+  --ease-gentle: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ── Transition durations ── */
+  --duration-DEFAULT: 600ms;
+  --duration-slow:    1200ms;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CSS CUSTOM PROPERTIES
+   Plain CSS variables for use directly in CSS rules (not
+   Tailwind utilities).  Mirrors the @theme colours so that
+   hand-written CSS that references var(--bone) keeps working.
+───────────────────────────────────────────────────────────── */
 
 :root {
   --bone:         #ECE7DC;
