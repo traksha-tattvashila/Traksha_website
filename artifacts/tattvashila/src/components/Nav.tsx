@@ -82,26 +82,10 @@ export default function Nav() {
                 )
               )}
 
-              {/* Institutional quiet CTA — restrained, not a product button */}
-              <a
-                href="/#intake"
-                data-testid="nav-intake-cta"
-                className="ml-1 inline-flex items-center gap-3 text-small text-ink-muted hover:text-ink transition-colors duration-700 ease-gentle group"
-              >
-                <span className="block w-5 h-px bg-current opacity-40 group-hover:opacity-70 transition-opacity duration-700" aria-hidden />
-                <span>Stay in correspondence</span>
-              </a>
             </nav>
 
             {/* Mobile controls */}
             <div className="md:hidden flex items-center gap-4">
-              <a
-                href="/#intake"
-                data-testid="nav-intake-cta-mobile"
-                className="text-micro tracking-widest uppercase text-ink-muted hover:text-ink transition-colors duration-500"
-              >
-                Stay in correspondence
-              </a>
               <button
                 onClick={() => setMobileOpen(true)}
                 aria-label="Open navigation menu"
@@ -191,20 +175,19 @@ export default function Nav() {
               )}
 
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.35, ease: EASE_GENTLE } }}
-                className="mt-auto pt-12"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.35 + SITE_NAV.length * 0.05, ease: EASE_GENTLE } }}
               >
                 <a
                   href="/#intake"
                   onClick={() => setMobileOpen(false)}
                   data-testid="mobile-nav-intake-cta"
-                  className="inline-flex items-center gap-4 text-small text-ink-muted hover:text-ink transition-colors duration-500 ease-gentle"
+                  className="block py-5 font-display text-display font-normal text-ink-muted hover:text-ink border-b border-ink/10 transition-colors duration-300"
                 >
-                  <span className="block w-6 h-px bg-current opacity-40" aria-hidden />
-                  <span>Stay in correspondence</span>
+                  Write to us
                 </a>
               </motion.div>
+              <div className="mt-auto pt-12" />
             </nav>
           </motion.div>
         )}

@@ -134,13 +134,6 @@ export default function Closing() {
               </div>
             )}
 
-            <p
-              data-testid="footer-tagline"
-              className="text-micro tracking-widest uppercase text-ink-faint"
-            >
-              {BRAND.legal}
-            </p>
-
           </div>
         </Reveal>
 
